@@ -5,3 +5,38 @@
 .httr-oauth
 .DS_Store
 .quarto
+# --- R 基础文件 ---
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.Rapp.history
+*.RData
+*.Rhistory
+
+# --- Quarto 渲染缓存与临时文件 ---
+/.quarto/
+/_site/
+/site_libs/
+/objects/
+/knitr_cache/
+/.ipynb_checkpoints/
+
+# --- xaringan 缓存与临时文件 ---
+/*_cache/
+/*_files/
+/libs/
+
+# --- 遥感影像与大型数据 (重点保护) ---
+*.tif
+*.tiff
+*.nc
+*.zip
+*.tar.gz
+*.csv
+/data/
+/raw_data/
+
+# --- 系统文件 ---
+.DS_Store
+Thumbs.db
