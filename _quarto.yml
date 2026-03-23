@@ -3,11 +3,20 @@ project:
   output-dir: docs
 book:
   title: "Jiaying-2026 portfolio"
-  author: "Norah Jones"
+  author: "Jiaying Li"
   date: "3/7/2026"
   chapters:
     - index.qmd
     - intro.qmd
+    - portfolio.qmd
+    - corrections.qmd
+    - policy.qmd
+    - gee_i.qmd
+    - classification_i.qmd
+    - classification_ii.qmd
+    - temperature.qmd
+    - sar.qmd
+    - resources.qmd
     - summary.qmd
     - references.qmd
 
