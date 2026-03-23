@@ -2,16 +2,16 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "Jiaying-2026 portfolio"
+  title: "CASA0023 Remotely Sensing Cities and Environments Learning Diary"
   author: "Jiaying Li"
-  date: "3/7/2026"
+  date: "2/1/2026"
   chapters:
     - index.qmd
     - intro.qmd
     - portfolio.qmd
     - corrections.qmd
     - policy.qmd
-    - gee_i.qmd
+    - gee.qmd
     - classification_i.qmd
     - classification_ii.qmd
     - temperature.qmd
@@ -24,7 +24,9 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      -cosmo
+      - brand
   pdf:
     documentclass: scrreprt
 
