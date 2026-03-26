@@ -1,1 +1,46 @@
-# gee_i
+---
+title: "GEE"
+---
+
+## Summary
+
+How does the "Client-side vs. Server-side" architecture of GEE enable massive data processing?
+Key Focus: Instructions sent from browser, execution happens on Google's clusters
+.
+What is the significance of "ImageCollections" for multi-temporal land cover analysis?
+Key Focus: Efficient filtering by date, bounds, and cloud cover to create cloud-free mosaics
+.
+How does GEE facilitate the emergence of near-real-time datasets like "Dynamic World"?
+Key Focus: Automated AI processing of 10m Sentinel-2 data at planetary scale
+.
+Why is the JavaScript API preferred over local processing for large-scale environmental monitoring?
+Key Focus: No need for high-performance hardware; instant access to petabytes of data
+.
+How can GEE "Apps" bridge the technical gap between data scientists and policy makers?
+Key Focus: Providing interactive, simplified web interfaces for complex spatial evidence
+
+## Application
+
+
+
+
+## Reflection
+
+讨论 GEE 的客户端/服务器端限制
+。例如：为什么在服务器端对象上使用 JavaScript 的 for 循环（客户端逻辑）会导致报错？这种对平台底层逻辑
+
+在 GEE 中运行一段更复杂的时间序列回归分析 (Linear Regression) 代码，来观察某个像素值随时间的变化趋势
+
+
+Why are "Zonal Statistics" essential for translating pixel data into actionable administrative reports?
+Key Focus: 将栅格值聚合到行政边界（如行政区、街道）内，使决策者能看到其管辖范围内的具体数值
+
+
+What are the limitations of generic EO statements when communicating with local government?
+Key Focus: 政策制定需要具体、有实证依据的建议，而非简单的描述性地图
+
+
+之前做建筑 绘制场地site analysis 经常会找卫星图通过截图获取，但是  scale自动缩放机制 困惑是页面大小，范围取值大小，实际大小不协调
+
+
+前几周的 LULC（土地覆盖分类） 理论，与 GEE 中的 Machine Learning（如随机森林、CART）工具包相对接

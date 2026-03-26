@@ -1,1 +1,24 @@
 # classification_i
+
+机器学习影像分类算法 (Image Classification Algorithms)
+How do Classification and Regression Trees (CART) utilize Gini Impurity and Sum of Squared Residuals (SSR) to partition data?
+Key Focus: 通过递归二分法找到特征的最佳分割点，使生成的子集纯度最高
+。
+What is the "Ensemble" advantage of Random Forests, and how do bootstrapping and OOB improve model robustness?
+Key Focus: 结合多棵决策树的结果以减少偏差，并利用未参与训练的样本进行自我验证
+。
+Explain the "Bias-Variance Tradeoff": Why is pruning essential to prevent overfitting?
+Key Focus: 过于复杂的树会过度拟合训练数据的噪声，通过剪枝限制模型复杂度可提高其泛化能力
+。
+How does Support Vector Machine (SVM) identify the "maximum margin" in feature space?
+Key Focus: 寻找能够将不同类别分得最开的“最优超平面”，确保模型对新数据的判别更稳定
+。
+When should a researcher prioritize model "Interpretability" over "Accuracy"?
+Key Focus: 在政策辩论中，简单的分类规则（如决策树）往往比黑盒模型（如深度学习）更具说服力
+。
+
+
+## Assement
+ 精度评估需要考虑空间自相关
+ 
+ 面向对象分析 OBIA 怎么提升分类精度

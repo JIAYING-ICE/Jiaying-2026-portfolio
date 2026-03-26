@@ -1,9 +1,49 @@
-# Preface {.unnumbered}
+---
+title: "Preface"
+---
 
-This is a Quarto book.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+# Hello, I'm Jiaying Li {.unnumbered}
 
-```{r}
-1 + 1
-```
+::: {style="text-align: center; margin-bottom: 30px;"}
+![](images/Location.png){fig-align="center" width="70%"}
+
+**Left:** Xinjiang, China (40°04'02.8" N 77°40'00.7" E)\
+**Right:** Holuhraun Ice Field, Iceland (64°51'11.2" N 16°49'37.2" W)
+
+<p style="font-size: 0.8em; color: gray;">
+
+source: [NASA - Your Name in Landsat](https://science.nasa.gov/mission/landsat/outreach/your-name-in-landsat/)
+
+</p>
+:::
+
+
+------------------------------------------------------------------------
+
+## About Me
+
+I am **Jiaying Li**, currently an MRes student in **Urban Spatial Science** at the Centre for Advanced Spatial Analysis (CASA), University College London (UCL).
+
+My academic journey is driven by a fascination with how digital footprints and remote sensing technologies can decode the complexities of urban environments. With a background in spatial analysis, I am particularly interested in leveraging Earth Observation (EO) data to address urban resilience and environmental sustainability.
+
+## About this Learning Diary
+
+This website serves as my digital portfolio and learning diary for the module **CASA0023: Remote Sensing Cities and Environments** (2025/26). It documents my weekly journey through the world of remote sensing, from understanding the physics of electromagnetic radiation to implementing advanced machine learning classifications on Google Earth Engine (GEE).
+
+
+------------------------------------------------------------------------
+
+::: callout
+## Interactive Experience
+
+Feel free to use the **Search** bar (Top Right) to find specific topics or toggle between **Light/Dark modes** for a comfortable reading experience!
+:::
+
+
+## About the Framework
+**ASK Myself Five Questions each week** and try to cover all the knowledge we had in Lecture and Practical.  
+
+How these **technologies are applied** in contemporary academic literature and policy？
+
+**Personal insights** on the future utility and Self Inspection of the tools explored.

@@ -1,1 +1,19 @@
-# portfolio
+# Portfolio
+
+This section explores the technical mechanisms and applications of Synthetic Aperture Radar (SAR), specifically focusing on the Copernicus Sentinel-1 mission.
+
+::: {.column-page}
+```{r, echo=FALSE}
+xaringanExtra::embed_xaringan(
+  url = "https://jiaying-ice.github.io/Jiaying-2026-RS-Diary/index.html",
+  ratio = "16:9"
+)
+```
+:::
+
+
+<p style="text-align: center; margin-top: 10px;">
+<a href="https://jiaying-ice.github.io/Jiaying-2026-RS-Diary/" target="_blank" class="btn btn-outline-primary">
+Full Screen
+</a>
+</p>

@@ -1,17 +1,39 @@
 project:
   type: book
   output-dir: docs
+  render: 
+  - "*.qmd"      
+  - "!slides/"  
+  resources: 
+  - slides/
+  - images/
+  - references.bib
+  
 book:
-  title: "CASA0023 Remotely Sensing Cities and Environments Learning Diary"
+  title: "CASA0023 RS Learning Diary"
   author: "Jiaying Li"
   date: "2/1/2026"
+  
+  navbar:
+    logo: "images/LI.png"
+    search: true
+    reader-mode: true
+    background: light
+    collapse: true
+        
+  repo-url: https://jiaying-ice.github.io/Jiaying-2026-portfolio/
+  repo-actions: [edit, issue]
+  repo-branch: master
+  
+  favicon: "images/LI.png"
+  
   chapters:
     - index.qmd
     - intro.qmd
     - portfolio.qmd
     - corrections.qmd
     - policy.qmd
-    - gee.qmd
+    - gee_i.qmd
     - classification_i.qmd
     - classification_ii.qmd
     - temperature.qmd
@@ -25,10 +47,27 @@ bibliography: references.bib
 format:
   html:
     theme: 
-      -cosmo
-      - brand
+      light: [cosmo, flatly]
+      dark: [cosmo, darkly]
+
+    code-link: true    
+    code-fold: true        
+    code-summary: "Show the code"
+    code-copy: true         
+    code-tools: true         
+    
+
+    toc: true              
+    toc-depth: 3
+    toc-title: "On this page"
+    number-sections: true   
+    anchor-sections: true   
+    smooth-scroll: true
   pdf:
     documentclass: scrreprt
+    number-sections: true
+    
+
 
 editor: visual
 

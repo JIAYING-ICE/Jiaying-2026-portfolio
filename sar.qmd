@@ -1,1 +1,50 @@
-# sar
+---
+title: "SAR"
+---
+合成孔径雷达 SAR 数据 (SAR Data Applications) How do the active sensing mechanisms of SAR allow for observation through clouds and at night? Key Focus: SAR 自身发射微波脉冲并接收回向散射，微波波段不受天气和光照条件影响 。 What is the significance of "Backscatter" intensity in urban versus forest environments? Key Focus: 建筑物产生强烈的“双跳反射”，而森林的散射则与植被结构和湿度（介电常数）有关 。 Why is Object-Based Image Analysis (OBIA) useful for SAR data? Key Focus: 能够有效抑制 SAR 影像中的椒盐噪声，并识别建筑网络等几何特征 。 How does "Intensity Fusion" leverage multi-source data to enhance feature detection? Key Focus: 结合雷达的纹理信息和光学数据的颜色信息，提高制图的精确度 。 In what ways does SAR excel in "Change Detection" for rapid response? Key Focus: 能够即时捕获多云或暴雨期的地表变化，通过时相影像组合识别水淹区域
+
+SAR characteristics A good introduction to Synthetic Aperture Radar (SAR) basics is A Tutorial on Synthetic Aperture Radar, created by a group of experts at DLR led by Dr. A. Moreira. The essentials are in part I and II. Advanced polarimetry and interferometry, or combined POLINSAR, (part III ff) is currently outside the scope of what is possible in Earth Engine.
+
+A key point about SAR is that it is a radar (RAdio Detection And Ranging) instrument, and its basic measurements are intensity (or amplitude) and phase of the backscattered signal, sampled in time bins along the azimuth (along track direction of the sensor antenna) and range (across track or perpendicular to the direction of the sensor antenna). These time bins relate to locations on Earth from which the backscattered signals originate. The "Synthetic Aperture" of the SAR relates to the virtual creation of a huge antenna by making use of the sensor motion. The virtual large antenna is needed to ensure an adequate resolution in azimuth. The sorting of the pulsed range echoes and Doppler shifted azimuth samples requires complex raw SAR signal processing (check the reference above if you want more technical details).
+
+The key differences between SAR and optical sensors are:
+
+SAR is an active sensor, transmitting microwave radiation, for which it receives the portion scattered back to the sensor. Optical sensors are passive sensors that register reflected radiation from the Sun in specific parts of the visible and infrared spectrum. SAR is side-looking, unlike optical sensors which are usually nadir looking. SAR radiation is coherent, because the microwave radiation is transmitted with a precise set of wavelengths. This is useful, because it allows precise phase and amplitude measurements of the backscattered waves and the use of polarization. Reflected sunlight is not coherent as it has a wide range of wavelengths and random phase. Reflecting on these differences is important, because it is the basis for understanding the relative advantages of SAR compared to optical sensors:
+
+SAR does not depend on sunlight, thus can produce data day and night, provided the sensor is switched on. SAR is insensitive to the atmosphere in C-band (Sentinel-1 except for very dense rain cells) and L-band (ALOS-PALSAR), both of which are in GEE collections. SAR backscattering depends on different physical properties of the "target" compared to the properties that cause reflectance in optical sensors. These properties relate to the structural geometry and (electromagnetic) material properties of what is illuminated by the incident radiation. SAR data can be calibrated, without the need for atmospheric correction, leading to consistent time series As well as some drawbacks:
+
+The coherent nature of the SAR microwave radiation causes speckle noise. This causes the "salt-and-pepper" appearance of extended target areas (e.g., a large homogeneous agricultural field) that one would expect to have a constant backscattering behavior. Speckle can be reduced in different ways (see next tutorial), but is difficult to eliminate. SAR backscattering depends on the angle of the incident microwave radiation. Thus, since the side-looking SAR operates over a range of incidence angles along the swath, the same target will appear different depending on whether it is in near range (low incidence angle) or far range (higher incidence angle) of the swath. The manner in which the backscattering varies with incidence angle depends on the target: a flat dry soil surface has a stronger drop off with incidence angle than, for instance, a forest. Terrain relief has a strong effect on SAR backscattering because it modulates the area that is illuminated by the side-looking SAR radiation. Slope angle determines the orientation with respect to the incident radiation. This causes foreshortening for slopes oriented towards the SAR and shadowing of slopes steeper than the local incidence and directed away from the SAR. In order to use SAR data efficiently, you need to be aware of what part of the signal variation relates to the intrinsic properties of the sensor, and what part is linked to the physical properties of the area you are looking at.
+
+
+SAR
+
+ 
+ 
+For the untrained eye, it’s just a bunch of black and white pixels. But the reality is that there’s more than meets the eye. For example, the 3 main types of backscatter are:
+
+Specular reflection
+Double-bounce
+Diffuse scattering
+
+Image：synthetic aperture radar  "D:\0.CASA_USS\Jiaying-2026 portfolio-book\images\SAR.png" https://gisgeography.com/passive-active-sensors-remote-sensing/
+
+SPECULAR REFLECTION: Specular reflection is where dark spots are in the image. In this case, it’s the smooth surfaces like the east-west flowing river and paved surfaces.
+
+DOUBLE-BOUNCE: The bright white in the center is double-bounce backscatter at work. As shown in the schematic above, it’s an urban feature like a building but it’s not entirely clear at this scale.
+
+DIFFUSE SCATTERING: Finally, the majority of the radar image is rough surface and diffuse scattering. This may be from the growing vegetation in the agricultural areas.
+
+
+
+
+Curlander, J. C., & McDonough, R. N. (1991). Synthetic Aperture Radar: Systems and Signal Processing. Wiley.
+
+Ferretti, A., Prati, C., & Rocca, F. (2001). Permanent scatterers in SAR interferometry. IEEE Transactions on Geoscience and Remote Sensing, 39(1), 8-20.
+
+Gamba, P., & Dell’Acqua, F. (2009). Per city remote sensing: From multispectral to SAR data. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2(2), 85-92.
+
+Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R. (2017).
+
+Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. Remote Sensing of Environment, 202, 18-27.
+Hand, E. (2015). Startup launches fleet of tiny satellites to image Earth every day. Science, 348(6235), 172-173.
+Henderson, F. M., & Lewis, A. J. (1998). Principles and Applications of Imaging Radar. Wiley.

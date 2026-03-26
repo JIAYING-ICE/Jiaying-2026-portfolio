@@ -1,1 +1,17 @@
 # classification_ii
+精度评估与核心挑战 (Accuracy Assessment & Challenges)
+Why is the trade-off between Producer’s Accuracy (Recall) and User’s Accuracy (Precision) critical?
+Key Focus: PA 关注真阳性的覆盖情况（防漏分），UA 关注分类结果的可靠性（防多分）
+。
+How does the F1-Score provide a more balanced performance metric than Overall Accuracy?
+Key Focus: 通过 PA 和 UA 的调和平均，在处理森林砍伐等类别不平衡的数据时更客观
+。
+In "Sub-pixel Analysis," what are the limitations of "Hard" classification?
+Key Focus: 30 米像素内常包含多种地物（混合像元），强制分配一个标签会丢失土地利用比例信息
+。
+What are the primary benefits and "Black Box" risks of using Dynamic World?
+Key Focus: 优势是近实时监测，风险是用户不完全了解 AI 模型在特定地理区域的判断逻辑
+。
+Explain the difference between Errors of Omission and Errors of Commission.
+Key Focus: 漏分是将目标类别分到了其他类，多分是将其他类错误划分到了目标类
+。

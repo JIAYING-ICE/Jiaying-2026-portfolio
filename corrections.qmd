@@ -1,1 +1,21 @@
-# corrections
+---
+title: "Correction"
+---
+
+## Research Question
+Pre-processing & Corrections (预处理与影像校正)
+What is the logical progression from Digital Numbers (DN) to Surface Reflectance (SR)?
+Key Focus: DN → Radiance → Reflectance; removing sensor and atmospheric artifacts
+.
+When is "Absolute Atmospheric Correction" mandatory versus "Relative Correction"?
+Key Focus: Mandatory for multi-temporal change detection and biophysical parameters (NDVI)
+.
+How does Orthorectification resolve geometric distortions caused by terrain and sensor angle?
+Key Focus: Shifting pixels to their true map coordinates using a DEM.
+What is the value of "Analysis Ready Data" (ARD) for policy-oriented researchers?
+Key Focus: Reducing technical barriers by providing pre-corrected, standardized datasets
+.
+How does the Tasseled Cap Transformation reduce data dimensionality while preserving 97% of information?
+Key Focus: Compressing bands into Brightness, Greenness, and Wetness components
+
+## Application

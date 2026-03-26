@@ -2,21 +2,21 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Jiaying-2026 portfolio",
+    "title": "CASA0023 RS Learning Diary",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "Hello, I’m Jiaying Li",
     "crumbs": [
-      "Preface"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
     ]
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction",
+    "title": "2  Getting Started",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "2.1 To Start\nRemote sensing is obtaining information about an object from a distance. (NASA)\nIt answers questions of:",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]
   },
   {
@@ -34,9 +34,349 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "Gagnon, Pieter, Robert Margolis, Jennifer Melius, Caleb Phillips, and\nRyan Elmore. 2016. “Rooftop Solar Photovoltaic Technical\nPotential in the United States. A Detailed\nAssessment.” NREL/TP–6A20-65298, 1236153. https://doi.org/10.2172/1236153.\n\n\nGoroshin, Ross, Alex Wilson, Andrew Lamb, Betty Peng, Brandon Ewonus,\nCornelius Ratsch, Jordan Raisher, et al. 2023. “Estimating\nResidential Solar Potential Using Aerial Data.”\narXiv. https://doi.org/10.48550/arXiv.2306.13564.\n\n\nLemay, Amélie C., Sigurd Wagner, and Barry P. Rand. 2023. “Current\nStatus and Future Potential of Rooftop Solar Adoption in the\nUnited States.” Energy Policy 177 (June):\n113571. https://doi.org/10.1016/j.enpol.2023.113571.\n\n\nMhlanga, Tendai, and Ozge Yalciner Ercoskun. 2020.\n“MAPPING, MODELING AND MEASURING PHOTOVOLTAIC\nPOTENTIAL IN URBAN ENVIRONMENTS USING GOOGLE PROJECT\nSUNROOF.” Gazi University Journal of Science Part\nB, 8(2): 593-606 (2020) (July).",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "CASA0023 RS Learning Diary",
+    "section": "0.1 About Me",
+    "text": "0.1 About Me\nI am Jiaying Li, currently an MRes student in Urban Spatial Science at the Centre for Advanced Spatial Analysis (CASA), University College London (UCL).\nMy academic journey is driven by a fascination with how digital footprints and remote sensing technologies can decode the complexities of urban environments. With a background in spatial analysis, I am particularly interested in leveraging Earth Observation (EO) data to address urban resilience and environmental sustainability.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#about-this-learning-diary",
+    "href": "index.html#about-this-learning-diary",
+    "title": "CASA0023 RS Learning Diary",
+    "section": "0.2 About this Learning Diary",
+    "text": "0.2 About this Learning Diary\nThis website serves as my digital portfolio and learning diary for the module CASA0023: Remote Sensing Cities and Environments (2025/26). It documents my weekly journey through the world of remote sensing, from understanding the physics of electromagnetic radiation to implementing advanced machine learning classifications on Google Earth Engine (GEE).\n\n\n\n\n\n\n\nInteractive Experience\n\n\n\nFeel free to use the Search bar (Top Right) to find specific topics or toggle between Light/Dark modes for a comfortable reading experience!",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#background-education",
+    "href": "index.html#background-education",
+    "title": "CASA0023 RS Learning Diary",
+    "section": "0.3 Background & Education",
+    "text": "0.3 Background & Education",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#professional-interests",
+    "href": "index.html#professional-interests",
+    "title": "CASA0023 RS Learning Diary",
+    "section": "0.4 Professional Interests",
+    "text": "0.4 Professional Interests",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#expectations-for-the-module",
+    "href": "index.html#expectations-for-the-module",
+    "title": "CASA0023 RS Learning Diary",
+    "section": "0.5 Expectations for the Module",
+    "text": "0.5 Expectations for the Module",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#framework",
+    "href": "index.html#framework",
+    "title": "CASA0023 RS Learning Diary",
+    "section": "0.6 Framework",
+    "text": "0.6 Framework\nASK Myself Five Questions each week\nSummarise, analyse and comment\n\nSummary: summary of the content. . It will also include independent thought such as questions, limitations, benefits\nApplications: Discussion of how data / concepts / methods (or related concepts) been applied in literature / policy or other studies\nReflection: personal reflection on the presented content\n\nEach chapter is structured into three key parts based on the module’s assessment criteria: * Summary: A technical synthesis of weekly concepts and practical outputs. * Applications: A review of how these technologies are applied in contemporary academic literature and policy. * Reflection: Personal insights on the future utility and ethical considerations of the tools explored.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "3  Portfolio",
+    "section": "",
+    "text": "This section explores the technical mechanisms and applications of Synthetic Aperture Radar (SAR), specifically focusing on the Copernicus Sentinel-1 mission.\n\n\n\n\n\n\n\n\n\n\n\n Full Screen",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Portfolio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#summary",
+    "href": "intro.html#summary",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "2.1.1 Research Question\n1.How does the fundamental distinction between Active and Passive sensors determine their ability to monitor Earth under various environmental conditions? 主动和被动传感器之间的根本区别如何决定了它们在不同环境条件下监测地球的能力？ Core Meaning: This addresses the basic definitions of sensors. Passive sensors (like Landsat/Sentinel-2) rely on naturally available solar energy and are hindered by clouds . Active sensors (like SAR) emit their own energy, allowing them to “see through” clouds and operate at night\n2.In what ways do Atmospheric Windows and Scattering processes (Rayleigh, Mie, and Non-selective) constrain the specific wavelengths utilized by satellite sensors? “大气窗口”和“散射过程”（瑞利散射、米氏散射和非选择性散射）如何限制了卫星传感器所使用的特定波段？ Core Meaning: This focuses on the physics of light. It explores why we can only observe Earth through “windows” where gases do not absorb energy and how particles in the air scatter light, affecting image quality and necessitating atmospheric correction\n\nWhat is the “Balancing Act” involved in the four resolutions (Spatial, Spectral, Temporal, and Radiometric), and how does it influence sensor selection for a project? 四种分辨率（空间、光谱、时间、辐射分辨率）之间存在怎样的“权衡/平衡关系”？这种关系如何影响项目的传感器选择？ Core Meaning: This covers the key concept of the 4 resolutions. It emphasizes that no sensor is perfect; there is always a trade-off (e.g., high spatial resolution often means a lower revisit time or higher cost), requiring researchers to choose the data that best fits their specific research question\nWhy are technical workflows like Resampling and Dimensionality Reduction (e.g., the Tasseled Cap transformation) essential for comparing multi-source data like Landsat and Sentinel? 为什么“重采样”和“降维”（如缨帽变换）等技术流程对于比较 Landsat 和 Sentinel 等多源数据至关重要？ Core Meaning: This addresses practical relationships and methodologies. Resampling is required to match different pixel sizes (e.g., Sentinel’s 10m vs 20m bands) before analysis . Transformations like the Tasseled Cap reduce complex multi-band data into 97% of its meaningful information: Brightness, Greenness, and Wetness\n\nWhat practical steps are required in the remote sensing workflow to ensure that data from different sensors (like Landsat and Sentinel) are statistically comparable? 在遥感工作流中，为了确保来自不同传感器（如 Landsat 和 Sentinel）的数据在统计上具有可比性，需要哪些实操步骤？ Core Points: This involves loading data into specialized software like SNAP or R, performing resampling to match spatial resolutions (e.g., upscaling Sentinel to match Landsat’s 30m grid), and using statistical tests like t-tests to evaluate differences in mean reflectance . These steps are vital for creating reproducible workflows for consistent monitoring\n. 5. How do Spectral Signatures function as a “fingerprint” for land cover features, and what tools are used to extract this information from raw data? “光谱特征”如何作为地表覆盖特征的“指纹”而存在？从原始数据中提取这些信息需要用到哪些工具？ Core Meaning: This links concepts to practical applications. It highlights that every feature reflects light uniquely across the spectrum . The practical demonstrates using software like SNAP, QGIS, and R to plot these signatures and identify differences between urban areas, vegetation, and water\nWhy are spectral signatures fundamental to feature identification, and how do transformations like the Tasseled Cap enhance this analysis? 为什么“光谱特征”是识别地物的基础？像“缨帽变换”这样的转换如何增强这种分析？ Core Points: Every feature on Earth has a unique spectral signature across different wavelengths . Tools like the Tasseled Cap transformation reduce high-dimensional data into meaningful components—Brightness, Greenness, and Wetness—to specifically highlight urban areas, vegetation, and moisture levels for policy-relevant analysis .\nTypes of Remote Sensing:\nActive Remote Sensing\nPassive Remote Sensing\nSensors and Platforms:\nSatellites\nAircraft\nDrones (UAVs)\nGround-Based Sensors\nData Types:\nImagery: Visual or photographic images captured in different spectral bands (e.g., visible, infrared, thermal). Spectral Data: Information about the different wavelengths of electromagnetic radiation reflected or emitted by objects. Radar Data: Information about the surface and objects collected using radar signals.\nRemote Sensing Process Remote Sensing is a process in which incoming radiation interacts with the target of interest. This is done by using imaging and non-imaging systems; the following steps are involved in the process:\nEnergy Source or Illumination (A): The initial prerequisite for remote sensing is an energy source that illuminates or delivers electromagnetic radiation to the target of interest. The Sun is the primary source of energy used in remote sensing. Radiation and the Atmosphere (B): As energy moves from its source to its target, it comes into contact with and interacts with the atmosphere it passes through. Interaction with the Target (C): Once the energy passes through the atmosphere and reaches the target, it interacts with it based on the qualities of both the target and the radiation. Recording of Energy by the Sensor (D): After the energy is scattered or emitted from the target, the sensor gathers and records the electromagnetic radiation. Transmission, Reception, and Processing (E): The energy recorded by the sensor must be sent, frequently electronically, to a receiving and processing unit where it is converted into a picture (hardcopy and/or digital). Interpretation and Analysis (F): The processed image is interpreted, visually and/or digitally, to extract information about the target that was illuminated. Application (G): The remote sensing process concludes when the extracted imagery information is applied to understand the target, reveal new information, or solve specific problems…. Read more at: https://vajiramandravi.com/upsc-exam/remote-sensing/\nResolution trade-offs Remote sensing systems face inherent trade-offs between spatial, spectral, and temporal resolution. Sensors providing fine spatial detail often cover smaller areas or revisit locations less frequently. High spectral resolution typically requires sacrificing some spatial sharpness. Selecting appropriate sensors requires balancing these competing factors against specific application requirements.\nThe “Balancing Act” of 4 Resolutions:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#application",
+    "href": "intro.html#application",
+    "title": "2  Getting Started",
+    "section": "2.3 Application",
+    "text": "2.3 Application\nhe limitations of the 4 resolutions. For example, why is a high temporal resolution (frequent visits) often sacrificed for high spatial resolution (small pixels)\nMethodology (Practical): How we load data into R (using terra for speed or stars for large datasets) and SNAP . Mention the importance of resampling Sentinel data to match Landsat’s grid for cross-comparison . Case Study Link: Referencing MacLachlan et al. (2017) regarding Urban Expansion in Perth . Critical Insight: Landsat is highly valued because it is the longest free temporal repository of consistent data, making it ideal for multi-decadal change detection . Policy Connection: How these spectral metrics (like NDVI or Tasseled Cap) support SDG Goal 11 by identifying urban green space or informal housing .\nIn our practical sessions, we found that comparing Landsat and Sentinel-2 requires resampling to a common grid. This is not merely a geometric correction; it is an active engagement with the MAUP Scale Effect. By upscaling Sentinel data to match Landsat’s 30m resolution, we are essentially re-zoning the Earth’s surface, which—as I learned in GIS—can introduce statistical bias where the variance of the data decreases as the unit size increases\n\n2.3.1 Technical Harmonization: Workflows, GIS Theory, and Policy Impact\n\n\n\nTable 2.5: Synthesis of Remote Sensing workflows and their GIS theoretical implications.\n\n\n\n\n\n\n\n\n\n\n\nTechnical Process\nGIS Equivalent (CASA0005)\nImpact on Information & Policy\nSupporting Evidence\n\n\n\n\nResampling (e.g., 10m Sentinel to 30m Landsat)\nMAUP: Scale Effect\nSpatial Aggregation: Larger pixels “smooth” local heterogeneities (e.g., small green roofs). This risk leads to biased technical potential estimates by averaging out fine-grained urban features.\nTable 2.3; Figure 2.5\n\n\nMasking & Boundary Clipping (GADM Units)\nMAUP: Zoning Effect\nBoundary Dependency: Aggregating data into administrative tracts (e.g., NYC Census Tracts) can artificially alter correlations between “Solar Potential” and “Income” based on how boundaries are drawn.\n?fig-sunroof-nyc; Table 2.4\n\n\nDimensionality Reduction (PCA / Tasseled Cap)\nInformation Compression\nSpectral Distillation: Reducing 13+ bands into 3 (Brightness, Greenness, Wetness) streamlines “Analysis Ready Data” (ARD), but risks discarding subtle spectral nuances vital for specific urban material identification.\nFigure 2.6; Table 2.4",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#reflection",
+    "href": "intro.html#reflection",
+    "title": "2  Getting Started",
+    "section": "2.4 Reflection",
+    "text": "2.4 Reflection\nInitial Hurdles: Reflection on the “Jargon” (专业术语). The lecture notes admit the field is filled with jargon that isn’t as complicated as it sounds once the physics are understood . Technical Discovery: Your thoughts on the transition from CASA0005 to more advanced R packages like terra (SpatRaster/SpatVector) . Future Outlook: Why understanding the Radiation Budget and Atmospheric Correction is the “hidden” but essential foundation for any reliable policy report .\nLearning outcomes By the end of this practical you should be able to:\nSource, load and articulate the differences between Landsat and Sentinel data Undertake basic raster image statistics and processing Evaluate the (dis)advantages of each type of software you have used Pull out and statistically compare spectral signatures\nEO Dashboard\n城市规划中的遥感",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "corrections.html",
+    "href": "corrections.html",
+    "title": "4  Correction",
+    "section": "",
+    "text": "Pre-processing & Corrections (预处理与影像校正) What is the logical progression from Digital Numbers (DN) to Surface Reflectance (SR)? Key Focus: DN → Radiance → Reflectance; removing sensor and atmospheric artifacts . When is “Absolute Atmospheric Correction” mandatory versus “Relative Correction”? Key Focus: Mandatory for multi-temporal change detection and biophysical parameters (NDVI) . How does Orthorectification resolve geometric distortions caused by terrain and sensor angle? Key Focus: Shifting pixels to their true map coordinates using a DEM. What is the value of “Analysis Ready Data” (ARD) for policy-oriented researchers? Key Focus: Reducing technical barriers by providing pre-corrected, standardized datasets . How does the Tasseled Cap Transformation reduce data dimensionality while preserving 97% of information? Key Focus: Compressing bands into Brightness, Greenness, and Wetness components",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Correction</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html",
+    "href": "policy.html",
+    "title": "5  Policy",
+    "section": "",
+    "text": "5.1 Introduction\nWith buildings contributing approximately 70% of New York City’s greenhouse gas emissions, the Climate Mobilization Act and Local Law 97 (Greenhouse Gas Emissions Reduction) have established a legal mandate to achieve a 50% reduction in government operational emissions by 2030.\nTo support this transition, Google Project Sunroof utilizes machine learning and aerial imagery to quantify technical solar potential by transforming high-resolution aerial data into a verifiable evidence base for policy justification.\nFor example, similar assessments in the United States have utilized aerial imagery to classify rooftops by size, shading, and insolation to determine adoption potential. By enforcing Local Laws 92 and 94 (Solar & Green Roofs), NYC successfully couples Earth Observation technology with regulatory frameworks to transform passive rooftops into strategic spatial assets and regulated distributed energy infrastructure.\nSource: PlaNYC 2023 Full Report",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "gee_i.html",
+    "href": "gee_i.html",
+    "title": "6  GEE",
+    "section": "",
+    "text": "6.1 Summary\nHow does the “Client-side vs. Server-side” architecture of GEE enable massive data processing? Key Focus: Instructions sent from browser, execution happens on Google’s clusters . What is the significance of “ImageCollections” for multi-temporal land cover analysis? Key Focus: Efficient filtering by date, bounds, and cloud cover to create cloud-free mosaics . How does GEE facilitate the emergence of near-real-time datasets like “Dynamic World”? Key Focus: Automated AI processing of 10m Sentinel-2 data at planetary scale . Why is the JavaScript API preferred over local processing for large-scale environmental monitoring? Key Focus: No need for high-performance hardware; instant access to petabytes of data . How can GEE “Apps” bridge the technical gap between data scientists and policy makers? Key Focus: Providing interactive, simplified web interfaces for complex spatial evidence",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>GEE</span>"
+    ]
+  },
+  {
+    "objectID": "gee_i.html#application",
+    "href": "gee_i.html#application",
+    "title": "6  GEE",
+    "section": "6.2 Application",
+    "text": "6.2 Application",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>GEE</span>"
+    ]
+  },
+  {
+    "objectID": "gee_i.html#reflection",
+    "href": "gee_i.html#reflection",
+    "title": "6  GEE",
+    "section": "6.3 Reflection",
+    "text": "6.3 Reflection\n讨论 GEE 的客户端/服务器端限制 。例如：为什么在服务器端对象上使用 JavaScript 的 for 循环（客户端逻辑）会导致报错？这种对平台底层逻辑\n在 GEE 中运行一段更复杂的时间序列回归分析 (Linear Regression) 代码，来观察某个像素值随时间的变化趋势\nWhy are “Zonal Statistics” essential for translating pixel data into actionable administrative reports? Key Focus: 将栅格值聚合到行政边界（如行政区、街道）内，使决策者能看到其管辖范围内的具体数值\nWhat are the limitations of generic EO statements when communicating with local government? Key Focus: 政策制定需要具体、有实证依据的建议，而非简单的描述性地图\n之前做建筑 绘制场地site analysis 经常会找卫星图通过截图获取，但是 scale自动缩放机制 困惑是页面大小，范围取值大小，实际大小不协调\n前几周的 LULC（土地覆盖分类） 理论，与 GEE 中的 Machine Learning（如随机森林、CART）工具包相对接",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>GEE</span>"
+    ]
+  },
+  {
+    "objectID": "classification_i.html",
+    "href": "classification_i.html",
+    "title": "7  classification_i",
+    "section": "",
+    "text": "7.1 Assement\n精度评估需要考虑空间自相关\n面向对象分析 OBIA 怎么提升分类精度",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>classification_i</span>"
+    ]
+  },
+  {
+    "objectID": "classification_ii.html",
+    "href": "classification_ii.html",
+    "title": "8  classification_ii",
+    "section": "",
+    "text": "精度评估与核心挑战 (Accuracy Assessment & Challenges) Why is the trade-off between Producer’s Accuracy (Recall) and User’s Accuracy (Precision) critical? Key Focus: PA 关注真阳性的覆盖情况（防漏分），UA 关注分类结果的可靠性（防多分） 。 How does the F1-Score provide a more balanced performance metric than Overall Accuracy? Key Focus: 通过 PA 和 UA 的调和平均，在处理森林砍伐等类别不平衡的数据时更客观 。 In “Sub-pixel Analysis,” what are the limitations of “Hard” classification? Key Focus: 30 米像素内常包含多种地物（混合像元），强制分配一个标签会丢失土地利用比例信息 。 What are the primary benefits and “Black Box” risks of using Dynamic World? Key Focus: 优势是近实时监测，风险是用户不完全了解 AI 模型在特定地理区域的判断逻辑 。 Explain the difference between Errors of Omission and Errors of Commission. Key Focus: 漏分是将目标类别分到了其他类，多分是将其他类错误划分到了目标类 。",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>classification_ii</span>"
+    ]
+  },
+  {
+    "objectID": "temperature.html",
+    "href": "temperature.html",
+    "title": "9  Temperature",
+    "section": "",
+    "text": "What are the primary physical drivers of the Urban Heat Island (UHI) effect identified via LST? Key Focus: 低天空视角系数 (SVF)、暗色不透水表面以及植被蒸腾作用缺失 。 How does the historical policy of “Redlining” manifest in contemporary Land Surface Temperature patterns? Key Focus: 揭示了系统性的资源投入缺失（如缺少树木）导致边缘化社区目前面临更高的极端热风险 。 What is the difference between “Equity” and “Equality” in the context of urban cooling interventions? Key Focus: 公平强调基于需求分配资源（给最热的地方多种树），而非在全市范围平均分配资源 。 How can the “Seattle Green Factor” be quantified using remote sensing tools? Key Focus: 通过高精度测绘计算新开发项目的绿化质量和覆盖面积，将其转化为标准化的许可分值 。 In what ways does the “Beating the Heat” handbook integrate EO data into cooling action plans? Key Focus: 提供基准评估、目标设定和干预效果监测的标准化流程 。",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Temperature</span>"
+    ]
+  },
+  {
+    "objectID": "sar.html",
+    "href": "sar.html",
+    "title": "10  sar",
+    "section": "",
+    "text": "合成孔径雷达 SAR 数据 (SAR Data Applications) How do the active sensing mechanisms of SAR allow for observation through clouds and at night? Key Focus: SAR 自身发射微波脉冲并接收回向散射，微波波段不受天气和光照条件影响 。 What is the significance of “Backscatter” intensity in urban versus forest environments? Key Focus: 建筑物产生强烈的“双跳反射”，而森林的散射则与植被结构和湿度（介电常数）有关 。 Why is Object-Based Image Analysis (OBIA) useful for SAR data? Key Focus: 能够有效抑制 SAR 影像中的椒盐噪声，并识别建筑网络等几何特征 。 How does “Intensity Fusion” leverage multi-source data to enhance feature detection? Key Focus: 结合雷达的纹理信息和光学数据的颜色信息，提高制图的精确度 。 In what ways does SAR excel in “Change Detection” for rapid response? Key Focus: 能够即时捕获多云或暴雨期的地表变化，通过时相影像组合识别水淹区域\nSAR characteristics A good introduction to Synthetic Aperture Radar (SAR) basics is A Tutorial on Synthetic Aperture Radar, created by a group of experts at DLR led by Dr. A. Moreira. The essentials are in part I and II. Advanced polarimetry and interferometry, or combined POLINSAR, (part III ff) is currently outside the scope of what is possible in Earth Engine.\nA key point about SAR is that it is a radar (RAdio Detection And Ranging) instrument, and its basic measurements are intensity (or amplitude) and phase of the backscattered signal, sampled in time bins along the azimuth (along track direction of the sensor antenna) and range (across track or perpendicular to the direction of the sensor antenna). These time bins relate to locations on Earth from which the backscattered signals originate. The “Synthetic Aperture” of the SAR relates to the virtual creation of a huge antenna by making use of the sensor motion. The virtual large antenna is needed to ensure an adequate resolution in azimuth. The sorting of the pulsed range echoes and Doppler shifted azimuth samples requires complex raw SAR signal processing (check the reference above if you want more technical details).\nThe key differences between SAR and optical sensors are:\nSAR is an active sensor, transmitting microwave radiation, for which it receives the portion scattered back to the sensor. Optical sensors are passive sensors that register reflected radiation from the Sun in specific parts of the visible and infrared spectrum. SAR is side-looking, unlike optical sensors which are usually nadir looking. SAR radiation is coherent, because the microwave radiation is transmitted with a precise set of wavelengths. This is useful, because it allows precise phase and amplitude measurements of the backscattered waves and the use of polarization. Reflected sunlight is not coherent as it has a wide range of wavelengths and random phase. Reflecting on these differences is important, because it is the basis for understanding the relative advantages of SAR compared to optical sensors:\nSAR does not depend on sunlight, thus can produce data day and night, provided the sensor is switched on. SAR is insensitive to the atmosphere in C-band (Sentinel-1 except for very dense rain cells) and L-band (ALOS-PALSAR), both of which are in GEE collections. SAR backscattering depends on different physical properties of the “target” compared to the properties that cause reflectance in optical sensors. These properties relate to the structural geometry and (electromagnetic) material properties of what is illuminated by the incident radiation. SAR data can be calibrated, without the need for atmospheric correction, leading to consistent time series As well as some drawbacks:\nThe coherent nature of the SAR microwave radiation causes speckle noise. This causes the “salt-and-pepper” appearance of extended target areas (e.g., a large homogeneous agricultural field) that one would expect to have a constant backscattering behavior. Speckle can be reduced in different ways (see next tutorial), but is difficult to eliminate. SAR backscattering depends on the angle of the incident microwave radiation. Thus, since the side-looking SAR operates over a range of incidence angles along the swath, the same target will appear different depending on whether it is in near range (low incidence angle) or far range (higher incidence angle) of the swath. The manner in which the backscattering varies with incidence angle depends on the target: a flat dry soil surface has a stronger drop off with incidence angle than, for instance, a forest. Terrain relief has a strong effect on SAR backscattering because it modulates the area that is illuminated by the side-looking SAR radiation. Slope angle determines the orientation with respect to the incident radiation. This causes foreshortening for slopes oriented towards the SAR and shadowing of slopes steeper than the local incidence and directed away from the SAR. In order to use SAR data efficiently, you need to be aware of what part of the signal variation relates to the intrinsic properties of the sensor, and what part is linked to the physical properties of the area you are looking at.\nSAR\nFor the untrained eye, it’s just a bunch of black and white pixels. But the reality is that there’s more than meets the eye. For example, the 3 main types of backscatter are:\nSpecular reflection Double-bounce Diffuse scattering\nImage：synthetic aperture radar “D:\\0.CASA_USS portfolio-book.png” https://gisgeography.com/passive-active-sensors-remote-sensing/\nSPECULAR REFLECTION: Specular reflection is where dark spots are in the image. In this case, it’s the smooth surfaces like the east-west flowing river and paved surfaces.\nDOUBLE-BOUNCE: The bright white in the center is double-bounce backscatter at work. As shown in the schematic above, it’s an urban feature like a building but it’s not entirely clear at this scale.\nDIFFUSE SCATTERING: Finally, the majority of the radar image is rough surface and diffuse scattering. This may be from the growing vegetation in the agricultural areas.\nCurlander, J. C., & McDonough, R. N. (1991). Synthetic Aperture Radar: Systems and Signal Processing. Wiley.\nFerretti, A., Prati, C., & Rocca, F. (2001). Permanent scatterers in SAR interferometry. IEEE Transactions on Geoscience and Remote Sensing, 39(1), 8-20.\nGamba, P., & Dell’Acqua, F. (2009). Per city remote sensing: From multispectral to SAR data. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2(2), 85-92.\nGorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R. (2017).\nGorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. Remote Sensing of Environment, 202, 18-27. Hand, E. (2015). Startup launches fleet of tiny satellites to image Earth every day. Science, 348(6235), 172-173. Henderson, F. M., & Lewis, A. J. (1998). Principles and Applications of Imaging Radar. Wiley.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>sar</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#introduction",
+    "href": "policy.html#introduction",
+    "title": "5  Policy",
+    "section": "6.1 Introduction",
+    "text": "6.1 Introduction\nWith buildings contributing approximately 70% of New York City’s greenhouse gas emissions, the Climate Mobilization Act and Local Law 97 (Greenhouse Gas Emissions Reduction) have established a legal mandate to achieve a 50% reduction in government operational emissions by 2030.\nTo support this transition, Google Project Sunroof utilizes machine learning and aerial imagery to quantify technical solar potential by transforming high-resolution aerial data into a verifiable evidence base for policy justification. For example, similar assessments in the United States have utilized aerial imagery to classify rooftops by size, shading, and insolation to determine adoption potential. By enforcing Local Laws 92 and 94 (Solar & Green Roofs), NYC successfully couples Earth Observation technology with regulatory frameworks to transform passive rooftops into strategic spatial assets and regulated distributed energy infrastructure.\n Source: PlaNYC 2023 Full Report",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#problem-solution-framework-unlocking-rooftop-solar-potential",
+    "href": "policy.html#problem-solution-framework-unlocking-rooftop-solar-potential",
+    "title": "5  New York City",
+    "section": "5.3 Problem-Solution Framework: Unlocking Rooftop Solar Potential",
+    "text": "5.3 Problem-Solution Framework: Unlocking Rooftop Solar Potential\n\n\n\nTable 5.1: Table 1: Synthesis of barriers and remote sensing solutions for urban solar adoption.\n\n\n\n\n\nThe Problem (Barriers to Adoption)\nThe Solution (Project Sunroof & EO Data)\nCitations & Supporting Links\n\n\n\n\nTechnical Uncertainty & Complexity: Implementation is marred by a “triple fold” obstacle: quantifying potential, data accessibility, and calculating realistic energy output (mhlanga2020?).\n3D Modeling & Machine Learning: Using deep networks to enhance Digital Surface Models (DSM) and calculate precise solar flux while accounting for shading from chimneys or trees (goroshin2023?).\nMhlanga & Ercoşkun (2020); Google Research Methodology\n\n\nInformation & Knowledge Gap: Homeowners often experience “reluctance” due to jargon-heavy processes and uncertainty about roof viability or financial savings (dietz2017?).\nPersonalized Evidence Base: Simplifying complex geospatial data into an actionable “bottom line,” providing 20-year savings estimates via a simple address lookup (dietz2017?; lemay2023?).\nEESI Article (2017); Sunroof Savings Estimator\n\n\nData Silos in Urban Planning: Traditional assessments rely on manual rules of thumb, lacking the “planetary-scale” foundations needed for city-wide mandates (gagnon2016?; guo2025?).\nPlanetary-scale Computing & Policy Integration: Linking Global Horizontal Irradiance (GHI) data to mandatory compliance tools like NYC’s Local Law 97 to drive decarbonization (dcas2024?; guo2025?).\nNREL Technical Report (2016); NYC DCAS LL24 Report (2024)\n\n\n\n\n\n\n\n\n\n各部分详细定位与引用逻辑说明 技术不确定性 (Problem 1) 与 3D 建模 (Solution 1): 定位：根据 Mhlanga & Ercoşkun (2020)，实施障碍主要集中在“三重困境”：潜力、可访问性和成本 。 定位：Goroshin (Google Inc.) 指出，Sunroof 使用深度学习来增强低分辨率 DSM，以解\n\n\n\n\nReference Sources: * NYC Solar Strategy - StoryMaps * Local Law 24 - FY2024 Progress Report (DCAS) * Public Solar NYC - Office of the Comptroller * Clean Energy Generation - NYC DCAS\n\n\n:::{#quarto-navigation-envelope .hidden} CASA0023 RS Learning Diary CASA0023 RS Learning Diary 6  gee_i 4  corrections 1  Preface 2  Introduction 3  Portfolio 4  corrections 5  New York City 6  gee_i 7  classification_i 8  classification_ii 9  temperature 10  sar 11  resources 12  Summary References https://github.com/yichienchen99/CASA0023_LD 5  New York City :::\n\n\n:::{#quarto-meta-markdown .hidden} CASA0023 RS Learning Diary - 5  New York City CASA0023 RS Learning Diary - 5  New York City CASA0023 RS Learning Diary - 5  New York City CASA0023 RS Learning Diary   :::\n\n\n\n\n\n::: {.quarto-embedded-source-code} ```````````````````{.markdown shortcodes=“false”}\n\n\n\ntitle: “New York City” format: html: number-sections: true —\nHow can remote sensing evidence “New Urban Agenda” goals in informal housing environments? Key Focus: Identifying building footprints and infrastructure gaps\nWhat are the primary physical drivers of the Urban Heat Island (UHI) effect identified via LST? Key Focus: Low SVF, dark surfaces, and lack of evapotranspiration\nIn what ways does the “Beating the Heat” handbook integrate EO data into cooling action plans? Key Focus: Baseline assessment, target setting, and monitoring intervention efficacy.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>New York City</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#rooftop-solar-potential-and-policytechnology-coupling-in-new-york-city-1",
+    "href": "policy.html#rooftop-solar-potential-and-policytechnology-coupling-in-new-york-city-1",
+    "title": "5  New York City",
+    "section": "5.4 Rooftop Solar Potential and Policy–Technology Coupling in New York City",
+    "text": "5.4 Rooftop Solar Potential and Policy–Technology Coupling in New York City",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>New York City</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#introduction-1",
+    "href": "policy.html#introduction-1",
+    "title": "5  New York City",
+    "section": "5.5 Introduction",
+    "text": "5.5 Introduction\nWith buildings contributing approximately 70% of New York City’s greenhouse gas emissions, the Climate Mobilization Act [] and Local Law 97 []have established a legal mandate to achieve a 50% reduction in government operational emissions by 2030. To support this transition, Google Project Sunroof [] utilizes machine learning and aerial imagery to quantify the city’s 8.6 GW of technical solar potential, transforming complex geospatial data into a verifiable evidence base for policy justification. By enforcing Local Laws 92 [] and 94 [], NYC successfully couples Earth Observation technology with regulatory frameworks to transform passive rooftops into strategic spatial assets and regulated distributed energy infrastructure.\nimage:Plan NYC Getting Sustainability Done [“D:\\0.CASA_USS portfolio-book_illustration.png”] source:https://www.nyc.gov/assets/climate/downloads/pdfs/PlaNYC-2023-Full-Report.pdf\n\n5.5.1 Google Project Sunroof\n如果想learn more， 可以看视频介绍：UN Global Climate Action Awards https://vimeo.com/227237771?fl=pl&fe=ti\nIf you enter the address of a residence in a covered region of the US, the Google Project Sunroof website shows you the following estimates: - How much sunlight the house receives annually - How much space the roof has for a solar installation - How much savings, in US dollars, the home can expect over the 20 year life of a solarsystem - The average monthly electricity bill for homes in your area, which you can adjust for yourhome - A recommended size, measured in kilowatts (kW), for a solar system on the house\nimage: Google Sunroof Dashboard (NYC) source: https://sunroof.withgoogle.com/data-explorer/place/ChIJqaUj8fBLzEwRZ5UY3sHGz90/\n\n\n5.5.2 Problem & Solution",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>New York City</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#problem-solution-framework-unlocking-rooftop-solar-potential-1",
+    "href": "policy.html#problem-solution-framework-unlocking-rooftop-solar-potential-1",
+    "title": "5  New York City",
+    "section": "5.6 Problem-Solution Framework: Unlocking Rooftop Solar Potential",
+    "text": "5.6 Problem-Solution Framework: Unlocking Rooftop Solar Potential\n\n\n\nTable 5.2: Table 1: Synthesis of barriers and remote sensing solutions for urban solar adoption.\n\n\n\n\n\nThe Problem (Barriers to Adoption)\nThe Solution (Project Sunroof & EO Data)\nCitations & Supporting Links\n\n\n\n\nTechnical Uncertainty & Complexity: Implementation is marred by a “triple fold” obstacle: quantifying potential, data accessibility, and calculating realistic energy output (mhlanga2020?).\n3D Modeling & Machine Learning: Using deep networks to enhance Digital Surface Models (DSM) and calculate precise solar flux while accounting for shading from chimneys or trees (goroshin2023?).\nMhlanga & Ercoşkun (2020); Google Research Methodology\n\n\nInformation & Knowledge Gap: Homeowners often experience “reluctance” due to jargon-heavy processes and uncertainty about roof viability or financial savings (dietz2017?).\nPersonalized Evidence Base: Simplifying complex geospatial data into an actionable “bottom line,” providing 20-year savings estimates via a simple address lookup (dietz2017?; lemay2023?).\nEESI Article (2017); Sunroof Savings Estimator\n\n\nData Silos in Urban Planning: Traditional assessments rely on manual rules of thumb, lacking the “planetary-scale” foundations needed for city-wide mandates (gagnon2016?; guo2025?).\nPlanetary-scale Computing & Policy Integration: Linking Global Horizontal Irradiance (GHI) data to mandatory compliance tools like NYC’s Local Law 97 to drive decarbonization (dcas2024?; guo2025?).\nNREL Technical Report (2016); NYC DCAS LL24 Report (2024)\n\n\n\n\n\n\n\n\n\n\n\n\n各部分详细定位与引用逻辑说明 技术不确定性 (Problem 1) 与 3D 建模 (Solution 1): 定位：根据 Mhlanga & Ercoşkun (2020)，实施障碍主要集中在“三重困境”：潜力、可访问性和成本 。 定位：Goroshin (Google Inc.) 指出，Sunroof 使用深度学习来增强低分辨率 DSM，以解\n\n\n## Policy Context: NYC Climate Governance Framework\n\n\nThe energy transition in New York City is driven by a robust hierarchy of strategic mandates, regulatory requirements, and data-driven accountability mechanisms.\n\n\n| Category | Policy / Instrument | Core Mandates & Requirements | Strategic Impact on Rooftop Transformation | | :— | :— | :— | :— | | Strategic Mandates | Climate Mobilization Act (2019) & PlaNYC (2023) | Establishes a city-wide roadmap to carbon neutrality; operationalized by the Mayor’s Office of Climate and Environmental Justice (MOCEJ). | Prioritizes the maximization of climate infrastructure across the city’s built environment. | | Regulatory Transformation | Local Laws 92 & 94 (2019) | Mandates “sustainable roofing zones” for all new buildings and major roof renovations. | Legally redefines rooftops as energy infrastructure, requiring solar PV, green roofs, or a hybrid. | | Carbon Compliance | Local Law 97 (LL97) | Imposes strict carbon caps on large buildings; mandates a 50% emissions reduction for City operations by 2030. | Shifts solar adoption from a voluntary choice to a critical compliance strategy to avoid heavy penalties. | | Accountability & Scale | Local Law 24 & LL99 (2024) | Requires biennial solar potential assessments for City-owned buildings &gt;10,000 sqft; codifies solar targets. | Establishes legally binding targets: 100 MW on City properties by 2030 and 150 MW by 2035. | | Barrier Removal | City of Yes for Carbon Neutrality (2023) | Comprehensive modernization of NYC’s Zoning Resolution to support renewable energy. | Eliminates administrative and spatial barriers, simplifying the siting and construction of solar hardware. | | Social Equity | Environmental Justice (EJ) Framework | Utilizes 45 indicators to identify Disadvantaged Communities (DACs). | Mandates that 55% of solar installations be located within EJ communities to address energy burdens. |\n\n\n\nReference Sources: * NYC Solar Strategy - StoryMaps * Local Law 24 - FY2024 Progress Report (DCAS) * Public Solar NYC - Office of the Comptroller * Clean Energy Generation - NYC DCAS\n``````````````````` :::",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>New York City</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#problem-solution",
+    "href": "policy.html#problem-solution",
+    "title": "5  Policy",
+    "section": "5.2 Problem & Solution",
+    "text": "5.2 Problem & Solution\n\n\n\nTable 5.1: Synthesis of barriers and remote sensing solutions for urban solar adoption.\n\n\n\n\n\nThe Problem\nThe Solution\nSupporting\n\n\n\n\nTechnical Uncertainty: Implementation is marred by challenges in quantifying potential and data accessibility (Mhlanga and Yalciner Ercoskun 2020).\n3D Modeling & ML: Using deep networks to enhance DSMs and calculate precise solar flux (Goroshin et al. 2023).\nMhlanga & Ercoşkun (2020)\n\n\nInformation Gap: Homeowners face uncertainty about roof viability or financial savings (Lemay, Wagner, and Rand 2023).\nPersonalized Evidence: Providing 20-year savings estimates via simple address lookup (Lemay, Wagner, and Rand 2023).\nSunroof Savings Estimator\n\n\nData Isolation: Traditional assessments lack “planetary-scale” foundations (Gagnon et al. 2016).\nPolicy Integration: Linking GHI data to mandatory compliance tools like LL97 (“LL97 Greenhouse Gas Emissions Reduction” n.d.).\nNREL Technical Report (2016)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#policy-context",
+    "href": "policy.html#policy-context",
+    "title": "5  Policy",
+    "section": "5.3 Policy Context",
+    "text": "5.3 Policy Context\nThe energy transition in New York City is driven by a robust hierarchy of strategic mandates, regulatory requirements, and data-driven accountability mechanisms.\n\n\n\n\n\n\n\n\n\nCategory\nPolicy\nContent\nImpact\n\n\n\n\nStrategic Mandates\nClimate Mobilization Act (2019) & PlaNYC (2023)\nEstablishes a city-wide roadmap to carbon neutrality; operationalized by the Mayor’s Office of Climate and Environmental Justice (MOCEJ).\nPrioritizes the maximization of climate infrastructure across the city’s built environment.\n\n\nRegulatory Transformation\nLocal Laws 92 & 94 (2019)\nMandates “sustainable roofing zones” for all new buildings and major roof renovations.\nLegally redefines rooftops as energy infrastructure, requiring solar PV, green roofs, or a hybrid.\n\n\nCarbon Compliance\nLocal Law 97 (LL97)\nImposes strict carbon caps on large buildings; mandates a 50% emissions reduction for City operations by 2030.\nShifts solar adoption from a voluntary choice to a critical compliance strategy to avoid heavy penalties.\n\n\nAccountability & Scale\nLocal Law 24 & LL99 (2024)\nRequires biennial solar potential assessments for City-owned buildings &gt;10,000 sqft; codifies solar targets.\nEstablishes legally binding targets: 100 MW on City properties by 2030 and 150 MW by 2035.\n\n\nBarrier Removal\nCity of Yes for Carbon Neutrality (2023)\nComprehensive modernization of NYC’s Zoning Resolution to support renewable energy.\nEliminates administrative and spatial barriers, simplifying the siting and construction of solar hardware.\n\n\nSocial Equity\nEnvironmental Justice (EJ) Framework\nUtilizes 45 indicators to identify Disadvantaged Communities (DACs).\nMandates that 55% of solar installations be located within EJ communities to address energy burdens.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#earth-observation-solar-potential-modelling",
+    "href": "policy.html#earth-observation-solar-potential-modelling",
+    "title": "5  Policy",
+    "section": "5.4 Earth Observation & Solar Potential Modelling",
+    "text": "5.4 Earth Observation & Solar Potential Modelling\nThe transformation of raw aerial imagery into actionable energy intelligence follows a sophisticated five-stage pipeline, primarily driven by deep learning and geometric computer vision (Goroshin et al. 2023).\n\n5.4.1 Google Project Sunroof\nFor a deeper dive into Google Project Sunroof:\n\n\n \n\n\n\nView directly on Vimeo\n\nIf you enter the address of a residence in a covered region of the US, the Google Project Sunroof website shows you the following estimates:\n- How much sunlight the house receives annually\n- How much space the roof has for a solar installation\n- How much savings, in US dollars, the home can expect over the 20 year life of a solarsystem\n- The average monthly electricity bill for homes in your area, which you can adjust for your home\n- A recommended size, measured in kilowatts (kW), for a solar system on the house\n Source: Google Project Sunroof Data Explorer (NYC)\n\n\n5.4.2 Technical Workflow\n\n\n\nTable 5.2: Technical breakdown of the Google Project Sunroof processing pipeline.\n\n\n\n\n\n\n\n\n\n\nStep\nPhase\nAction\n\n\n\n\nInputs\nData Ingestion\nHigh-resolution RGB imagery, DSM (Digital Surface Models), building footprints, and classification probabilities.\n\n\n01\nBuilding Segmentation\nfootprints ← SegmentBuildings(RGB, DSM, footprints, probabilities)Refines boundaries and separates individual structures from vegetation.\n\n\n02\nRoof Geometry\nSegment roof DSM into planes: Uses algorithms like RANSAC to identify flat surfaces and remove obstacles (chimneys, HVAC units, vents).\n\n\n03\nSolar Simulation\nFast Ray-tracing: Efficiently computes annual solar flux by simulating shadows from the surrounding environment (trees, neighboring tall buildings).\n\n\n04\nSystem Design\nPanel Layout Optimization: Calculates the maximum number of panels that fit on viable planes and predicts the power produced (PVOUT).\n\n\n05\nEconomic Analysis\nFinancial Calculations: Integrates local utility rates, net metering policies, and incentives to estimate 20-year savings.\n\n\nOutputs\nActionable Intelligence\nPotential Solar Power (kW/kWh) and Total Cost Savings ($).\n\n\n\n\n\n\n Source: Goroshin et al. (2023)\n\n\n5.4.3 Multi-modal Data Acquisition and Enhancement\nThe process begins with the ingestion of high-resolution aerial imagery (RGB), Digital Surface Models (DSM), and Digital Terrain Models (DTM).\n\nDeep Learning DSM Enhancement: Because high-resolution, centimeter-scale data is often limited, deep learning architectures—specifically a UNet architecture with a ResNet-50 encoder backbone—are used to enhance lower-quality sub-meter DSMs.\nFilling Coverage Gaps: This approach bridges the gap between widely available low-resolution data and the precise spatial detail required to resolve roof features, dramatically increasing the geographic coverage of solar potential estimates.\n\n Source: Goroshin et al. (2023)\n\n\n5.4.4 Roof Segmentation\n\nBuilding Footprint Refinement: Initial building footprints are refined using graph-cut algorithms to remove “tree overhangs” and separate individual residential addresses that may appear connected in raw imagery.\nRoof Plane Partitioning: Roof pixels in the DSM are fitted to a set of planar segments using the RANSAC algorithm.\nObstacle Removal: The segments are refined to identify and exclude small structural features unsuitable for panel installation, such as chimneys, air vents, and air-conditioning units.\n\n Source: Goroshin et al. (2023)\n\n\n5.4.5 Solar Flux and Shading Simulation\nThis phase quantifies the annual solar energy received by each square meter of the roof, accounting for orientation and environmental factors.\n\nIrradiance: The system calculates Direct Normal Irradiance (DNI) and Global Horizontal Irradiance (GHI).\nRay-tracing: Instead of computationally heavy traditional ray-tracing, a linear complexity algorithm is used to simulate hourly shadows cast by the surrounding environment, including trees and neighboring buildings.\nAtmospheric and Thermal Corrections: Factors such as latitude and pitch angle are integrated, and a correction factor for local air temperature and wind speed is applied to account for the decrease in PV efficiency at elevated temperatures.\n\n\n\n5.4.6 PV Outcome\nThe final stage translates physical potential into practical energy output and economic value.\n\nOptimal Panel Layout: The viable roof area is tiled with virtual panels to maximize both energy production and layout compactness.\nPVOUT Computation: This represents the practical measure of usable energy, factoring in system losses, annual efficiency degradation, and a standard DC-to-AC derate factor (typically 0.85) for inverter conversion.\nFinancial Justification: By combining production data with local utility rates, weather patterns, and financial incentives, the tool generates a personalized 20-year savings estimate.\n\n Source: Goroshin et al. (2023)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#technical-workflow-earth-observation-solar-potential-modelling",
+    "href": "policy.html#technical-workflow-earth-observation-solar-potential-modelling",
+    "title": "5  Policy",
+    "section": "5.4 Technical Workflow: Earth Observation & Solar Potential Modelling",
+    "text": "5.4 Technical Workflow: Earth Observation & Solar Potential Modelling\nThe transformation of raw aerial imagery into actionable energy intelligence follows a sophisticated five-stage pipeline, primarily driven by deep learning and geometric computer vision (Goroshin et al. 2023).\n\n5.4.1 Google Project Sunroof\nFor a deeper dive into Google Project Sunroof\n\n\n \n\n\n\n\n View directly on Vimeo \n\nIf you enter the address of a residence in a covered region of the US, the Google Project Sunroof website shows you the following estimates: - How much sunlight the house receives annually\n- How much space the roof has for a solar installation\n- How much savings, in US dollars, the home can expect over the 20 year life of a solarsystem\n- The average monthly electricity bill for homes in your area, which you can adjust for your home\n- A recommended size, measured in kilowatts (kW), for a solar system on the house\n\n\n\n\n\n\nFigure 5.1: Interactive Google Sunroof Dashboard displaying solar potential for New York City.\n\n\n\nSource: Google Project Sunroof Data Explorer (NYC)\n\n\n5.4.2 Technical Workflow\n\n\n\nTable 5.2: Technical breakdown of the Google Project Sunroof processing pipeline.\n\n\n\n\n\n\n\n\n\n\nStep\nPhase\nAction\n\n\n\n\nInputs\nData Ingestion\nHigh-resolution RGB imagery, DSM (Digital Surface Models), building footprints, and classification probabilities.\n\n\n01\nBuilding Segmentation\nfootprints ← SegmentBuildings(RGB, DSM, footprints, probabilities)Refines boundaries and separates individual structures from vegetation.\n\n\n02\nRoof Geometry\nSegment roof DSM into planes: Uses algorithms like RANSAC to identify flat surfaces and remove obstacles (chimneys, HVAC units, vents).\n\n\n03\nSolar Simulation\nFast Ray-tracing: Efficiently computes annual solar flux by simulating shadows from the surrounding environment (trees, neighboring tall buildings).\n\n\n04\nSystem Design\nPanel Layout Optimization: Calculates the maximum number of panels that fit on viable planes and predicts the power produced (PVOUT).\n\n\n05\nEconomic Analysis\nFinancial Calculations: Integrates local utility rates, net metering policies, and incentives to estimate 20-year savings.\n\n\nOutputs\nActionable Intelligence\nPotential Solar Power (kW/kWh) and Total Cost Savings ($).\n\n\n\n\n\n\n Source: Goroshin et al. (2023)\n\n\n5.4.3 Multi-modal Data Acquisition and Enhancement\nThe process begins with the ingestion of high-resolution aerial imagery (RGB), Digital Surface Models (DSM), and Digital Terrain Models (DTM).\n\nDeep Learning DSM Enhancement: Because high-resolution, centimeter-scale data is often limited, deep learning architectures—specifically a UNet architecture with a ResNet-50 encoder backbone—are used to enhance lower-quality sub-meter DSMs.\nFilling Coverage Gaps: This approach bridges the gap between widely available low-resolution data and the precise spatial detail required to resolve roof features, dramatically increasing the geographic coverage of solar potential estimates.\n\n Source: Goroshin et al. (2023)\n\n\n5.4.4 Object-based Building and Roof Segmentation\n\nBuilding Footprint Refinement: Initial building footprints are refined using graph-cut algorithms to remove “tree overhangs” and separate individual residential addresses that may appear connected in raw imagery.\nRoof Plane Partitioning: Roof pixels in the DSM are fitted to a set of planar segments using the RANSAC algorithm.\nObstacle Removal: The segments are refined to identify and exclude small structural features unsuitable for panel installation, such as chimneys, air vents, and air-conditioning units.\n\n Source: Goroshin et al. (2023)\n\n\n5.4.5 Solar Flux and Shading Simulation\nThis phase quantifies the annual solar energy received by each square meter of the roof, accounting for orientation and environmental factors.\n\nIrradiance Metrics: The system calculates Direct Normal Irradiance (DNI) and Global Horizontal Irradiance (GHI).\nFast Ray-tracing: Instead of computationally heavy traditional ray-tracing, a linear complexity algorithm is used to simulate hourly shadows cast by the surrounding environment, including trees and neighboring buildings.\nAtmospheric and Thermal Corrections: Factors such as latitude and pitch angle are integrated, and a correction factor for local air temperature and wind speed is applied to account for the decrease in PV efficiency at elevated temperatures.\n\n\n\n5.4.6 Yield Prediction and Financial Evaluation (PVOUT)\nThe final stage translates physical potential into practical energy output and economic value.\n\nOptimal Panel Layout: The viable roof area is tiled with virtual panels to maximize both energy production and layout compactness.\nPVOUT Computation: This represents the practical measure of usable energy, factoring in system losses, annual efficiency degradation, and a standard DC-to-AC derate factor (typically 0.85) for inverter conversion.\nFinancial Justification: By combining production data with local utility rates, weather patterns, and financial incentives, the tool generates a personalized 20-year savings estimate.\n\n Source: Goroshin et al. (2023)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#policytechnology-coupling-mechanism",
+    "href": "policy.html#policytechnology-coupling-mechanism",
+    "title": "5  Policy",
+    "section": "5.5 Policy–Technology Coupling Mechanism",
+    "text": "5.5 Policy–Technology Coupling Mechanism\n==========================================================\n1. FROM DATA TO POLICY JUSTIFICATION\n==========================================================\n   [Aerial Imagery & LiDAR Data]\n               |\n               v\n   { Machine Learning & 3D Modeling } &lt;-----------+\n               |                                  |\n               | (Identify GHI & PVOUT)           |\n               v                                  |\n   [ Quantified Technical Potential ]              |\n       (NYC: 8.6 GW Potential)                    |\n               |                                  |\n               v                                  |\n   [  Evidence Base for Policy  ]                 |\n               |                                  |\n===============|==================================|=======\n2. FROM POLICY TO IMPLEMENTATION                  |\n===============|==================================|=======\n               v                                  |\n   [ Climate Mobilization Act / OneNYC ]          |\n               |                                  |\n               v                                  |\n   [ Regulatory Mandates: LL92/94 & LL97 ]        |\n               |                                  |\n               v                                  |\n     { Administrative Filter }                    | (DSM Enhancement)\n      /                   \\                       |\n(Solar Readiness)    (Environmental Justice)      |\n    /                       \\                     |\n   v                         v                    |\n[Building-Level]        [Targeting DAC]           |\n[  Deployment  ]        [ Communities ]           |\n       \\                    /                     |\n========\\==================/======================|=======\n3. FEEDBACK LOOP         /                        |\n=========\\==============/=========================|=======\n          \\            /                          |\n           v          v                           |\n    [ Monitoring via NYC Dashboard ]              |\n               |                                  |\n               | (Validation Data)                |\n               v                                  |\n    [ Refined Deep Learning Models ] --------------+\n==========================================================\n\n\n\n\n\n\nAlgorithm 1: Sunroof Logic\n\n\n\nInputs: RGB, DSM, building footprints, and probabilities\n1. SegmentBuildings: Identify precise structure boundaries.\n2. Loop for each building: - Partition DSM into roof planes; filter out obstructions. - Execute fast ray-tracing for solar flux (shading analysis). - Tile panels to compute potential power yield. - Run financial models based on local electricity tariffs.\nOutputs: Potential solar power and projected cost savings.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#discussion",
+    "href": "policy.html#discussion",
+    "title": "5  Policy",
+    "section": "5.7 Discussion",
+    "text": "5.7 Discussion",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "policy.html#references",
+    "href": "policy.html#references",
+    "title": "5  Policy",
+    "section": "5.6 References",
+    "text": "5.6 References\n\n\nGagnon, Pieter, Robert Margolis, Jennifer Melius, Caleb Phillips, and\nRyan Elmore. 2016. “Rooftop Solar Photovoltaic Technical\nPotential in the United States. A Detailed\nAssessment.” NREL/TP–6A20-65298, 1236153. https://doi.org/10.2172/1236153.\n\n\nGoroshin, Ross, Alex Wilson, Andrew Lamb, Betty Peng, Brandon Ewonus,\nCornelius Ratsch, Jordan Raisher, et al. 2023. “Estimating\nResidential Solar Potential Using Aerial Data.”\narXiv. https://doi.org/10.48550/arXiv.2306.13564.\n\n\nLemay, Amélie C., Sigurd Wagner, and Barry P. Rand. 2023. “Current\nStatus and Future Potential of Rooftop Solar Adoption in the\nUnited States.” Energy Policy 177 (June):\n113571. https://doi.org/10.1016/j.enpol.2023.113571.\n\n\n“LL97 Greenhouse Gas Emissions Reduction.”\nn.d.\nhttps://www.nyc.gov/assets/buildings/apps/pdf_viewer/viewer.html?file=2022GAP_Chapter3_MaintenanceWBwm.pdf&section=conscode_2022#page=31.\nAccessed March 26, 2026.\n\n\nMhlanga, Tendai, and Ozge Yalciner Ercoskun. 2020.\n“MAPPING, MODELING AND MEASURING PHOTOVOLTAIC\nPOTENTIAL IN URBAN ENVIRONMENTS USING GOOGLE PROJECT\nSUNROOF.” Gazi University Journal of Science Part\nB, 8(2): 593-606 (2020) (July).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#to-start",
+    "href": "intro.html#to-start",
+    "title": "2  Getting Started",
+    "section": "",
+    "text": "What information do you need?\nHow much detail?\nHow frequently do you need the data?\n\n\n\n\n\n\n\nFigure 2.1: Evelyn Lord Pruitt (1918–2000): The geographer at the Office of Naval Research who first coined the term “remote sensing” in the 1950s to encompass aerial and satellite-based Earth observation beyond traditional photography.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#research-question",
+    "href": "intro.html#research-question",
+    "title": "2  Getting Started",
+    "section": "2.2 Research Question",
+    "text": "2.2 Research Question\n\n2.2.1 How does the fundamental distinction between Active and Passive sensors determine their ability to monitor Earth under various environmental conditions?\n\n\n\nTable 2.1: Comparative analysis of Active and Passive Sensing.\n\n\n\n\n\n\n\n\n\n\nFeature\nPassive Sensors (Optical)\nActive Sensors (Radar/LiDAR)\n\n\n\n\nPrinciple\nDetects reflected sunlight or emitted heat.\nEmits own energy pulse and measures backscatter.\n\n\nEnergy Source\nSunlight-dependent (Daytime only).\nSelf-powered (Day & Night capability).\n\n\nAtmosphere\nBlocked by clouds, fog, and smoke.\nAll-weather; penetrates clouds and light rain.\n\n\nVisuals\nIntuitive (True/False color images).\nComplex (Requires phase/amplitude processing).\n\n\nExamples\nLandsat, Sentinel-2, MODIS.\nSentinel-1 (SAR), LiDAR, RADARSAT.\n\n\nBest Use\nVegetation health (NDVI) & Land cover.\n3D Terrain (DEM) & Structural biomass.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: Active vs. Passive Sensing in Remote Sensing: Key Differences and Applications. Source\n\n\n\n\n\n2.2.2 In what ways do Atmospheric Windows and Scattering processes constrain the specific wavelengths utilized by satellite sensors?\n\n\n\nTable 2.2: Classification of atmospheric scattering and its impact on remote sensing.\n\n\n\n\n\n\n\n\n\n\n\nScattering Type\nSize Ratio (Particle : \\(\\lambda\\))\nPrimary Cause\nImpact on Data\n\n\n\n\nRayleigh\nParticle \\(\\ll\\) \\(\\lambda\\)\nGas molecules (Oxygen, Nitrogen).\nCauses “Haze”; affects shorter blue wavelengths; reduces contrast.\n\n\nMie\nParticle \\(\\approx\\) \\(\\lambda\\)\nAerosols, dust, smoke, pollen.\nAffects specific spectral bands; common in polluted urban lower atmospheres.\n\n\nNon-selective\nParticle \\(\\gg\\) \\(\\lambda\\)\nWater droplets (Clouds, Fog).\nThe “Cloud Problem”; blocks all visible/IR light; makes surface invisible.\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe Non-selective scattering mentioned in Table 2.2 is the scientific reason why Passive Sensors (like Landsat) cannot see through clouds, whereas Active Sensors (like Sentinel-1 SAR) use much longer wavelengths that are unaffected by these larger water droplets, allowing for all weather imaging.\n\n\nOur eyes can see red, green, and blue which is visible light. Healthy vegetation (or chlorophyll) reflects more green light. However, it absorbs more red and blue light. That is why our eyes see plants as green. Actually, this is the principle of the Normalized Vegetation Difference Index (NDVI).\nBut engineers design sensors to detect non-visible light as well. For example, vegetation reflects near-infrared (NIR) which is invisible to the human eye. But sensors can pick up this spectral information. We can perform any type of image classification technique by using these principles.\n\n\n\n\n\n\nFigure 2.3: The Earth’s “atmospheric window”: The blue regions represent specific spectral bands where electromagnetic radiation can pass through the atmosphere with minimal absorption, allowing sensors to “see” the Earth’s surface. Source: GIS Geography\n\n\n\n\n\n2.2.3 What is the “Balancing Act” involved in the four resolutions and how does it influence sensor selection for a project?\n\n\n\nTable 2.3: Synthesis of the fundamental trade-offs in remote sensing.\n\n\n\n\n\n\n\n\n\n\n\nResolution Type\n\\(\\uparrow\\) Increase This…\n\\(\\downarrow\\) Trade-off / Decrease…\nTechnical Reason\n\n\n\n\nSpatial\nPrecision/Detail (e.g., 10cm–1m)\nSwath Width & Temporal\nSmall pixels capture less energy. To maintain SNR, sensors must have narrower swaths and longer revisit times.\n\n\nSpectral\nDiscrimination (100+ bands)\nSpatial Resolution\nNarrow spectral bands require a larger “collecting area” per pixel to gather sufficient radiant energy.\n\n\nTemporal\nRevisit Frequency (Daily/Hourly)\nSpatial Detail\nFrequent global coverage requires a massive Swath Width, which forces larger pixel sizes (e.g., MODIS/500m).\n\n\nRadiometric\nSensitivity (12-bit to 16-bit)\nSpectral Bands / Data Vol.\nHigher bit depth (4,096+ values) exponentially increases data storage and downlink requirements.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.4: The Four Types of Remote Sensing Resolution: Spatial, Spectral, Temporal, and Radiometric. Source: NASA Earthdata - Remote Sensing Resolution\n\n\n\n\n\n2.2.4 Why are technical workflows like Resampling and Dimensionality Reduction essential for comparing multi-source data like Landsat and Sentinel?\nProcessing has become more important to create images at different resolutions and coordinate system conversions. As shown in Table 2.4, Without Resampling, spatial patterns remain blurred; without Dimensionality Reduction, the signal-to-noise ratio remains too low.\n\n\n\nTable 2.4: Critical workflows for cross-sensor data harmonization.\n\n\n\n\n\n\n\n\n\n\n\nWorkflow Type\nThe Technical Challenge\nThe “Processed” Solution\nImpact on Research\n\n\n\n\nResampling\nResolution Mismatch: Landsat (30m) vs. Sentinel-2 (10m/20m) mixed resolutions.\nSpatial Alignment: Scaling to a common raster grid so pixels “line up” precisely.\nEnables direct pixel-by-pixel statistical tests (e.g., t-tests) across sensors.\n\n\nDimensionality Reduction\nData Overload: High computational weight and redundancy across 9–13+ spectral bands.\nInformation Compression: Using Tasseled Cap Transformation (Brightness, Greenness, Wetness).\nDistills ~97% of meaningful information while filtering out noise/atmospheric effects.\n\n\nMasking & Preprocessing\nInconsistent Context: Comparing full tiles to specific study areas leads to skewed results.\nGeometric Clipping: Applying vector masks to ensure identical geographical extents.\nGuarantees that results represent the same physical features regardless of orbit.\n\n\n\n\n\n\nThe following figures illustrate the geometric and spectral logic behind resampling and dimensionality reduction, which are critical for harmonizing multi-source satellite data.\n\n\n\n\n\n\nFigure 2.5: Three common resampling methods: Nearest Neighbor, Bilinear Interpolation, and Cubic Convolution. Source: “Principles of Remote Sensing” © 2009 by ITC, Enschede\n\n\n\n\n\n\n\n\n\nFigure 2.6: Preprocessed dimensionality reduction prior to information derivation from hyperspectral imagery. Source: SPIE - Dimensionality reduction of multidimensional satellite imagery",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#about-the-framework",
+    "href": "index.html#about-the-framework",
+    "title": "CASA0023 RS Learning Diary",
+    "section": "0.3 About the Framework",
+    "text": "0.3 About the Framework\nASK Myself Five Questions each week and try to cover all the knowledge we had in Lecture and Practical.\nHow these technologies are applied in contemporary academic literature and policy？\nPersonal insights on the future utility and Self Inspection of the tools explored.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
     ]
   }
 ]
