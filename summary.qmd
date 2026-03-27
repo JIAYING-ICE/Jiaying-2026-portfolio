@@ -4,6 +4,8 @@ This introductory Remote Sensing course has been an incredibly fascinating journ
 
 This experience has fundamentally expanded my perspective. Coming from an architectural background, my previous work was deeply rooted in the micro-scale—focusing on the tactile details of the built environment. Now, my field of vision has reached outer space! Through the lens of orbital sensors, I am working at an environmental scale where the primary object of study is the Earth itself. While this macroscopic view is exhilarating, I’ve learned to remain cautious: no matter how vast our perspective or how grand the research questions, we must never lose sight of authentic human perception. Even the most global analysis must ultimately return to the individual human scale.
 
+Looking ahead to my dissertation, I hope to continue deepening this research...
+
 ------------------------------------------------------------------------
 
 My Learning Diary follows a consistent thread: leveraging remote sensing to empower urban solar energy distribution. From my initial explorations in NYC to our current group project in Barcelona, I am committed to refining this high-fidelity approach:
@@ -11,10 +13,10 @@ My Learning Diary follows a consistent thread: leveraging remote sensing to empo
 > "While Barcelona’s current dashboard relies on static geometric estimations (e.g., gross rooftop area), our Smart Plugin integrates VHR (Very High Resolution) imagery and LiDAR point clouds. By deploying Deep Learning segmentation, we verify 'true availability' by filtering out micro-obstacles (HVAC, chimneys) and existing PV panels, thereby providing a high-fidelity mapping of the Net Potential Expansion Area."
 
 
-View the full presentation: [here](https://christychoicc.github.io/RSCE_GROUP/)
+View our Group presentation: [here](https://christychoicc.github.io/RSCE_GROUP/)
 
-View our GitHub Repository: [here](https://github.com/christychoicc/RSCE_GROUP)
 
-Looking ahead to my dissertation, I hope to continue deepening this research...
+
+
 
 
