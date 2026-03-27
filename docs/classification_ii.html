@@ -423,8 +423,7 @@ window.Quarto = {
 <p>However, with great computational power comes great responsibility. <strong>“Garbage in, garbage out”</strong> remains the golden rule of GEE Machine Learning. If our training samples are biased or our preprocessing is flawed, the model’s output is meaningless.</p>
 <p>This brings us to a critical debate: <strong>Often, classifiers on EO data can overcomplicate things.</strong></p>
 <ul>
-<li>If there is a clear, spectral divide between bands (for example, a sharp NIR spike in healthy vegetation), <strong>do we actually need a complex classifier?</strong> * Can we just <strong>threshold</strong> the data (e.g., <span class="math inline">\(NDVI &gt; 0.4\)</span>)?<br>
-</li>
+<li>If there is a clear, spectral divide between bands (for example, a sharp NIR spike in healthy vegetation), <strong>do we actually need a complex classifier?</strong> Can we just <strong>threshold</strong> the data (e.g., <span class="math inline">\(NDVI &gt; 0.4\)</span>)?</li>
 <li><strong>Yes!</strong> Thresholding is transparent and fast. However, the catch is scalability: if we receive new data from a different season or satellite, a static threshold might fail, whereas a trained classifier can adapt.</li>
 </ul>
 <p><img src="images/modeltradeoff.png" class="img-fluid" alt="Interpretability-Accuracy Tradeoff"> <em>Figure 2: The inherent trade-off between model interpretability and predictive accuracy. <span class="citation" data-cites="sheykhmousa2020">(<a href="references.html#ref-sheykhmousa2020" role="doc-biblioref">Sheykhmousa et al. 2020</a>)</span></em></p>
@@ -1188,7 +1187,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>This brings us to a critical debate: **Often, classifiers on EO data can overcomplicate things.**</span>
 <span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>If there is a clear, spectral divide between bands (for example, a sharp NIR spike in healthy vegetation), **do we actually need a complex classifier?** \* Can we just **threshold** the data (e.g., $NDVI &gt; 0.4$)?\</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>If there is a clear, spectral divide between bands (for example, a sharp NIR spike in healthy vegetation), **do we actually need a complex classifier?**  Can we just **threshold** the data (e.g., $NDVI &gt; 0.4$)?</span>
 <span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Yes!** Thresholding is transparent and fast. However, the catch is scalability: if we receive new data from a different season or satellite, a static threshold might fail, whereas a trained classifier can adapt.</span>
 <span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a><span class="al">![Interpretability-Accuracy Tradeoff](images/modeltradeoff.png)</span></span>
