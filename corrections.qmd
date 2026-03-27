@@ -49,7 +49,7 @@ A **Spectral Signature** is the unique reflectance or emittance of an object acr
 | **Level 1** | **Top of Atmosphere (TOA)** | Reflectance calculated at the "top" of the atmosphere. Corrects for sun angle but **not** atmospheric haze. | Quick visual checks or extremely clear sky conditions. |
 | **Level 2** | **Surface Reflectance (BOA)** | The "Gold Standard." Corrects for all atmospheric interference to show what the ground actually reflects. | **Mandatory** for NDVI, change detection, and time-series analysis. |
 
-![Atmospheric Correction Comparison](images/atmosphericcorrection.png)
+![Atmospheric Correction Comparison](images/atmosphericcorrection.png)   
 *Figure: The impact of atmospheric correction on hyperspectral and multispectral data. Source: [MathWorks](https://www.mathworks.com/help/images/hyperspectral-and-multispectral-data-correction.html)*
 
 ## Application

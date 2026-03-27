@@ -1,4 +1,0 @@
-# Temperature
-What are the primary physical drivers of the Urban Heat Island (UHI) effect identified via LST? Key Focus: 低天空视角系数 (SVF)、暗色不透水表面以及植被蒸腾作用缺失 。 How does the historical policy of "Redlining" manifest in contemporary Land Surface Temperature patterns? Key Focus: 揭示了系统性的资源投入缺失（如缺少树木）导致边缘化社区目前面临更高的极端热风险 。 What is the difference between "Equity" and "Equality" in the context of urban cooling interventions? Key Focus: 公平强调基于需求分配资源（给最热的地方多种树），而非在全市范围平均分配资源 。 How can the "Seattle Green Factor" be quantified using remote sensing tools? Key Focus: 通过高精度测绘计算新开发项目的绿化质量和覆盖面积，将其转化为标准化的许可分值 。 In what ways does the "Beating the Heat" handbook integrate EO data into cooling action plans? Key Focus: 提供基准评估、目标设定和干预效果监测的标准化流程 。
-
-

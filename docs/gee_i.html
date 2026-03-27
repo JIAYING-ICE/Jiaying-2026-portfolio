@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -125,7 +145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="https://jiaying-ice.github.io/Jiaying-2026-portfolio/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-git"></i></a>
+    <a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
@@ -169,7 +189,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./corrections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correction &amp; Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -198,26 +218,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./temperature.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Temperature</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./sar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">sar</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">resources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -236,11 +244,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#how-does-the-client-side-vs.-server-side-architecture-of-gee-enable-massive-data-processing" id="toc-how-does-the-client-side-vs.-server-side-architecture-of-gee-enable-massive-data-processing" class="nav-link" data-scroll-target="#how-does-the-client-side-vs.-server-side-architecture-of-gee-enable-massive-data-processing"><span class="header-section-number">6.1.1</span> How does the “Client-side vs.&nbsp;Server-side” architecture of GEE enable massive data processing?</a></li>
+  <li><a href="#how-does-gee-classify-and-organize-raster-and-vector-data-structures" id="toc-how-does-gee-classify-and-organize-raster-and-vector-data-structures" class="nav-link" data-scroll-target="#how-does-gee-classify-and-organize-raster-and-vector-data-structures"><span class="header-section-number">6.1.2</span> How does GEE classify and organize raster and vector data structures?</a></li>
+  <li><a href="#why-must-researchers-use-mapping-instead-of-looping-for-server-side-operations" id="toc-why-must-researchers-use-mapping-instead-of-looping-for-server-side-operations" class="nav-link" data-scroll-target="#why-must-researchers-use-mapping-instead-of-looping-for-server-side-operations"><span class="header-section-number">6.1.3</span> Why must researchers use “Mapping” instead of “Looping” for server-side operations?</a></li>
+  <li><a href="#how-does-gee-handle-scale-resolution-and-projections-differently-than-traditional-desktop-gis" id="toc-how-does-gee-handle-scale-resolution-and-projections-differently-than-traditional-desktop-gis" class="nav-link" data-scroll-target="#how-does-gee-handle-scale-resolution-and-projections-differently-than-traditional-desktop-gis"><span class="header-section-number">6.1.4</span> How does GEE handle Scale (resolution) and Projections differently than traditional desktop GIS?</a></li>
+  <li><a href="#what-are-reducers-and-how-do-they-facilitate-geospatial-statistics" id="toc-what-are-reducers-and-how-do-they-facilitate-geospatial-statistics" class="nav-link" data-scroll-target="#what-are-reducers-and-how-do-they-facilitate-geospatial-statistics"><span class="header-section-number">6.1.5</span> What are “Reducers” and how do they facilitate geospatial statistics?</a></li>
+  </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">6.2</span> Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://jiaying-ice.github.io/Jiaying-2026-portfolio/edit/master/gee_i.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://jiaying-ice.github.io/Jiaying-2026-portfolio/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/edit/master/gee_i.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -264,25 +279,293 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>GEE is a cloud-based geospatial processing service designed for planetary-scale analysis. It eliminates local hardware constraints by storing massive datasets (like Landsat and Sentinel) on <strong>Google’s servers</strong> and executing computations on the <strong>server-side</strong> rather than on the user’s local machine.</p>
+<p><strong>EECU</strong> (Earth Engine Compute Units) measures the computational resources required to execute a task or script in Google Earth Engine Server.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The <code>ee.</code> Prefix
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Server-side objects in Google Earth Engine are typically prefixed with <code>ee.</code>. This indicates that they are created, stored, and manipulated on GEE’s high-performance cloud infrastructure rather than your local machine.</p>
+</div>
+</div>
+<section id="examples-of-server-side-construction" class="level4" data-number="6.0.0.1">
+<h4 data-number="6.0.0.1" class="anchored" data-anchor-id="examples-of-server-side-construction"><span class="header-section-number">6.0.0.1</span> Examples of Server-Side Construction:</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Accessing a collection of satellite imagery</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> landsatCol <span class="op">=</span> ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">'LANDSAT/LC08/C01/T1_SR'</span>)<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. Defining a spatial boundary (Vector Geometry)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> studyArea <span class="op">=</span> ee<span class="op">.</span><span class="at">Geometry</span><span class="op">.</span><span class="fu">Rectangle</span>(<span class="op">-</span><span class="fl">122.35</span><span class="op">,</span> <span class="fl">37.77</span><span class="op">,</span> <span class="op">-</span><span class="fl">122.15</span><span class="op">,</span> <span class="fl">37.97</span>)<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">// 3. Loading a pre-defined vector dataset (FeatureCollection)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> tradeData <span class="op">=</span> ee<span class="op">.</span><span class="fu">FeatureCollection</span>(<span class="st">'USDA/ERS/Global_Trade'</span>)<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">// 4. Utilizing a specific GEE algorithm</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> anomaly <span class="op">=</span> ee<span class="op">.</span><span class="at">Algorithms</span><span class="op">.</span><span class="at">Landsat</span><span class="op">.</span><span class="fu">thermalAnomaly</span>(landsatCol<span class="op">.</span><span class="fu">first</span>())<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>[!TIP] <strong>Why it matters:</strong> When you perform operations on an <code>ee.ImageCollection</code> or <code>ee.FeatureCollection</code>, you are sending instructions to the Google servers to process petabytes of data in parallel. Never use a standard JavaScript <code>for</code> loop to iterate over these; instead, use the <code>.map()</code> function to keep the computation on the server side.</p>
+</blockquote>
+</section>
 <section id="summary" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
-<p>How does the “Client-side vs.&nbsp;Server-side” architecture of GEE enable massive data processing? Key Focus: Instructions sent from browser, execution happens on Google’s clusters . What is the significance of “ImageCollections” for multi-temporal land cover analysis? Key Focus: Efficient filtering by date, bounds, and cloud cover to create cloud-free mosaics . How does GEE facilitate the emergence of near-real-time datasets like “Dynamic World”? Key Focus: Automated AI processing of 10m Sentinel-2 data at planetary scale . Why is the JavaScript API preferred over local processing for large-scale environmental monitoring? Key Focus: No need for high-performance hardware; instant access to petabytes of data . How can GEE “Apps” bridge the technical gap between data scientists and policy makers? Key Focus: Providing interactive, simplified web interfaces for complex spatial evidence</p>
+<section id="how-does-the-client-side-vs.-server-side-architecture-of-gee-enable-massive-data-processing" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="how-does-the-client-side-vs.-server-side-architecture-of-gee-enable-massive-data-processing"><span class="header-section-number">6.1.1</span> How does the “Client-side vs.&nbsp;Server-side” architecture of GEE enable massive data processing?</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+It’s mine! BUT not really!!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<pre class="text"><code>+------------------------------------------+               +------------------------------------------+
+|          CLIENT SIDE (Browser)           |               |          SERVER SIDE (Backend)           |
+|      (Frontend / User Environment)       |               |     (Google Cloud Infrastructure)        |
++------------------------------------------+               +------------------------------------------+
+|                                          |               |                                          |
+|   [ GEE CODE EDITOR / INTERFACE ]        |               |   [ MASSIVE GEOSPATIAL DATASTORES ]      |
+|   - Collects User Input &amp; Scripts        |               |   - Multi-Petabyte Public Data Catalog   |
+|   - Manages Visualization Parameters     |               |   - Landsat, Sentinel, MODIS Archives    |
+|   - Displays Final Maps &amp; Charts         |               |   - Climate, Terrain &amp; Vector Datasets   |
+|                                          |               |                                          |
+|   [ PROXY OBJECTS / DEPUTIES ]           |  REST API     |   [ GOOGLE COMPUTATION ENGINE ]          |
+|   - Variables prefixed with "ee."        |  Request      |   - High-Performance Parallel Processing |
+|   - Handles "Instructions," not Data     |--------------&gt;|   - Executes Complex Spatial Algorithms  |
+|   - Acts as Client-side placeholders     | (JSON Task)   |   - Map/Reduce Operations over Imagery   |
+|                                          |               |   - Spatial, Temporal &amp; Spectral Joins   |
+|                                          |               |                                          |
+|   [ LOCAL RENDERING ]                    |               |   [ ON-THE-FLY COMPUTATION ]             |
+|   - Decodes JSON/Protocol Buffers        |   Results     |   - Processes only visible map pixels    |
+|   - Renders 256x256 Map Tiles            |&lt;--------------|   - Calculates Statistics &amp; Reducers     |
+|   - Populates Console &amp; Inspector        | (Tiles/JSON)  |   - Scales resources based on request    |
+|                                          |               |                                          |
++------------------------------------------+               +------------------------------------------+
+|  STRENGTH: Low local hardware demand     |               |  STRENGTH: Planetary-scale throughput    |
++------------------------------------------+               +------------------------------------------+ </code></pre>
+</section>
+<section id="how-does-gee-classify-and-organize-raster-and-vector-data-structures" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="how-does-gee-classify-and-organize-raster-and-vector-data-structures"><span class="header-section-number">6.1.2</span> How does GEE classify and organize raster and vector data structures?</h3>
+<p>GEE utilizes specific “objects” for different data types:</p>
+<ul>
+<li><p>Image: The fundamental raster data type consisting of bands</p></li>
+<li><p>Feature: The fundamental vector data type consisting of a geometry and a dictionary of attributes</p></li>
+<li><p>Collections: Stacks of these objects are managed as ImageCollections or FeatureCollections</p></li>
+</ul>
+</section>
+<section id="why-must-researchers-use-mapping-instead-of-looping-for-server-side-operations" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="why-must-researchers-use-mapping-instead-of-looping-for-server-side-operations"><span class="header-section-number">6.1.3</span> Why must researchers use “Mapping” instead of “Looping” for server-side operations?</h3>
+<p>Standard JavaScript loops run on the client-side (the browser) and cannot “see” what is inside a server-side ee object.</p>
+<p>Mapping (using .map()) allows GEE to allocate processing to different machines in parallel, ensuring efficient analysis of massive collections without repeatedly loading data.</p>
+</section>
+<section id="how-does-gee-handle-scale-resolution-and-projections-differently-than-traditional-desktop-gis" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="how-does-gee-handle-scale-resolution-and-projections-differently-than-traditional-desktop-gis"><span class="header-section-number">6.1.4</span> How does GEE handle Scale (resolution) and Projections differently than traditional desktop GIS?</h3>
+<p>Scale: In GEE, scale is determined by the output analysis, not the input.</p>
+<p>GEE uses an Image Pyramid logic to select the resolution closest to the analysis scale and resamples data on the fly.</p>
+<p>Projections: Users generally do not need to worry about projections; GEE automatically converts all data into the Mercator projection (EPSG:3857) for map display.</p>
+<p><img src="images/Resample.png" class="img-fluid" alt="Flow chart of operations when resample() is called on the input image. Curved lines indicate the flow of information: output projection, scale, and method."> <em>Source: <a href="https://developers.google.com/earth-engine/guides/resample">Google Earth Engine Guides</a></em></p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/resample_original.png" class="img-fluid figure-img"></p>
+<figcaption>Landsat: Nearest Neighbor (Original)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/resample_bicubic.png" class="img-fluid figure-img"></p>
+<figcaption>Landsat: Bicubic Resampling</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p><em>Source: <a href="https://developers.google.com/earth-engine/guides/resample">Google Earth Engine Guides</a></em></p>
+</section>
+<section id="what-are-reducers-and-how-do-they-facilitate-geospatial-statistics" class="level3" data-number="6.1.5">
+<h3 data-number="6.1.5" class="anchored" data-anchor-id="what-are-reducers-and-how-do-they-facilitate-geospatial-statistics"><span class="header-section-number">6.1.5</span> What are “Reducers” and how do they facilitate geospatial statistics?</h3>
+<p>Reducers are objects used to summarize or aggregate data.</p>
+<ul>
+<li>Image Reduction: Summarizing an ImageCollection into a single image (e.g., calculating the median value of every pixel over a year).</li>
+</ul>
+<p><img src="images/flowchart.png" class="img-fluid" alt="The Technical Workflow for GEE Data Processing"> <em>Figure: The end-to-end technical path from data ingestion to final analysis. <span class="citation" data-cites="zhang2021">(<a href="references.html#ref-zhang2021" role="doc-biblioref">Zhang et al. 2021</a>)</span></em> - Zonal Statistics: Using reduceRegion() or reduceRegions() to calculate statistics (like mean temperature) for a specific vector geometry</p>
+<ul>
+<li>Reducer in Application</li>
+</ul>
+<p>Annual Composite Images are representative datasets synthesized from a long-term sequence of satellite observations (such as Landsat or Sentinel-2) over a full year. This process relies on Reducers, which are specific objects in Google Earth Engine (GEE) used to compute statistics or perform aggregations across an ImageCollection.</p>
+<p>As detailed in the literature, the workflow for creating these composites typically follows three stages: Data Acquisition and Pre-processing: The system ingests an entire year of multi-band imagery, filtered by date and region of interest. A critical step involves using the Quality Assessment (QA) band to mask clouds, shadows, and water, ensuring only “clean” pixels remain in the stack.<br>
+Feature Engineering (Indices): Spectral indices like NDVI (vegetation), NDWI (water), and NDBI (built-up) are calculated for every individual image in the time series.</p>
+<p><img src="images/minmax.png" class="img-fluid" alt="Annual composite images of the three districts using different reducers"> <em>Figure: Comparison of (1) Min, (2) Median, and (3) Max reducers (R: Band 6; G: Band 5; B: Band 3). <span class="citation" data-cites="zhang2021">(<a href="references.html#ref-zhang2021" role="doc-biblioref">Zhang et al. 2021</a>)</span></em></p>
+<p><span class="citation" data-cites="zhang2021">Zhang et al. (<a href="references.html#ref-zhang2021" role="doc-biblioref">2021</a>)</span> indicates that combining multiple reducers—such as Min, Max, and Median—provides better results for urban mapping than a single reducer. Median Reducers are the gold standard for creating haze-free, “representative” annual images. Min and Max Reducers are applied to capture phenological extremes, such as the peak of the growing season or seasonal bare-soil periods, which helps distinguish urban areas from spectral “confusers” like farmland.</p>
+<p>image: Annual composite images of the three districts obtained in this study ((a), (b), and (c) respectively; 1, 2, and 3 represent the results from ee.Reducer.min(), ee.Reducer.median(), and ee.Reducer.max() respectively). (R: Band 6; G: Band 5; B: Band 3). “D:\0.CASA_USS portfolio-book.png” <span class="citation" data-cites="zhang2021">(<a href="references.html#ref-zhang2021" role="doc-biblioref">Zhang et al. 2021</a>)</span></p>
+</section>
 </section>
 <section id="application" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
+<p>This practical transitions from single-image processing to managing <strong>Image Collections</strong>, the core data structure in GEE for handling time-series and planetary-scale satellite data.</p>
+<blockquote class="blockquote">
+<p><strong>Image Collection (<code>ee.ImageCollection</code>)</strong>: A stack or “folder” of many <code>ee.Image</code> objects. Each image contains its own bands and metadata.</p>
+</blockquote>
+<pre class="text"><code>+-------------------------------------------------------------------------------+
+|                      GOOGLE EARTH ENGINE (GEE) WORKFLOW                       |
++-------------------------------------------------------------------------------+
+|                                                                               |
+|  [ PHASE 1: DATA DOWNLOADING &amp; FILTERING ]                                    |
+|  - Access ImageCollections (Landsat, Sentinel, MODIS)                         |
+|  - Spatial/Temporal Filtering (Date, Bounds, Metadata)                        |
+|  - Geometry Operations (Joins, Clipping, Buffering)                           |
+|                                                                               |
++-----------------------+-------------------------------------------------------+
+                        |
+                        v
++-------------------------------------------------------------------------------+
+|  [ PHASE 2: CORE ANALYSIS &amp; COMPUTATION ]                                     |
++-------------------------------------------------------------------------------+
+|          STATISTICAL METHODS          |           MACHINE LEARNING            |
+| ------------------------------------- | ------------------------------------- |
+| - Zonal Statistics (e.g., Avg Temp)   | - Supervised Classification           |
+| - Image/Region Reducers               | - Unsupervised Clustering             |
+| - Variable Relationship Mapping       | - Deep Learning (TensorFlow)          |
++-------------------------------------------------------------------------------+
+                        |
+                        v
++-------------------------------------------------------------------------------+
+|  [ PHASE 3: APPLICATIONS &amp; OUTPUTS ]                                          |
++-------------------------------------------------------------------------------+
+|                                                                               |
+|   /-------------------\        /-------------------\       /--------------\   |
+|   |   ONLINE CHARTS   |        |   SCALABLE APPS   |       |  EXPORT DATA |   |
+|   | (Temporal Trends) |        |  (User Interface) |       | (Drive/Asset)|   |
+|   \-------------------/        \-------------------/       \--------------/   |
+|                                                                               |
++-------------------------------------------------------------------------------+
+|            From raw spectral signal to multi-level layer                      |
++-------------------------------------------------------------------------------+
+</code></pre>
+<section id="a.-accessing-collections" class="level4" data-number="6.2.0.1">
+<h4 data-number="6.2.0.1" class="anchored" data-anchor-id="a.-accessing-collections"><span class="header-section-number">6.2.0.1</span> A. Accessing Collections</h4>
+<p>Loading a specific dataset from the GEE Data Catalog and inspecting the first available image.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Accessing Landsat 8 Collection 2 Level 2 TOA dataset</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> l8 <span class="op">=</span> ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">"LANDSAT/LC08/C02/T1_TOA"</span>)<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Inspect the first image in the stack to understand its structure</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'First image metadata:'</span><span class="op">,</span> l8<span class="op">.</span><span class="fu">first</span>())<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="b.-filtering-collections" class="level4" data-number="6.2.0.2">
+<h4 data-number="6.2.0.2" class="anchored" data-anchor-id="b.-filtering-collections"><span class="header-section-number">6.2.0.2</span> B. Filtering Collections</h4>
+<p>Filtering is the “Remote Control” step—narrowing down millions of images to the specific ones needed for study.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> startDate <span class="op">=</span> <span class="st">'2025-01-01'</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> endDate <span class="op">=</span> <span class="st">'2025-12-31'</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> poi <span class="op">=</span> ee<span class="op">.</span><span class="at">Geometry</span><span class="op">.</span><span class="fu">Point</span>(<span class="fl">91.79</span><span class="op">,</span> <span class="fl">22.34</span>)<span class="op">;</span> <span class="co">// Point of Interest</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> maxCloud <span class="op">=</span> <span class="dv">20</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">// Chain filters for Date, Location, and Metadata (Cloud Cover)</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> filteredLandsat <span class="op">=</span> l8</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterDate</span>(startDate<span class="op">,</span> endDate)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterBounds</span>(poi)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterMetadata</span>(<span class="st">'CLOUD_COVER'</span><span class="op">,</span> <span class="st">'less_than'</span><span class="op">,</span> maxCloud)<span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Filtered Collection Size:'</span><span class="op">,</span> filteredLandsat<span class="op">.</span><span class="fu">size</span>())<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="c.-reducing-collections-compositing" class="level4" data-number="6.2.0.3">
+<h4 data-number="6.2.0.3" class="anchored" data-anchor-id="c.-reducing-collections-compositing"><span class="header-section-number">6.2.0.3</span> C. Reducing Collections (Compositing)</h4>
+<p>The process of “squashing” a stack of filtered images into a single composite image. Using <code>median()</code> helps remove transient “noise” like clouds and shadows.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a median composite</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> medianComposite <span class="op">=</span> filteredLandsat<span class="op">.</span><span class="fu">median</span>()<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Add to map - Landsat 8 bands: B4(R), B3(G), B2(B)</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">centerObject</span>(poi<span class="op">,</span> <span class="dv">10</span>)<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(medianComposite<span class="op">,</span> {</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">bands</span><span class="op">:</span> [<span class="st">'B4'</span><span class="op">,</span> <span class="st">'B3'</span><span class="op">,</span> <span class="st">'B2'</span>]<span class="op">,</span> </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> <span class="dv">3000</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="st">'Median Composite'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="d.-extracting-metadata" class="level4" data-number="6.2.0.4">
+<h4 data-number="6.2.0.4" class="anchored" data-anchor-id="d.-extracting-metadata"><span class="header-section-number">6.2.0.4</span> D. Extracting Metadata</h4>
+<p>Retrieving specific properties like the acquisition date of an individual image.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Select the first image from the filtered stack</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> singleImage <span class="op">=</span> ee<span class="op">.</span><span class="fu">Image</span>(filteredLandsat<span class="op">.</span><span class="fu">first</span>())<span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Get the timestamp (system:time_start)</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> timeStart <span class="op">=</span> singleImage<span class="op">.</span><span class="fu">get</span>(<span class="st">'system:time_start'</span>)<span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">// Format the date into a human-readable string (YYYY-MM-dd)</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> readableDate <span class="op">=</span> ee<span class="op">.</span><span class="fu">Date</span>(timeStart)<span class="op">.</span><span class="fu">format</span>(<span class="st">'YYYY-MM-dd'</span>)<span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Capture Date of this image:'</span><span class="op">,</span> readableDate)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="e.-rgb-vs.-false-color" class="level4" data-number="6.2.0.5">
+<h4 data-number="6.2.0.5" class="anchored" data-anchor-id="e.-rgb-vs.-false-color"><span class="header-section-number">6.2.0.5</span> E. RGB vs.&nbsp;False Color</h4>
+<p>Changing the band combinations to reveal features invisible to the naked eye.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Natural Color (RGB): B4, B3, B2</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> naturalColor <span class="op">=</span> medianComposite<span class="op">.</span><span class="fu">visualize</span>({</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">bands</span><span class="op">:</span> [<span class="st">'B4'</span><span class="op">,</span> <span class="st">'B3'</span><span class="op">,</span> <span class="st">'B2'</span>]<span class="op">,</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> <span class="dv">3000</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(naturalColor<span class="op">,</span> {}<span class="op">,</span> <span class="st">'Natural Color RGB'</span>)<span class="op">;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. False-Color Infrared: B5 (NIR), B4 (Red), B3 (Green)</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">// Highlights vegetation as bright red</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> falseColor <span class="op">=</span> medianComposite<span class="op">.</span><span class="fu">visualize</span>({</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">bands</span><span class="op">:</span> [<span class="st">'B5'</span><span class="op">,</span> <span class="st">'B4'</span><span class="op">,</span> <span class="st">'B3'</span>]<span class="op">,</span> </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> <span class="dv">3000</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(falseColor<span class="op">,</span> {}<span class="op">,</span> <span class="st">'False-Color Composite (NIR)'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Workflow Logic
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Select</strong>: Identify the right satellite collection (e.g., Landsat 8/9 or Sentinel-2).</li>
+<li><strong>Filter</strong>: Apply spatial (bounds), temporal (date range), and quality (cloud cover) constraints.</li>
+<li><strong>Reduce</strong>: Use a reducer like <code>ee.Reducer.median()</code> to “stack” multiple images and create a single “Analysis Ready” cloud-free composite.</li>
+<li><strong>Visualize</strong>: Swap bands to tell different urban stories—for instance, using <strong>False Color (NIR)</strong> to monitor urban green space or <strong>SWIR</strong> to highlight built-up structures.</li>
+</ol>
+<p><strong>Key Takeaway</strong>: By utilizing <strong>Server-side</strong> filtering and reducing, we bypass the memory-hogging limitations of local processing. GEE only computes the specific pixels required for your current zoom level, effectively solving the hardware bottlenecks often encountered in desktop software like SNAP.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="reflection" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
-<p>讨论 GEE 的客户端/服务器端限制 。例如：为什么在服务器端对象上使用 JavaScript 的 for 循环（客户端逻辑）会导致报错？这种对平台底层逻辑</p>
-<p>在 GEE 中运行一段更复杂的时间序列回归分析 (Linear Regression) 代码，来观察某个像素值随时间的变化趋势</p>
-<p>Why are “Zonal Statistics” essential for translating pixel data into actionable administrative reports? Key Focus: 将栅格值聚合到行政边界（如行政区、街道）内，使决策者能看到其管辖范围内的具体数值</p>
-<p>What are the limitations of generic EO statements when communicating with local government? Key Focus: 政策制定需要具体、有实证依据的建议，而非简单的描述性地图</p>
-<p>之前做建筑 绘制场地site analysis 经常会找卫星图通过截图获取，但是 scale自动缩放机制 困惑是页面大小，范围取值大小，实际大小不协调</p>
-<p>前几周的 LULC（土地覆盖分类） 理论，与 GEE 中的 Machine Learning（如随机森林、CART）工具包相对接</p>
+<p>I have been eagerly anticipating the introduction of Google Earth Engine (GEE), and it did not disappoint. While the introduction of JavaScript—yet another programming language to master!—felt daunting at first, I soon realized its purpose. GEE uses JavaScript as a “bridge” because it is the language of the web; it allows us to interact with Google’s cloud infrastructure through a browser without installing a single gigabyte of software. This week, the fragmented pieces of the past month finally clicked into a unified workflow.</p>
+<p>My previous struggle with SNAP was a battle against my own hardware. I was trying to haul massive buckets of data into my local RAM, resulting in constant crashes. GEE brings a fundamental shift on <strong>Processing vs.&nbsp;Requesting</strong>. I am no longer doing the math on my computer that could lead it into crashed. I am sending a script, a instruction to Google’s servers. Also, the <strong>Proxy Objects</strong> has changed. When I define <code>var image = ee.Image(...)</code>, that image doesn’t exist in my browser. It is a <strong>Proxy Object</strong>—a placeholder or a agent. Most interesting thing is GEE is “lazy” in the best way possible. It only computes exactly what is visible on my screen at that moment so I can pan across the entire globe as easily as a single city block.</p>
+<p>One of the most striking analogies from class was the “Cooking” metaphor. GEE is like giving a chef a recipe: “Take a pot (Collection), add vegetables (Filter), boil (Reduce), and serve (Visualize).” However, this led to a major “Aha!” moment regarding limitations. I finally understood why a standard JavaScript <code>for-loop</code> (Client-side logic) fails when applied to an <code>ee.ImageCollection</code> (Server-side object). You cannot use a “local” spoon to stir a “remote” pot. To loop in GEE, you must use <code>.map()</code>, keeping the instructions within the server’s domain.</p>
+<p>The connection between GEE and our previous work in R was a highlight. Just as we used <strong>Principal Component Analysis (PCA)</strong> in R to compress multi-spectral complexity, GEE <strong>Reducers</strong> perform a similar role. They allow us to collapse a year’s worth of temporal data into a single, highly informative median image. Furthermore, the LULC (Land Use/Land Cover) theories from previous weeks have now found their “engine” in GEE’s Machine Learning library, where I can finally deploy Random Forest or CART classifiers at scale.</p>
+<p>That’s it! Hello, GEE! Couldn’t help exploring more…</p>
 
 
 <!-- -->
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-zhang2021" class="csl-entry" role="listitem">
+Zhang, Zhaoming, Mingyue Wei, Dongchuan Pu, Guojin He, Wang guizhou Wang guizhou, and Tengfei Long. 2021. <span>“Assessment of <span>Annual Composite Images Obtained</span> by <span>Google Earth Engine</span> for <span>Urban Areas Mapping Using Random Forest</span>.”</span> <em>Remote Sensing</em> 13 (February): 748. <a href="https://doi.org/10.3390/rs13040748">https://doi.org/10.3390/rs13040748</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -902,57 +1185,291 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "GEE"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>How does the "Client-side vs. Server-side" architecture of GEE enable massive data processing?</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Key Focus: Instructions sent from browser, execution happens on Google's clusters</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>.</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>What is the significance of "ImageCollections" for multi-temporal land cover analysis?</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Key Focus: Efficient filtering by date, bounds, and cloud cover to create cloud-free mosaics</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>.</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>How does GEE facilitate the emergence of near-real-time datasets like "Dynamic World"?</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Key Focus: Automated AI processing of 10m Sentinel-2 data at planetary scale</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Why is the JavaScript API preferred over local processing for large-scale environmental monitoring?</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Key Focus: No need for high-performance hardware; instant access to petabytes of data</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>How can GEE "Apps" bridge the technical gap between data scientists and policy makers?</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Key Focus: Providing interactive, simplified web interfaces for complex spatial evidence</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Application</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reflection</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>讨论 GEE 的客户端/服务器端限制</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>。例如：为什么在服务器端对象上使用 JavaScript 的 for 循环（客户端逻辑）会导致报错？这种对平台底层逻辑</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>在 GEE 中运行一段更复杂的时间序列回归分析 (Linear Regression) 代码，来观察某个像素值随时间的变化趋势</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>Why are "Zonal Statistics" essential for translating pixel data into actionable administrative reports?</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Key Focus: 将栅格值聚合到行政边界（如行政区、街道）内，使决策者能看到其管辖范围内的具体数值</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>What are the limitations of generic EO statements when communicating with local government?</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>Key Focus: 政策制定需要具体、有实证依据的建议，而非简单的描述性地图</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>之前做建筑 绘制场地site analysis 经常会找卫星图通过截图获取，但是  scale自动缩放机制 困惑是页面大小，范围取值大小，实际大小不协调</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>前几周的 LULC（土地覆盖分类） 理论，与 GEE 中的 Machine Learning（如随机森林、CART）工具包相对接</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "GEE"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>GEE is a cloud-based geospatial processing service designed for planetary-scale analysis. It eliminates local hardware constraints by storing massive datasets (like Landsat and Sentinel) on **Google’s servers** and executing computations on the **server-side** rather than on the user's local machine.</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>**EECU** (Earth Engine Compute Units) measures the computational resources required to execute a task or script in Google Earth Engine Server.</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## The `ee.` Prefix</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>Server-side objects in Google Earth Engine are typically prefixed with <span class="in">`ee.`</span>. This indicates that they are created, stored, and manipulated on GEE's high-performance cloud infrastructure rather than your local machine.</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Examples of Server-Side Construction:</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Accessing a collection of satellite imagery</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> landsatCol <span class="op">=</span> ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">'LANDSAT/LC08/C01/T1_SR'</span>)<span class="op">;</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. Defining a spatial boundary (Vector Geometry)</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> studyArea <span class="op">=</span> ee<span class="op">.</span><span class="at">Geometry</span><span class="op">.</span><span class="fu">Rectangle</span>(<span class="op">-</span><span class="fl">122.35</span><span class="op">,</span> <span class="fl">37.77</span><span class="op">,</span> <span class="op">-</span><span class="fl">122.15</span><span class="op">,</span> <span class="fl">37.97</span>)<span class="op">;</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="co">// 3. Loading a pre-defined vector dataset (FeatureCollection)</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> tradeData <span class="op">=</span> ee<span class="op">.</span><span class="fu">FeatureCollection</span>(<span class="st">'USDA/ERS/Global_Trade'</span>)<span class="op">;</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="co">// 4. Utilizing a specific GEE algorithm</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> anomaly <span class="op">=</span> ee<span class="op">.</span><span class="at">Algorithms</span><span class="op">.</span><span class="at">Landsat</span><span class="op">.</span><span class="fu">thermalAnomaly</span>(landsatCol<span class="op">.</span><span class="fu">first</span>())<span class="op">;</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span><span class="co">[</span><span class="ot">!TIP</span><span class="co">]</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Why it matters:** When you perform operations on an </span><span class="in">`ee.ImageCollection`</span><span class="at"> or </span><span class="in">`ee.FeatureCollection`</span><span class="at">, you are sending instructions to the Google servers to process petabytes of data in parallel. Never use a standard JavaScript </span><span class="in">`for`</span><span class="at"> loop to iterate over these; instead, use the </span><span class="in">`.map()`</span><span class="at"> function to keep the computation on the server side.</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### How does the "Client-side vs. Server-side" architecture of GEE enable massive data processing?</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## It’s mine! BUT not really!!</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="in">+------------------------------------------+               +------------------------------------------+</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="in">|          CLIENT SIDE (Browser)           |               |          SERVER SIDE (Backend)           |</span></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="in">|      (Frontend / User Environment)       |               |     (Google Cloud Infrastructure)        |</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="in">+------------------------------------------+               +------------------------------------------+</span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="in">|                                          |               |                                          |</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="in">|   [ GEE CODE EDITOR / INTERFACE ]        |               |   [ MASSIVE GEOSPATIAL DATASTORES ]      |</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="in">|   - Collects User Input &amp; Scripts        |               |   - Multi-Petabyte Public Data Catalog   |</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="in">|   - Manages Visualization Parameters     |               |   - Landsat, Sentinel, MODIS Archives    |</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a><span class="in">|   - Displays Final Maps &amp; Charts         |               |   - Climate, Terrain &amp; Vector Datasets   |</span></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a><span class="in">|                                          |               |                                          |</span></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a><span class="in">|   [ PROXY OBJECTS / DEPUTIES ]           |  REST API     |   [ GOOGLE COMPUTATION ENGINE ]          |</span></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a><span class="in">|   - Variables prefixed with "ee."        |  Request      |   - High-Performance Parallel Processing |</span></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="in">|   - Handles "Instructions," not Data     |--------------&gt;|   - Executes Complex Spatial Algorithms  |</span></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="in">|   - Acts as Client-side placeholders     | (JSON Task)   |   - Map/Reduce Operations over Imagery   |</span></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a><span class="in">|                                          |               |   - Spatial, Temporal &amp; Spectral Joins   |</span></span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a><span class="in">|                                          |               |                                          |</span></span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a><span class="in">|   [ LOCAL RENDERING ]                    |               |   [ ON-THE-FLY COMPUTATION ]             |</span></span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a><span class="in">|   - Decodes JSON/Protocol Buffers        |   Results     |   - Processes only visible map pixels    |</span></span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a><span class="in">|   - Renders 256x256 Map Tiles            |&lt;--------------|   - Calculates Statistics &amp; Reducers     |</span></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a><span class="in">|   - Populates Console &amp; Inspector        | (Tiles/JSON)  |   - Scales resources based on request    |</span></span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a><span class="in">|                                          |               |                                          |</span></span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a><span class="in">+------------------------------------------+               +------------------------------------------+</span></span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a><span class="in">|  STRENGTH: Low local hardware demand     |               |  STRENGTH: Planetary-scale throughput    |</span></span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a><span class="in">+------------------------------------------+               +------------------------------------------+ </span></span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a><span class="fu">### How does GEE classify and organize raster and vector data structures?</span></span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a>GEE utilizes specific "objects" for different data types:  </span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Image: The fundamental raster data type consisting of bands</span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Feature: The fundamental vector data type consisting of a geometry and a dictionary of attributes</span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Collections: Stacks of these objects are managed as ImageCollections or FeatureCollections</span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why must researchers use "Mapping" instead of "Looping" for server-side operations?</span></span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a>Standard JavaScript loops run on the client-side (the browser) and cannot "see" what is inside a server-side ee object.</span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a>Mapping (using .map()) allows GEE to allocate processing to different machines in parallel, ensuring efficient analysis of massive collections without repeatedly loading data.</span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a><span class="fu">### How does GEE handle Scale (resolution) and Projections differently than traditional desktop GIS?</span></span>
+<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a>Scale: In GEE, scale is determined by the output analysis, not the input.  </span>
+<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a>GEE uses an Image Pyramid logic to select the resolution closest to the analysis scale and resamples data on the fly.   </span>
+<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a>Projections: Users generally do not need to worry about projections; GEE automatically converts all data into the Mercator projection (EPSG:3857) for map display.    </span>
+<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a><span class="al">![Flow chart of operations when resample() is called on the input image. Curved lines indicate the flow of information: output projection, scale, and method.](images/Resample.png)</span></span>
+<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a>*Source: [Google Earth Engine Guides](https://developers.google.com/earth-engine/guides/resample)*</span>
+<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a>::: {layout-ncol=2}</span>
+<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a><span class="al">![Landsat: Nearest Neighbor (Original)](images/resample_original.png)</span></span>
+<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a><span class="al">![Landsat: Bicubic Resampling](images/resample_bicubic.png)</span></span>
+<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a>*Source: [Google Earth Engine Guides](https://developers.google.com/earth-engine/guides/resample)*</span>
+<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a><span class="fu">### What are "Reducers" and how do they facilitate geospatial statistics?</span></span>
+<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a>Reducers are objects used to summarize or aggregate data.  </span>
+<span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Image Reduction: Summarizing an ImageCollection into a single image (e.g., calculating the median value of every pixel over a year).     </span>
+<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a><span class="al">![The Technical Workflow for GEE Data Processing](images/flowchart.png)</span></span>
+<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a>*Figure: The end-to-end technical path from data ingestion to final analysis. [@zhang2021]*</span>
+<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zonal Statistics: Using reduceRegion() or reduceRegions() to calculate statistics (like mean temperature) for a specific vector geometry  </span>
+<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reducer in Application</span>
+<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a>Annual Composite Images are representative datasets synthesized from a long-term sequence of satellite observations (such as Landsat or Sentinel-2) over a full year. This process relies on Reducers, which are specific objects in Google Earth Engine (GEE) used to compute statistics or perform aggregations across an ImageCollection.</span>
+<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a>As detailed in the literature, the workflow for creating these composites typically follows three stages:</span>
+<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a>Data Acquisition and Pre-processing: The system ingests an entire year of multi-band imagery, filtered by date and region of interest. A critical step involves using the Quality Assessment (QA) band to mask clouds, shadows, and water, ensuring only "clean" pixels remain in the stack.  </span>
+<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a>Feature Engineering (Indices): Spectral indices like NDVI (vegetation), NDWI (water), and NDBI (built-up) are calculated for every individual image in the time series.  </span>
+<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-122"><a href="#cb9-122" aria-hidden="true" tabindex="-1"></a><span class="al">![Annual composite images of the three districts using different reducers](images/minmax.png)</span></span>
+<span id="cb9-123"><a href="#cb9-123" aria-hidden="true" tabindex="-1"></a>*Figure: Comparison of (1) Min, (2) Median, and (3) Max reducers (R: Band 6; G: Band 5; B: Band 3). [@zhang2021]*</span>
+<span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a>@zhang2021 indicates that combining multiple reducers—such as Min, Max, and Median—provides better results for urban mapping than a single reducer. Median Reducers are the gold standard for creating haze-free, "representative" annual images. Min and Max Reducers are applied to capture phenological extremes, such as the peak of the growing season or seasonal bare-soil periods, which helps distinguish urban areas from spectral "confusers" like farmland.</span>
+<span id="cb9-126"><a href="#cb9-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-127"><a href="#cb9-127" aria-hidden="true" tabindex="-1"></a>image: Annual composite images of the three districts obtained in this study ((a), (b), and (c) respectively; 1, 2, and 3 represent the results from ee.Reducer.min(), ee.Reducer.median(), and ee.Reducer.max() respectively). (R: Band 6; G: Band 5; B: Band 3). "D:\0.CASA_USS\Jiaying-2026 portfolio-book\images\minmax.png" <span class="co">[</span><span class="ot">@zhang2021</span><span class="co">]</span></span>
+<span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a><span class="fu">## Application</span></span>
+<span id="cb9-130"><a href="#cb9-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-131"><a href="#cb9-131" aria-hidden="true" tabindex="-1"></a>This practical transitions from single-image processing to managing **Image Collections**, the core data structure in GEE for handling time-series and planetary-scale satellite data.  </span>
+<span id="cb9-132"><a href="#cb9-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-133"><a href="#cb9-133" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Image Collection (`ee.ImageCollection`)**: A stack or "folder" of many </span><span class="in">`ee.Image`</span><span class="at"> objects. Each image contains its own bands and metadata.</span></span>
+<span id="cb9-134"><a href="#cb9-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-135"><a href="#cb9-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-136"><a href="#cb9-136" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb9-137"><a href="#cb9-137" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------------------------+</span></span>
+<span id="cb9-138"><a href="#cb9-138" aria-hidden="true" tabindex="-1"></a><span class="in">|                      GOOGLE EARTH ENGINE (GEE) WORKFLOW                       |</span></span>
+<span id="cb9-139"><a href="#cb9-139" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------------------------+</span></span>
+<span id="cb9-140"><a href="#cb9-140" aria-hidden="true" tabindex="-1"></a><span class="in">|                                                                               |</span></span>
+<span id="cb9-141"><a href="#cb9-141" aria-hidden="true" tabindex="-1"></a><span class="in">|  [ PHASE 1: DATA DOWNLOADING &amp; FILTERING ]                                    |</span></span>
+<span id="cb9-142"><a href="#cb9-142" aria-hidden="true" tabindex="-1"></a><span class="in">|  - Access ImageCollections (Landsat, Sentinel, MODIS)                         |</span></span>
+<span id="cb9-143"><a href="#cb9-143" aria-hidden="true" tabindex="-1"></a><span class="in">|  - Spatial/Temporal Filtering (Date, Bounds, Metadata)                        |</span></span>
+<span id="cb9-144"><a href="#cb9-144" aria-hidden="true" tabindex="-1"></a><span class="in">|  - Geometry Operations (Joins, Clipping, Buffering)                           |</span></span>
+<span id="cb9-145"><a href="#cb9-145" aria-hidden="true" tabindex="-1"></a><span class="in">|                                                                               |</span></span>
+<span id="cb9-146"><a href="#cb9-146" aria-hidden="true" tabindex="-1"></a><span class="in">+-----------------------+-------------------------------------------------------+</span></span>
+<span id="cb9-147"><a href="#cb9-147" aria-hidden="true" tabindex="-1"></a><span class="in">                        |</span></span>
+<span id="cb9-148"><a href="#cb9-148" aria-hidden="true" tabindex="-1"></a><span class="in">                        v</span></span>
+<span id="cb9-149"><a href="#cb9-149" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------------------------+</span></span>
+<span id="cb9-150"><a href="#cb9-150" aria-hidden="true" tabindex="-1"></a><span class="in">|  [ PHASE 2: CORE ANALYSIS &amp; COMPUTATION ]                                     |</span></span>
+<span id="cb9-151"><a href="#cb9-151" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------------------------+</span></span>
+<span id="cb9-152"><a href="#cb9-152" aria-hidden="true" tabindex="-1"></a><span class="in">|          STATISTICAL METHODS          |           MACHINE LEARNING            |</span></span>
+<span id="cb9-153"><a href="#cb9-153" aria-hidden="true" tabindex="-1"></a><span class="in">| ------------------------------------- | ------------------------------------- |</span></span>
+<span id="cb9-154"><a href="#cb9-154" aria-hidden="true" tabindex="-1"></a><span class="in">| - Zonal Statistics (e.g., Avg Temp)   | - Supervised Classification           |</span></span>
+<span id="cb9-155"><a href="#cb9-155" aria-hidden="true" tabindex="-1"></a><span class="in">| - Image/Region Reducers               | - Unsupervised Clustering             |</span></span>
+<span id="cb9-156"><a href="#cb9-156" aria-hidden="true" tabindex="-1"></a><span class="in">| - Variable Relationship Mapping       | - Deep Learning (TensorFlow)          |</span></span>
+<span id="cb9-157"><a href="#cb9-157" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------------------------+</span></span>
+<span id="cb9-158"><a href="#cb9-158" aria-hidden="true" tabindex="-1"></a><span class="in">                        |</span></span>
+<span id="cb9-159"><a href="#cb9-159" aria-hidden="true" tabindex="-1"></a><span class="in">                        v</span></span>
+<span id="cb9-160"><a href="#cb9-160" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------------------------+</span></span>
+<span id="cb9-161"><a href="#cb9-161" aria-hidden="true" tabindex="-1"></a><span class="in">|  [ PHASE 3: APPLICATIONS &amp; OUTPUTS ]                                          |</span></span>
+<span id="cb9-162"><a href="#cb9-162" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------------------------+</span></span>
+<span id="cb9-163"><a href="#cb9-163" aria-hidden="true" tabindex="-1"></a><span class="in">|                                                                               |</span></span>
+<span id="cb9-164"><a href="#cb9-164" aria-hidden="true" tabindex="-1"></a><span class="in">|   /-------------------\        /-------------------\       /--------------\   |</span></span>
+<span id="cb9-165"><a href="#cb9-165" aria-hidden="true" tabindex="-1"></a><span class="in">|   |   ONLINE CHARTS   |        |   SCALABLE APPS   |       |  EXPORT DATA |   |</span></span>
+<span id="cb9-166"><a href="#cb9-166" aria-hidden="true" tabindex="-1"></a><span class="in">|   | (Temporal Trends) |        |  (User Interface) |       | (Drive/Asset)|   |</span></span>
+<span id="cb9-167"><a href="#cb9-167" aria-hidden="true" tabindex="-1"></a><span class="in">|   \-------------------/        \-------------------/       \--------------/   |</span></span>
+<span id="cb9-168"><a href="#cb9-168" aria-hidden="true" tabindex="-1"></a><span class="in">|                                                                               |</span></span>
+<span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------------------------+</span></span>
+<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a><span class="in">|            From raw spectral signal to multi-level layer                      |</span></span>
+<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------------------------+</span></span>
+<span id="cb9-172"><a href="#cb9-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-173"><a href="#cb9-173" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-174"><a href="#cb9-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-175"><a href="#cb9-175" aria-hidden="true" tabindex="-1"></a><span class="fu">#### A. Accessing Collections</span></span>
+<span id="cb9-176"><a href="#cb9-176" aria-hidden="true" tabindex="-1"></a>Loading a specific dataset from the GEE Data Catalog and inspecting the first available image.</span>
+<span id="cb9-177"><a href="#cb9-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-178"><a href="#cb9-178" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb9-179"><a href="#cb9-179" aria-hidden="true" tabindex="-1"></a><span class="co">// Accessing Landsat 8 Collection 2 Level 2 TOA dataset</span></span>
+<span id="cb9-180"><a href="#cb9-180" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> l8 <span class="op">=</span> ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">"LANDSAT/LC08/C02/T1_TOA"</span>)<span class="op">;</span></span>
+<span id="cb9-181"><a href="#cb9-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-182"><a href="#cb9-182" aria-hidden="true" tabindex="-1"></a><span class="co">// Inspect the first image in the stack to understand its structure</span></span>
+<span id="cb9-183"><a href="#cb9-183" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'First image metadata:'</span><span class="op">,</span> l8<span class="op">.</span><span class="fu">first</span>())<span class="op">;</span></span>
+<span id="cb9-184"><a href="#cb9-184" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-185"><a href="#cb9-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-186"><a href="#cb9-186" aria-hidden="true" tabindex="-1"></a><span class="fu">#### B. Filtering Collections</span></span>
+<span id="cb9-187"><a href="#cb9-187" aria-hidden="true" tabindex="-1"></a>Filtering is the "Remote Control" step—narrowing down millions of images to the specific ones needed for study.</span>
+<span id="cb9-188"><a href="#cb9-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-189"><a href="#cb9-189" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb9-190"><a href="#cb9-190" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> startDate <span class="op">=</span> <span class="st">'2025-01-01'</span><span class="op">;</span></span>
+<span id="cb9-191"><a href="#cb9-191" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> endDate <span class="op">=</span> <span class="st">'2025-12-31'</span><span class="op">;</span></span>
+<span id="cb9-192"><a href="#cb9-192" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> poi <span class="op">=</span> ee<span class="op">.</span><span class="at">Geometry</span><span class="op">.</span><span class="fu">Point</span>(<span class="fl">91.79</span><span class="op">,</span> <span class="fl">22.34</span>)<span class="op">;</span> <span class="co">// Point of Interest</span></span>
+<span id="cb9-193"><a href="#cb9-193" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> maxCloud <span class="op">=</span> <span class="dv">20</span><span class="op">;</span></span>
+<span id="cb9-194"><a href="#cb9-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-195"><a href="#cb9-195" aria-hidden="true" tabindex="-1"></a><span class="co">// Chain filters for Date, Location, and Metadata (Cloud Cover)</span></span>
+<span id="cb9-196"><a href="#cb9-196" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> filteredLandsat <span class="op">=</span> l8</span>
+<span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterDate</span>(startDate<span class="op">,</span> endDate)</span>
+<span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterBounds</span>(poi)</span>
+<span id="cb9-199"><a href="#cb9-199" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterMetadata</span>(<span class="st">'CLOUD_COVER'</span><span class="op">,</span> <span class="st">'less_than'</span><span class="op">,</span> maxCloud)<span class="op">;</span></span>
+<span id="cb9-200"><a href="#cb9-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-201"><a href="#cb9-201" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Filtered Collection Size:'</span><span class="op">,</span> filteredLandsat<span class="op">.</span><span class="fu">size</span>())<span class="op">;</span></span>
+<span id="cb9-202"><a href="#cb9-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-203"><a href="#cb9-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-204"><a href="#cb9-204" aria-hidden="true" tabindex="-1"></a><span class="fu">#### C. Reducing Collections (Compositing)</span></span>
+<span id="cb9-205"><a href="#cb9-205" aria-hidden="true" tabindex="-1"></a>The process of "squashing" a stack of filtered images into a single composite image. Using <span class="in">`median()`</span> helps remove transient "noise" like clouds and shadows.</span>
+<span id="cb9-206"><a href="#cb9-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-207"><a href="#cb9-207" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb9-208"><a href="#cb9-208" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a median composite</span></span>
+<span id="cb9-209"><a href="#cb9-209" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> medianComposite <span class="op">=</span> filteredLandsat<span class="op">.</span><span class="fu">median</span>()<span class="op">;</span></span>
+<span id="cb9-210"><a href="#cb9-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-211"><a href="#cb9-211" aria-hidden="true" tabindex="-1"></a><span class="co">// Add to map - Landsat 8 bands: B4(R), B3(G), B2(B)</span></span>
+<span id="cb9-212"><a href="#cb9-212" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">centerObject</span>(poi<span class="op">,</span> <span class="dv">10</span>)<span class="op">;</span></span>
+<span id="cb9-213"><a href="#cb9-213" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(medianComposite<span class="op">,</span> {</span>
+<span id="cb9-214"><a href="#cb9-214" aria-hidden="true" tabindex="-1"></a>  <span class="dt">bands</span><span class="op">:</span> [<span class="st">'B4'</span><span class="op">,</span> <span class="st">'B3'</span><span class="op">,</span> <span class="st">'B2'</span>]<span class="op">,</span> </span>
+<span id="cb9-215"><a href="#cb9-215" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb9-216"><a href="#cb9-216" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> <span class="dv">3000</span></span>
+<span id="cb9-217"><a href="#cb9-217" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="st">'Median Composite'</span>)<span class="op">;</span></span>
+<span id="cb9-218"><a href="#cb9-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-219"><a href="#cb9-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-220"><a href="#cb9-220" aria-hidden="true" tabindex="-1"></a><span class="fu">#### D. Extracting Metadata</span></span>
+<span id="cb9-221"><a href="#cb9-221" aria-hidden="true" tabindex="-1"></a>Retrieving specific properties like the acquisition date of an individual image.</span>
+<span id="cb9-222"><a href="#cb9-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-223"><a href="#cb9-223" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb9-224"><a href="#cb9-224" aria-hidden="true" tabindex="-1"></a><span class="co">// Select the first image from the filtered stack</span></span>
+<span id="cb9-225"><a href="#cb9-225" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> singleImage <span class="op">=</span> ee<span class="op">.</span><span class="fu">Image</span>(filteredLandsat<span class="op">.</span><span class="fu">first</span>())<span class="op">;</span></span>
+<span id="cb9-226"><a href="#cb9-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-227"><a href="#cb9-227" aria-hidden="true" tabindex="-1"></a><span class="co">// Get the timestamp (system:time_start)</span></span>
+<span id="cb9-228"><a href="#cb9-228" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> timeStart <span class="op">=</span> singleImage<span class="op">.</span><span class="fu">get</span>(<span class="st">'system:time_start'</span>)<span class="op">;</span></span>
+<span id="cb9-229"><a href="#cb9-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-230"><a href="#cb9-230" aria-hidden="true" tabindex="-1"></a><span class="co">// Format the date into a human-readable string (YYYY-MM-dd)</span></span>
+<span id="cb9-231"><a href="#cb9-231" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> readableDate <span class="op">=</span> ee<span class="op">.</span><span class="fu">Date</span>(timeStart)<span class="op">.</span><span class="fu">format</span>(<span class="st">'YYYY-MM-dd'</span>)<span class="op">;</span></span>
+<span id="cb9-232"><a href="#cb9-232" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Capture Date of this image:'</span><span class="op">,</span> readableDate)<span class="op">;</span></span>
+<span id="cb9-233"><a href="#cb9-233" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-234"><a href="#cb9-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-235"><a href="#cb9-235" aria-hidden="true" tabindex="-1"></a><span class="fu">#### E. RGB vs. False Color</span></span>
+<span id="cb9-236"><a href="#cb9-236" aria-hidden="true" tabindex="-1"></a>Changing the band combinations to reveal features invisible to the naked eye.</span>
+<span id="cb9-237"><a href="#cb9-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-238"><a href="#cb9-238" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb9-239"><a href="#cb9-239" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Natural Color (RGB): B4, B3, B2</span></span>
+<span id="cb9-240"><a href="#cb9-240" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> naturalColor <span class="op">=</span> medianComposite<span class="op">.</span><span class="fu">visualize</span>({</span>
+<span id="cb9-241"><a href="#cb9-241" aria-hidden="true" tabindex="-1"></a>  <span class="dt">bands</span><span class="op">:</span> [<span class="st">'B4'</span><span class="op">,</span> <span class="st">'B3'</span><span class="op">,</span> <span class="st">'B2'</span>]<span class="op">,</span> </span>
+<span id="cb9-242"><a href="#cb9-242" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb9-243"><a href="#cb9-243" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> <span class="dv">3000</span></span>
+<span id="cb9-244"><a href="#cb9-244" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb9-245"><a href="#cb9-245" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(naturalColor<span class="op">,</span> {}<span class="op">,</span> <span class="st">'Natural Color RGB'</span>)<span class="op">;</span></span>
+<span id="cb9-246"><a href="#cb9-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-247"><a href="#cb9-247" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. False-Color Infrared: B5 (NIR), B4 (Red), B3 (Green)</span></span>
+<span id="cb9-248"><a href="#cb9-248" aria-hidden="true" tabindex="-1"></a><span class="co">// Highlights vegetation as bright red</span></span>
+<span id="cb9-249"><a href="#cb9-249" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> falseColor <span class="op">=</span> medianComposite<span class="op">.</span><span class="fu">visualize</span>({</span>
+<span id="cb9-250"><a href="#cb9-250" aria-hidden="true" tabindex="-1"></a>  <span class="dt">bands</span><span class="op">:</span> [<span class="st">'B5'</span><span class="op">,</span> <span class="st">'B4'</span><span class="op">,</span> <span class="st">'B3'</span>]<span class="op">,</span> </span>
+<span id="cb9-251"><a href="#cb9-251" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb9-252"><a href="#cb9-252" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> <span class="dv">3000</span></span>
+<span id="cb9-253"><a href="#cb9-253" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb9-254"><a href="#cb9-254" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(falseColor<span class="op">,</span> {}<span class="op">,</span> <span class="st">'False-Color Composite (NIR)'</span>)<span class="op">;</span></span>
+<span id="cb9-255"><a href="#cb9-255" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-256"><a href="#cb9-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-257"><a href="#cb9-257" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb9-258"><a href="#cb9-258" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Workflow Logic</span></span>
+<span id="cb9-259"><a href="#cb9-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-260"><a href="#cb9-260" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Select**: Identify the right satellite collection (e.g., Landsat 8/9 or Sentinel-2).</span>
+<span id="cb9-261"><a href="#cb9-261" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Filter**: Apply spatial (bounds), temporal (date range), and quality (cloud cover) constraints.</span>
+<span id="cb9-262"><a href="#cb9-262" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Reduce**: Use a reducer like <span class="in">`ee.Reducer.median()`</span> to "stack" multiple images and create a single "Analysis Ready" cloud-free composite.</span>
+<span id="cb9-263"><a href="#cb9-263" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**Visualize**: Swap bands to tell different urban stories—for instance, using **False Color (NIR)** to monitor urban green space or **SWIR** to highlight built-up structures.</span>
+<span id="cb9-264"><a href="#cb9-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-265"><a href="#cb9-265" aria-hidden="true" tabindex="-1"></a>**Key Takeaway**: By utilizing **Server-side** filtering and reducing, we bypass the memory-hogging limitations of local processing. GEE only computes the specific pixels required for your current zoom level, effectively solving the hardware bottlenecks often encountered in desktop software like SNAP.</span>
+<span id="cb9-266"><a href="#cb9-266" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb9-267"><a href="#cb9-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-268"><a href="#cb9-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-269"><a href="#cb9-269" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reflection</span></span>
+<span id="cb9-270"><a href="#cb9-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-271"><a href="#cb9-271" aria-hidden="true" tabindex="-1"></a>I have been eagerly anticipating the introduction of Google Earth Engine (GEE), and it did not disappoint. While the introduction of JavaScript—yet another programming language to master!—felt daunting at first, I soon realized its purpose. GEE uses JavaScript as a "bridge" because it is the language of the web; it allows us to interact with Google’s cloud infrastructure through a browser without installing a single gigabyte of software. This week, the fragmented pieces of the past month finally clicked into a unified workflow.</span>
+<span id="cb9-272"><a href="#cb9-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-273"><a href="#cb9-273" aria-hidden="true" tabindex="-1"></a>My previous struggle with SNAP was a battle against my own hardware. I was trying to haul massive buckets of data into my local RAM, resulting in constant crashes. GEE brings a fundamental shift on **Processing vs. Requesting**. I am no longer doing the math on my computer that could lead it into crashed. I am sending a script, a instruction to Google’s servers. </span>
+<span id="cb9-274"><a href="#cb9-274" aria-hidden="true" tabindex="-1"></a>Also, the **Proxy Objects** has changed. When I define `var image = ee.Image(...)`, that image doesn't exist in my browser. It is a **Proxy Object**—a placeholder or a agent. Most interesting thing is GEE is "lazy" in the best way possible. It only computes exactly what is visible on my screen at that moment so  I can pan across the entire globe as easily as a single city block.</span>
+<span id="cb9-275"><a href="#cb9-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-276"><a href="#cb9-276" aria-hidden="true" tabindex="-1"></a>One of the most striking analogies from class was the "Cooking" metaphor. GEE is like giving a chef a recipe: "Take a pot (Collection), add vegetables (Filter), boil (Reduce), and serve (Visualize)." However, this led to a major "Aha!" moment regarding limitations. I finally understood why a standard JavaScript <span class="in">`for-loop`</span> (Client-side logic) fails when applied to an <span class="in">`ee.ImageCollection`</span> (Server-side object). You cannot use a "local" spoon to stir a "remote" pot. To loop in GEE, you must use <span class="in">`.map()`</span>, keeping the instructions within the server’s domain.</span>
+<span id="cb9-277"><a href="#cb9-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-278"><a href="#cb9-278" aria-hidden="true" tabindex="-1"></a>The connection between GEE and our previous work in R was a highlight. Just as we used **Principal Component Analysis (PCA)** in R to compress multi-spectral complexity, GEE **Reducers** perform a similar role. They allow us to collapse a year's worth of temporal data into a single, highly informative median image. Furthermore, the LULC (Land Use/Land Cover) theories from previous weeks have now found their "engine" in GEE’s Machine Learning library, where I can finally deploy Random Forest or CART classifiers at scale.</span>
+<span id="cb9-279"><a href="#cb9-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-280"><a href="#cb9-280" aria-hidden="true" tabindex="-1"></a>That's it! Hello, GEE! Couldn't help exploring more...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://jiaying-ice.github.io/Jiaying-2026-portfolio/edit/master/gee_i.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://jiaying-ice.github.io/Jiaying-2026-portfolio/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/edit/master/gee_i.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -2,7 +2,6 @@
 title: "Preface"
 ---
 
-
 # Hello, I'm Jiaying Li {.unnumbered}
 
 ::: {style="text-align: center; margin-bottom: 30px;"}
@@ -18,7 +17,6 @@ source: [NASA - Your Name in Landsat](https://science.nasa.gov/mission/landsat/o
 </p>
 :::
 
-
 ------------------------------------------------------------------------
 
 ## About Me
@@ -31,7 +29,6 @@ My academic journey is driven by a fascination with how digital footprints and r
 
 This website serves as my digital portfolio and learning diary for the module **CASA0023: Remote Sensing Cities and Environments** (2025/26). It documents my weekly journey through the world of remote sensing, from understanding the physics of electromagnetic radiation to implementing advanced machine learning classifications on Google Earth Engine (GEE).
 
-
 ------------------------------------------------------------------------
 
 ::: callout
@@ -40,9 +37,9 @@ This website serves as my digital portfolio and learning diary for the module **
 Feel free to use the **Search** bar (Top Right) to find specific topics or toggle between **Light/Dark modes** for a comfortable reading experience!
 :::
 
-
 ## About the Framework
-**ASK Myself Five Questions each week** and try to cover all the knowledge we had in Lecture and Practical.  
+
+**ASK Myself Five Questions each week** and try to cover all the knowledge we had in Lecture and Practical.
 
 How these **technologies are applied** in contemporary academic literature and policy？
 

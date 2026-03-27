@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -64,7 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./temperature.html" rel="next">
+<link href="./sar.html" rel="next">
 <link href="./classification_i.html" rel="prev">
 <link href="./images/LI.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -107,6 +127,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -125,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="https://github.com/yichienchen99/CASA0023_LD" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
@@ -151,37 +200,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Personal Introduction &amp; Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">portfolio</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Portfolio</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./corrections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">corrections</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correction &amp; Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./policy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">policy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./gee_i.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">gee_i</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">GEE</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -198,26 +247,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./temperature.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">temperature</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./sar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">sar</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">resources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -232,7 +269,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary-application" id="toc-summary-application" class="nav-link active" data-scroll-target="#summary-application"><span class="header-section-number">8.1</span> Summary &amp; Application</a>
+  <ul class="collapse">
+  <li><a href="#how-does-ensemble-logic-solve-the-overfitting-problem" id="toc-how-does-ensemble-logic-solve-the-overfitting-problem" class="nav-link" data-scroll-target="#how-does-ensemble-logic-solve-the-overfitting-problem"><span class="header-section-number">8.1.1</span> How does “Ensemble” logic solve the Overfitting Problem?</a></li>
+  <li><a href="#how-do-hyperparameters-control-learning-behavior" id="toc-how-do-hyperparameters-control-learning-behavior" class="nav-link" data-scroll-target="#how-do-hyperparameters-control-learning-behavior"><span class="header-section-number">8.1.2</span> How do Hyperparameters control learning behavior?</a></li>
+  <li><a href="#which-cross-validation-cv-strategy-is-most-reliable" id="toc-which-cross-validation-cv-strategy-is-most-reliable" class="nav-link" data-scroll-target="#which-cross-validation-cv-strategy-is-most-reliable"><span class="header-section-number">8.1.3</span> Which Cross-Validation (CV) strategy is most reliable?</a></li>
+  <li><a href="#why-moving-away-from-the-kappa-coefficient" id="toc-why-moving-away-from-the-kappa-coefficient" class="nav-link" data-scroll-target="#why-moving-away-from-the-kappa-coefficient"><span class="header-section-number">8.1.4</span> Why moving away from the “Kappa Coefficient”?</a></li>
+  <li><a href="#why-is-spatial-cross-validation-mandatory" id="toc-why-is-spatial-cross-validation-mandatory" class="nav-link" data-scroll-target="#why-is-spatial-cross-validation-mandatory"><span class="header-section-number">8.1.5</span> Why is “Spatial Cross-Validation” mandatory?</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.2</span> Reflection</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/edit/master/classification_ii.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -256,11 +307,177 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>精度评估与核心挑战 (Accuracy Assessment &amp; Challenges) Why is the trade-off between Producer’s Accuracy (Recall) and User’s Accuracy (Precision) critical? Key Focus: PA 关注真阳性的覆盖情况（防漏分），UA 关注分类结果的可靠性（防多分） 。 How does the F1-Score provide a more balanced performance metric than Overall Accuracy? Key Focus: 通过 PA 和 UA 的调和平均，在处理森林砍伐等类别不平衡的数据时更客观 。 In “Sub-pixel Analysis,” what are the limitations of “Hard” classification? Key Focus: 30 米像素内常包含多种地物（混合像元），强制分配一个标签会丢失土地利用比例信息 。 What are the primary benefits and “Black Box” risks of using Dynamic World? Key Focus: 优势是近实时监测，风险是用户不完全了解 AI 模型在特定地理区域的判断逻辑 。 Explain the difference between Errors of Omission and Errors of Commission. Key Focus: 漏分是将目标类别分到了其他类，多分是将其他类错误划分到了目标类 。</p>
+<p>Machine Learning Architecture &amp; Spatial Validation in Remote Sensing</p>
+<section id="summary-application" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary-application"><span class="header-section-number">8.1</span> Summary &amp; Application</h2>
+<section id="how-does-ensemble-logic-solve-the-overfitting-problem" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="how-does-ensemble-logic-solve-the-overfitting-problem"><span class="header-section-number">8.1.1</span> How does “Ensemble” logic solve the Overfitting Problem?</h3>
+<p>The transition from a single <strong>Decision Tree (CART)</strong> to a <strong>Random Forest (RF)</strong> represents a fundamental shift from individual hierarchical partitioning to collective intelligence. While CART is easy to interpret, it often “memorizes” the training data, leading to poor generalization.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Aspect</th>
+<th style="text-align: left;">Decision Tree</th>
+<th style="text-align: left;">Random Forest</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Model Type</strong></td>
+<td style="text-align: left;">Single tree-based model</td>
+<td style="text-align: left;"><strong>Ensemble</strong> of multiple trees (Bagging)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Data Usage</strong></td>
+<td style="text-align: left;">Uses the full training set</td>
+<td style="text-align: left;"><strong>Bootstrap samples</strong> (~70% of data used per tree)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Feature Selection</strong></td>
+<td style="text-align: left;">Uses all available features</td>
+<td style="text-align: left;">Random subset of features (<strong>Mtry</strong>) per split</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Accuracy</strong></td>
+<td style="text-align: left;">Prone to overfitting; lower stability</td>
+<td style="text-align: left;">Higher accuracy; significantly reduces variance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Interpretability</strong></td>
+<td style="text-align: left;">High (Visualizable “if-then” rules)</td>
+<td style="text-align: left;">Low (“Black Box” majority voting)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Output</strong></td>
+<td style="text-align: left;">Single prediction</td>
+<td style="text-align: left;"><strong>Majority Voting</strong> across the entire forest</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Workflow of Ensemble Learning:</strong></p>
+<pre class="text"><code>[ Original Training Data ] 
+           |
+           +--[ Bootstrap Sample 1 ] --&gt; [ Tree 1 ] --+
+           |                                          |
+           +--[ Bootstrap Sample 2 ] --&gt; [ Tree 2 ] --+--&gt; [ Majority Voting ] --&gt; [ Final Class ]
+           |                                          |
+           +--[ Bootstrap Sample N ] --&gt; [ Tree N ] --+</code></pre>
+</section>
+<section id="how-do-hyperparameters-control-learning-behavior" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="how-do-hyperparameters-control-learning-behavior"><span class="header-section-number">8.1.2</span> How do Hyperparameters control learning behavior?</h3>
+<p><strong>Hyperparameter Tuning</strong> is the process of setting the “rules of engagement” before training begins. These parameters dictate the balance between <strong>Bias</strong> (underfitting) and <strong>Variance</strong> (overfitting).</p>
+<ul>
+<li><strong>Model Hyperparameters (Specific to the architecture):</strong>
+<ul>
+<li><strong>Random Forest:</strong> <code>n_estimators</code> (number of trees), <code>max_features</code> (Mtry), and <code>max_depth</code>.</li>
+<li><strong>SVM:</strong> <code>C</code> (penalty for misclassification; large C = narrow margin) and <code>Gamma</code> (influence distance of points; high gamma = tighter clusters).</li>
+<li><strong>Decision Trees:</strong> Managed via <strong>Pruning</strong> to remove leaves that don’t improve the “Tree Score” or SSR.</li>
+</ul></li>
+<li><strong>Algorithm Hyperparameters (Control the process):</strong>
+<ul>
+<li><strong>Learning Rate:</strong> The step size for updating parameters.</li>
+<li><strong>Regularization Strength:</strong> Penalizes large weights to prevent the model from becoming overly complex.</li>
+</ul></li>
+</ul>
+</section>
+<section id="which-cross-validation-cv-strategy-is-most-reliable" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="which-cross-validation-cv-strategy-is-most-reliable"><span class="header-section-number">8.1.3</span> Which Cross-Validation (CV) strategy is most reliable?</h3>
+<p>To ensure a model generalizes well, we use <strong>Cross-Validation</strong> to divide the dataset into multiple “folds,” ensuring the model is tested on data it hasn’t seen during training.</p>
+<ul>
+<li><strong>K-Fold CV:</strong> Data is split into <span class="math inline">\(k\)</span> equal folds. The model trains on <span class="math inline">\(k-1\)</span> and tests on the remaining 1. This repeats <span class="math inline">\(k\)</span> times.</li>
+<li><strong>Stratified K-Fold:</strong> Essential for imbalanced datasets (e.g., mapping rare urban wetlands); it ensures each fold maintains the same class proportions as the total population.</li>
+<li><strong>Leave-One-Out (LOOCV):</strong> A special case where <span class="math inline">\(k\)</span> equals the number of samples. Highly reliable for small datasets but computationally expensive for large-scale GEE tasks.</li>
+</ul>
+</section>
+<section id="why-moving-away-from-the-kappa-coefficient" class="level3" data-number="8.1.4">
+<h3 data-number="8.1.4" class="anchored" data-anchor-id="why-moving-away-from-the-kappa-coefficient"><span class="header-section-number">8.1.4</span> Why moving away from the “Kappa Coefficient”?</h3>
+<p>Modern remote sensing demands more rigorous metrics than “Overall Accuracy.” We now look at the <strong>Accuracy Dimensions</strong> defined by <span class="citation" data-cites="barsi2018">Barsi et al. (<a href="references.html#ref-barsi2018" role="doc-biblioref">2018</a>)</span>.</p>
+<ul>
+<li><strong>Producer’s Accuracy (Recall):</strong> Measures how often real-world features are correctly identified (avoiding <strong>Errors of Omission</strong>/Type I).</li>
+<li><strong>User’s Accuracy (Precision):</strong> Measures how often a category on the map actually exists on the ground (avoiding <strong>Errors of Commission</strong>/Type II).</li>
+<li><strong>F1-Score:</strong> The harmonic mean of Precision and Recall. It is the gold standard for <strong>Application-Ready Data</strong> (like <span class="citation" data-cites="brown2022">Brown et al. (<a href="references.html#ref-brown2022" role="doc-biblioref">2022</a>)</span> Dynamic World).</li>
+<li><strong>The Kappa Issue:</strong> <span class="citation" data-cites="foody2020">Foody (<a href="references.html#ref-foody2020" role="doc-biblioref">2020</a>)</span> argues that the <strong>Kappa Coefficient</strong>—designed to account for “chance” agreement—is statistically unsuitable for thematic maps and should be abandoned in favour of more direct metrics like the <strong>ROC Curve/AUC</strong>.</li>
+</ul>
+<p><img src="images/train.png" class="img-fluid" alt="Training Process Visualization"> <em>Figure 1: The iterative process of defining training samples for urban classification. <span class="citation" data-cites="brown2022">(<a href="references.html#ref-brown2022" role="doc-biblioref">Brown et al. 2022</a>)</span></em></p>
+<p><img src="images/tarning.png" class="img-fluid" alt="Training Data and Spectral Signatures"> <em>Figure 3: Analyzing spectral signatures within training datasets to ensure class separation. <span class="citation" data-cites="brown2022">(<a href="references.html#ref-brown2022" role="doc-biblioref">Brown et al. 2022</a>)</span></em></p>
+</section>
+<section id="why-is-spatial-cross-validation-mandatory" class="level3" data-number="8.1.5">
+<h3 data-number="8.1.5" class="anchored" data-anchor-id="why-is-spatial-cross-validation-mandatory"><span class="header-section-number">8.1.5</span> Why is “Spatial Cross-Validation” mandatory?</h3>
+<p>Standard ML assumes data points are independent. However, <strong>Tobler’s First Law</strong> (Spatial Autocorrelation) states that “near things are more related than distant things.”</p>
+<p><strong>The Problem:</strong> In standard K-Fold, a training point and a test point might be geographically adjacent. The model “cheats” by using proximity rather than learning actual spectral relationships, leading to overoptimistic results (<span class="citation" data-cites="zotero-item-172">Karasiak et al. (<a href="references.html#ref-zotero-item-172" role="doc-biblioref">n.d.</a>)</span>).</p>
+<p><strong>The Solution: Spatial Leave-One-Out (SLOO CV)</strong> Methods advocated by <span class="citation" data-cites="wadoux2021">Wadoux et al. (<a href="references.html#ref-wadoux2021" role="doc-biblioref">2021</a>)</span> use distance-based buffers to ensure the test fold is geographically isolated from the training folds.</p>
+<pre class="text"><code>      Standard K-Fold                     Spatial CV (SLOO)
+[ P1 P2 P3 P4 P5 ]                [ P1 P2 | Buffer | P5 ]
+(Points are mixed)           (Test point P5 is spatially isolated)</code></pre>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.2</span> Reflection</h2>
+<p>This week marked a fundamental shift in my spatial identity. I have moved from <strong>seeing the world to querying it</strong>. As an architect, I previously treated satellite imagery as a static backdrop for site analysis—essentially a high-resolution “picture.” In the Google Earth Engine (GEE) environment, I now recognize that every pixel is a multi-dimensional data point waiting to be interrogated.</p>
+<p>One of my most significant realizations is that <strong>Object-Based Image Analysis (OBIA)</strong> and <strong>Superpixel segmentation (SLIC)</strong> are the essential bridges between “pixels” and “buildings.” In traditional urban analysis, we often get bogged down in the “noise” of individual pixels. By moving toward recognizing “objects,” we treat the city not as a chaotic collection of dots, but as a structured environment. This allows us to classify the urban fabric in a way that aligns with physical architectural forms.</p>
+<p>However, with great computational power comes great responsibility. <strong>“Garbage in, garbage out”</strong> remains the golden rule of GEE Machine Learning. If our training samples are biased or our preprocessing is flawed, the model’s output is meaningless.</p>
+<p>This brings us to a critical debate: <strong>Often, classifiers on EO data can overcomplicate things.</strong></p>
+<ul>
+<li>If there is a clear, spectral divide between bands (for example, a sharp NIR spike in healthy vegetation), <strong>do we actually need a complex classifier?</strong> * Can we just <strong>threshold</strong> the data (e.g., <span class="math inline">\(NDVI &gt; 0.4\)</span>)?<br>
+</li>
+<li><strong>Yes!</strong> Thresholding is transparent and fast. However, the catch is scalability: if we receive new data from a different season or satellite, a static threshold might fail, whereas a trained classifier can adapt.</li>
+</ul>
+<p><img src="images/modeltradeoff.png" class="img-fluid" alt="Interpretability-Accuracy Tradeoff"> <em>Figure 2: The inherent trade-off between model interpretability and predictive accuracy. <span class="citation" data-cites="sheykhmousa2020">(<a href="references.html#ref-sheykhmousa2020" role="doc-biblioref">Sheykhmousa et al. 2020</a>)</span></em></p>
+<p>This is the <strong>Interpretability-Accuracy Trade-off</strong> <span class="citation" data-cites="sheykhmousa2020">(<a href="references.html#ref-sheykhmousa2020" role="doc-biblioref">Sheykhmousa et al. 2020</a>)</span>. As shown in the trade-off model, as we move toward “Ensemble” methods like Random Forest to gain accuracy, we often lose the “Interpretability” that a single Decision Tree or a simple threshold provides. In urban policy, being able to explain <em>why</em> a model made a decision is often as important as the decision itself.</p>
+<hr>
+<p>To visualize this trade-off, I draft a GEE script to check “Black Box” classifier.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Load Median Image for NYC</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> nyc <span class="op">=</span> ee<span class="op">.</span><span class="at">Geometry</span><span class="op">.</span><span class="fu">Point</span>([<span class="op">-</span><span class="fl">73.97</span><span class="op">,</span> <span class="fl">40.78</span>])<span class="op">.</span><span class="fu">buffer</span>(<span class="dv">5000</span>)<span class="op">.</span><span class="fu">bounds</span>()<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> s2 <span class="op">=</span> ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">"COPERNICUS/S2_SR_HARMONIZED"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterBounds</span>(nyc)<span class="op">.</span><span class="fu">filterDate</span>(<span class="st">'2023-05-01'</span><span class="op">,</span> <span class="st">'2023-09-30'</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">median</span>()<span class="op">.</span><span class="fu">clip</span>(nyc)<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Method A: Simple NDVI Threshold (Highly Interpretable)</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> ndvi <span class="op">=</span> s2<span class="op">.</span><span class="fu">normalizedDifference</span>([<span class="st">'B8'</span><span class="op">,</span> <span class="st">'B4'</span>])<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> thresholdVeg <span class="op">=</span> ndvi<span class="op">.</span><span class="fu">gt</span>(<span class="fl">0.4</span>)<span class="op">.</span><span class="fu">selfMask</span>()<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. Method B: Random Forest Classifier (High Accuracy/Low Interpretability)</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">// (Assuming 'trainingPoints' is a FeatureCollection of labeled spectral data)</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> rf <span class="op">=</span> ee<span class="op">.</span><span class="at">Classifier</span><span class="op">.</span><span class="fu">smileRandomForest</span>(<span class="dv">50</span>)<span class="op">.</span><span class="fu">train</span>({</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">features</span><span class="op">:</span> trainingData<span class="op">,</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">classProperty</span><span class="op">:</span> <span class="st">'class'</span><span class="op">,</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">inputProperties</span><span class="op">:</span> [<span class="st">'B2'</span><span class="op">,</span> <span class="st">'B3'</span><span class="op">,</span> <span class="st">'B4'</span><span class="op">,</span> <span class="st">'B8'</span><span class="op">,</span> <span class="st">'NDVI'</span>]</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> rfVeg <span class="op">=</span> s2<span class="op">.</span><span class="fu">addBands</span>(ndvi)<span class="op">.</span><span class="fu">classify</span>(rf)<span class="op">.</span><span class="fu">eq</span>(<span class="dv">1</span>)<span class="op">.</span><span class="fu">selfMask</span>()<span class="op">;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">// Compare Results</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(thresholdVeg<span class="op">,</span> {<span class="dt">palette</span><span class="op">:</span> <span class="st">'lime'</span>}<span class="op">,</span> <span class="st">'Heuristic: NDVI &gt; 0.4'</span>)<span class="op">;</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(rfVeg<span class="op">,</span> {<span class="dt">palette</span><span class="op">:</span> <span class="st">'darkgreen'</span>}<span class="op">,</span> <span class="st">'ML: Random Forest'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 <!-- -->
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-barsi2018" class="csl-entry" role="listitem">
+Barsi, Arpad, Zsofia Kugler, István László, György Szabó, and Hussein Abdulmuttalib. 2018. <span>“<span>ACCURACY DIMENSIONS IN REMOTE SENSING</span>.”</span> <em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em> XLII-3 (April): 61–67. <a href="https://doi.org/10.5194/isprs-archives-XLII-3-61-2018">https://doi.org/10.5194/isprs-archives-XLII-3-61-2018</a>.
+</div>
+<div id="ref-brown2022" class="csl-entry" role="listitem">
+Brown, Christopher F., Steven P. Brumby, Brookie Guzder-Williams, Tanya Birch, Samantha Brooks Hyde, Joseph Mazzariello, Wanda Czerwinski, et al. 2022. <span>“Dynamic <span>World</span>, <span>Near</span> Real-Time Global 10 m Land Use Land Cover Mapping.”</span> <em>Scientific Data</em> 9 (1): 251. <a href="https://doi.org/10.1038/s41597-022-01307-4">https://doi.org/10.1038/s41597-022-01307-4</a>.
+</div>
+<div id="ref-foody2020" class="csl-entry" role="listitem">
+Foody, Giles M. 2020. <span>“Explaining the Unsuitability of the Kappa Coefficient in the Assessment and Comparison of the Accuracy of Thematic Maps Obtained by Image Classification.”</span> <em>Remote Sensing of Environment</em> 239 (March): 111630. <a href="https://doi.org/10.1016/j.rse.2019.111630">https://doi.org/10.1016/j.rse.2019.111630</a>.
+</div>
+<div id="ref-zotero-item-172" class="csl-entry" role="listitem">
+Karasiak et al. n.d. <span>“Spatial Dependence Between Training and Test Sets: Another Pitfall of Classification Accuracy Assessment in Remote Sensing <span>Machine Learning</span> <span>Springer Nature Link</span>.”</span> https://link.springer.com/article/10.1007/s10994-021-05972-1. Accessed March 27, 2026.
+</div>
+<div id="ref-sheykhmousa2020" class="csl-entry" role="listitem">
+Sheykhmousa, Mohammadreza, Masoud Mahdianpari, Hamid Ghanbari, Fariba Mohammadimanesh, Pedram Ghamisi, and Saeid Homayouni. 2020. <span>“Support <span>Vector Machine Versus Random Forest</span> for <span>Remote Sensing Image Classification</span>: <span>A Meta-Analysis</span> and <span>Systematic Review</span>.”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em> 13: 6308–25. <a href="https://doi.org/10.1109/JSTARS.2020.3026724">https://doi.org/10.1109/JSTARS.2020.3026724</a>.
+</div>
+<div id="ref-wadoux2021" class="csl-entry" role="listitem">
+Wadoux, Alexandre M. J. -C., Gerard B. M. Heuvelink, Sytze de Bruin, and Dick J. Brus. 2021. <span>“Spatial Cross-Validation Is Not the Right Way to Evaluate Map Accuracy.”</span> <em>Ecological Modelling</em> 457 (October): 109692. <a href="https://doi.org/10.1016/j.ecolmodel.2021.109692">https://doi.org/10.1016/j.ecolmodel.2021.109692</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -874,33 +1091,144 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./temperature.html" class="pagination-link" aria-label="temperature">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">temperature</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./sar.html" class="pagination-link" aria-label="SAR">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># classification_ii</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>精度评估与核心挑战 (Accuracy Assessment &amp; Challenges)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Why is the trade-off between Producer’s Accuracy (Recall) and User’s Accuracy (Precision) critical?</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Key Focus: PA 关注真阳性的覆盖情况（防漏分），UA 关注分类结果的可靠性（防多分）</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>。</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>How does the F1-Score provide a more balanced performance metric than Overall Accuracy?</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Key Focus: 通过 PA 和 UA 的调和平均，在处理森林砍伐等类别不平衡的数据时更客观</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>。</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>In "Sub-pixel Analysis," what are the limitations of "Hard" classification?</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Key Focus: 30 米像素内常包含多种地物（混合像元），强制分配一个标签会丢失土地利用比例信息</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>。</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>What are the primary benefits and "Black Box" risks of using Dynamic World?</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Key Focus: 优势是近实时监测，风险是用户不完全了解 AI 模型在特定地理区域的判断逻辑</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>。</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Explain the difference between Errors of Omission and Errors of Commission.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Key Focus: 漏分是将目标类别分到了其他类，多分是将其他类错误划分到了目标类</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>。</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "# classification_ii"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>Machine Learning Architecture &amp; Spatial Validation in Remote Sensing</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary &amp; Application</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### How does "Ensemble" logic solve the Overfitting Problem?</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>The transition from a single **Decision Tree (CART)** to a **Random Forest (RF)** represents a fundamental shift from individual hierarchical partitioning to collective intelligence. While CART is easy to interpret, it often "memorizes" the training data, leading to poor generalization.</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>| Aspect | Decision Tree | Random Forest |</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>|:-----------------------|:-----------------------|:-----------------------|</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>| **Model Type** | Single tree-based model | **Ensemble** of multiple trees (Bagging) |</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>| **Data Usage** | Uses the full training set | **Bootstrap samples** (\~70% of data used per tree) |</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>| **Feature Selection** | Uses all available features | Random subset of features (**Mtry**) per split |</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>| **Accuracy** | Prone to overfitting; lower stability | Higher accuracy; significantly reduces variance |</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>| **Interpretability** | High (Visualizable "if-then" rules) | Low ("Black Box" majority voting) |</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>| **Output** | Single prediction | **Majority Voting** across the entire forest |</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>**The Workflow of Ensemble Learning:**</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="in">[ Original Training Data ] </span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="in">           |</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="in">           +--[ Bootstrap Sample 1 ] --&gt; [ Tree 1 ] --+</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="in">           |                                          |</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="in">           +--[ Bootstrap Sample 2 ] --&gt; [ Tree 2 ] --+--&gt; [ Majority Voting ] --&gt; [ Final Class ]</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="in">           |                                          |</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="in">           +--[ Bootstrap Sample N ] --&gt; [ Tree N ] --+</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### How do Hyperparameters control learning behavior?</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>**Hyperparameter Tuning** is the process of setting the "rules of engagement" before training begins. These parameters dictate the balance between **Bias** (underfitting) and **Variance** (overfitting).</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Model Hyperparameters (Specific to the architecture):**</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Random Forest:** <span class="in">`n_estimators`</span> (number of trees), <span class="in">`max_features`</span> (Mtry), and <span class="in">`max_depth`</span>.</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**SVM:** <span class="in">`C`</span> (penalty for misclassification; large C = narrow margin) and <span class="in">`Gamma`</span> (influence distance of points; high gamma = tighter clusters).</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Decision Trees:** Managed via **Pruning** to remove leaves that don't improve the "Tree Score" or SSR.</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Algorithm Hyperparameters (Control the process):**</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Learning Rate:** The step size for updating parameters.</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**Regularization Strength:** Penalizes large weights to prevent the model from becoming overly complex.</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### Which Cross-Validation (CV) strategy is most reliable?</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>To ensure a model generalizes well, we use **Cross-Validation** to divide the dataset into multiple "folds," ensuring the model is tested on data it hasn't seen during training.</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**K-Fold CV:** Data is split into $k$ equal folds. The model trains on $k-1$ and tests on the remaining 1. This repeats $k$ times.</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Stratified K-Fold:** Essential for imbalanced datasets (e.g., mapping rare urban wetlands); it ensures each fold maintains the same class proportions as the total population.</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Leave-One-Out (LOOCV):** A special case where $k$ equals the number of samples. Highly reliable for small datasets but computationally expensive for large-scale GEE tasks.</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why moving away from the "Kappa Coefficient"?</span></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>Modern remote sensing demands more rigorous metrics than "Overall Accuracy." We now look at the **Accuracy Dimensions** defined by @barsi2018.</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Producer’s Accuracy (Recall):** Measures how often real-world features are correctly identified (avoiding **Errors of Omission**/Type I).</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**User’s Accuracy (Precision):** Measures how often a category on the map actually exists on the ground (avoiding **Errors of Commission**/Type II).</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**F1-Score:** The harmonic mean of Precision and Recall. It is the gold standard for **Application-Ready Data** (like @brown2022 Dynamic World).</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**The Kappa Issue:** @foody2020 argues that the **Kappa Coefficient**—designed to account for "chance" agreement—is statistically unsuitable for thematic maps and should be abandoned in favour of more direct metrics like the **ROC Curve/AUC**.</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a><span class="al">![Training Process Visualization](images/train.png)</span></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>*Figure 1: The iterative process of defining training samples for urban classification. [@brown2022]*</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a><span class="al">![Training Data and Spectral Signatures](images/tarning.png)</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>*Figure 3: Analyzing spectral signatures within training datasets to ensure class separation. [@brown2022]*</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why is "Spatial Cross-Validation" mandatory?</span></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>Standard ML assumes data points are independent. However, **Tobler’s First Law** (Spatial Autocorrelation) states that "near things are more related than distant things."</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>**The Problem:** In standard K-Fold, a training point and a test point might be geographically adjacent. The model "cheats" by using proximity rather than learning actual spectral relationships, leading to overoptimistic results (@zotero-item-172).</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>**The Solution: Spatial Leave-One-Out (SLOO CV)** Methods advocated by @wadoux2021 use distance-based buffers to ensure the test fold is geographically isolated from the training folds.</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="in">      Standard K-Fold                     Spatial CV (SLOO)</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="in">[ P1 P2 P3 P4 P5 ]                [ P1 P2 | Buffer | P5 ]</span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="in">(Points are mixed)           (Test point P5 is spatially isolated)</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reflection</span></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>This week marked a fundamental shift in my spatial identity. I have moved from **seeing the world to querying it**. As an architect, I previously treated satellite imagery as a static backdrop for site analysis—essentially a high-resolution "picture." In the Google Earth Engine (GEE) environment, I now recognize that every pixel is a multi-dimensional data point waiting to be interrogated.</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>One of my most significant realizations is that **Object-Based Image Analysis (OBIA)** and **Superpixel segmentation (SLIC)** are the essential bridges between "pixels" and "buildings." In traditional urban analysis, we often get bogged down in the "noise" of individual pixels. By moving toward recognizing "objects," we treat the city not as a chaotic collection of dots, but as a structured environment. This allows us to classify the urban fabric in a way that aligns with physical architectural forms.</span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>However, with great computational power comes great responsibility. **"Garbage in, garbage out"** remains the golden rule of GEE Machine Learning. If our training samples are biased or our preprocessing is flawed, the model's output is meaningless.</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>This brings us to a critical debate: **Often, classifiers on EO data can overcomplicate things.**</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>If there is a clear, spectral divide between bands (for example, a sharp NIR spike in healthy vegetation), **do we actually need a complex classifier?** \* Can we just **threshold** the data (e.g., $NDVI &gt; 0.4$)?\</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Yes!** Thresholding is transparent and fast. However, the catch is scalability: if we receive new data from a different season or satellite, a static threshold might fail, whereas a trained classifier can adapt.</span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a><span class="al">![Interpretability-Accuracy Tradeoff](images/modeltradeoff.png)</span></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>*Figure 2: The inherent trade-off between model interpretability and predictive accuracy. [@sheykhmousa2020]*</span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>This is the **Interpretability-Accuracy Trade-off** <span class="co">[</span><span class="ot">@sheykhmousa2020</span><span class="co">]</span>. As shown in the trade-off model, as we move toward "Ensemble" methods like Random Forest to gain accuracy, we often lose the "Interpretability" that a single Decision Tree or a simple threshold provides. In urban policy, being able to explain *why* a model made a decision is often as important as the decision itself.</span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>To visualize this trade-off, I draft a GEE script to check "Black Box" classifier.</span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a><span class="in">``` javascript</span></span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a><span class="co">// Load Median Image for NYC</span></span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> nyc <span class="op">=</span> ee<span class="op">.</span><span class="at">Geometry</span><span class="op">.</span><span class="fu">Point</span>([<span class="op">-</span><span class="fl">73.97</span><span class="op">,</span> <span class="fl">40.78</span>])<span class="op">.</span><span class="fu">buffer</span>(<span class="dv">5000</span>)<span class="op">.</span><span class="fu">bounds</span>()<span class="op">;</span></span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> s2 <span class="op">=</span> ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">"COPERNICUS/S2_SR_HARMONIZED"</span>)</span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterBounds</span>(nyc)<span class="op">.</span><span class="fu">filterDate</span>(<span class="st">'2023-05-01'</span><span class="op">,</span> <span class="st">'2023-09-30'</span>)</span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">median</span>()<span class="op">.</span><span class="fu">clip</span>(nyc)<span class="op">;</span></span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Method A: Simple NDVI Threshold (Highly Interpretable)</span></span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> ndvi <span class="op">=</span> s2<span class="op">.</span><span class="fu">normalizedDifference</span>([<span class="st">'B8'</span><span class="op">,</span> <span class="st">'B4'</span>])<span class="op">;</span></span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> thresholdVeg <span class="op">=</span> ndvi<span class="op">.</span><span class="fu">gt</span>(<span class="fl">0.4</span>)<span class="op">.</span><span class="fu">selfMask</span>()<span class="op">;</span></span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. Method B: Random Forest Classifier (High Accuracy/Low Interpretability)</span></span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a><span class="co">// (Assuming 'trainingPoints' is a FeatureCollection of labeled spectral data)</span></span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> rf <span class="op">=</span> ee<span class="op">.</span><span class="at">Classifier</span><span class="op">.</span><span class="fu">smileRandomForest</span>(<span class="dv">50</span>)<span class="op">.</span><span class="fu">train</span>({</span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a>  <span class="dt">features</span><span class="op">:</span> trainingData<span class="op">,</span></span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a>  <span class="dt">classProperty</span><span class="op">:</span> <span class="st">'class'</span><span class="op">,</span></span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>  <span class="dt">inputProperties</span><span class="op">:</span> [<span class="st">'B2'</span><span class="op">,</span> <span class="st">'B3'</span><span class="op">,</span> <span class="st">'B4'</span><span class="op">,</span> <span class="st">'B8'</span><span class="op">,</span> <span class="st">'NDVI'</span>]</span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> rfVeg <span class="op">=</span> s2<span class="op">.</span><span class="fu">addBands</span>(ndvi)<span class="op">.</span><span class="fu">classify</span>(rf)<span class="op">.</span><span class="fu">eq</span>(<span class="dv">1</span>)<span class="op">.</span><span class="fu">selfMask</span>()<span class="op">;</span></span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a><span class="co">// Compare Results</span></span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(thresholdVeg<span class="op">,</span> {<span class="dt">palette</span><span class="op">:</span> <span class="st">'lime'</span>}<span class="op">,</span> <span class="st">'Heuristic: NDVI &gt; 0.4'</span>)<span class="op">;</span></span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(rfVeg<span class="op">,</span> {<span class="dt">palette</span><span class="op">:</span> <span class="st">'darkgreen'</span>}<span class="op">,</span> <span class="st">'ML: Random Forest'</span>)<span class="op">;</span></span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/yichienchen99/CASA0023_LD/edit/master/classification_ii.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/yichienchen99/CASA0023_LD/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/edit/master/classification_ii.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

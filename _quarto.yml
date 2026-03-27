@@ -36,9 +36,7 @@ book:
     - gee_i.qmd
     - classification_i.qmd
     - classification_ii.qmd
-    - temperature.qmd
     - sar.qmd
-    - resources.qmd
     - summary.qmd
     - references.qmd
 

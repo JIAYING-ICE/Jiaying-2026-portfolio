@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -125,7 +145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="https://github.com/yichienchen99/CASA0023_LD" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
@@ -151,37 +171,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Personal Introduction &amp; Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">portfolio</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Portfolio</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./corrections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">corrections</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correction &amp; Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./policy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">policy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./gee_i.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">gee_i</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">GEE</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -198,26 +218,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./temperature.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">temperature</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./sar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">sar</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">resources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -236,9 +244,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assement" id="toc-assement" class="nav-link active" data-scroll-target="#assement"><span class="header-section-number">7.1</span> Assement</a></li>
+  <li><a href="#summary-application" id="toc-summary-application" class="nav-link active" data-scroll-target="#summary-application"><span class="header-section-number">7.1</span> Summary &amp; Application</a>
+  <ul class="collapse">
+  <li><a href="#what-are-the-fundamental-differences-between-supervised-and-unsupervised-classification-in-terms-of-data-requirements-and-the-training-process" id="toc-what-are-the-fundamental-differences-between-supervised-and-unsupervised-classification-in-terms-of-data-requirements-and-the-training-process" class="nav-link" data-scroll-target="#what-are-the-fundamental-differences-between-supervised-and-unsupervised-classification-in-terms-of-data-requirements-and-the-training-process"><span class="header-section-number">7.1.1</span> What are the fundamental differences between <strong>supervised and unsupervised classification</strong> in terms of <strong>data requirements</strong> and the <strong>training process</strong>?</a></li>
+  <li><a href="#how-does-the-isodata-algorithm-improve-upon-standard-k-means-clustering-and-what-is-cluster-busting" id="toc-how-does-the-isodata-algorithm-improve-upon-standard-k-means-clustering-and-what-is-cluster-busting" class="nav-link" data-scroll-target="#how-does-the-isodata-algorithm-improve-upon-standard-k-means-clustering-and-what-is-cluster-busting"><span class="header-section-number">7.1.2</span> How does the <strong>ISODATA</strong> algorithm improve upon standard <strong>K-means</strong> clustering, and what is “cluster busting”?</a></li>
+  <li><a href="#what-are-the-statistical-assumptions-of-the-maximum-likelihood-classifier-and-how-does-it-assign-a-pixel-to-a-class" id="toc-what-are-the-statistical-assumptions-of-the-maximum-likelihood-classifier-and-how-does-it-assign-a-pixel-to-a-class" class="nav-link" data-scroll-target="#what-are-the-statistical-assumptions-of-the-maximum-likelihood-classifier-and-how-does-it-assign-a-pixel-to-a-class"><span class="header-section-number">7.1.3</span> What are the statistical assumptions of the Maximum Likelihood classifier, and how does it assign a pixel to a class?</a></li>
+  <li><a href="#how-do-the-hyperparameters-c-and-gamma-sigma-control-the-decision-boundary-in-a-support-vector-machine-svm" id="toc-how-do-the-hyperparameters-c-and-gamma-sigma-control-the-decision-boundary-in-a-support-vector-machine-svm" class="nav-link" data-scroll-target="#how-do-the-hyperparameters-c-and-gamma-sigma-control-the-decision-boundary-in-a-support-vector-machine-svm"><span class="header-section-number">7.1.4</span> How do the hyperparameters “C” and “Gamma” (Sigma) control the decision boundary in a Support Vector Machine (SVM)?</a></li>
+  <li><a href="#what-is-object-based-image-analysis-obia-and-what-metrics-beyond-spectral-values-can-it-utilize-for-classification" id="toc-what-is-object-based-image-analysis-obia-and-what-metrics-beyond-spectral-values-can-it-utilize-for-classification" class="nav-link" data-scroll-target="#what-is-object-based-image-analysis-obia-and-what-metrics-beyond-spectral-values-can-it-utilize-for-classification"><span class="header-section-number">7.1.5</span> What is Object-Based Image Analysis (OBIA), and what metrics beyond spectral values can it utilize for classification?</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">7.2</span> Application</a>
+  <ul class="collapse">
+  <li><a href="#a.-data-preparation-sampling" id="toc-a.-data-preparation-sampling" class="nav-link" data-scroll-target="#a.-data-preparation-sampling"><span class="header-section-number">7.2.1</span> A. Data Preparation &amp; Sampling</a></li>
+  <li><a href="#b.-supervised-classification-random-forest-cart" id="toc-b.-supervised-classification-random-forest-cart" class="nav-link" data-scroll-target="#b.-supervised-classification-random-forest-cart"><span class="header-section-number">7.2.2</span> B. Supervised Classification (Random Forest / CART)</a></li>
+  <li><a href="#c.-unsupervised-classification-k-means-clustering" id="toc-c.-unsupervised-classification-k-means-clustering" class="nav-link" data-scroll-target="#c.-unsupervised-classification-k-means-clustering"><span class="header-section-number">7.2.3</span> C. Unsupervised Classification (K-Means Clustering)</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.3</span> Reflection</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/yichienchen99/CASA0023_LD/edit/master/classification_i.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/yichienchen99/CASA0023_LD/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/edit/master/classification_i.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -262,15 +284,223 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>机器学习影像分类算法 (Image Classification Algorithms) How do Classification and Regression Trees (CART) utilize Gini Impurity and Sum of Squared Residuals (SSR) to partition data? Key Focus: 通过递归二分法找到特征的最佳分割点，使生成的子集纯度最高 。 What is the “Ensemble” advantage of Random Forests, and how do bootstrapping and OOB improve model robustness? Key Focus: 结合多棵决策树的结果以减少偏差，并利用未参与训练的样本进行自我验证 。 Explain the “Bias-Variance Tradeoff”: Why is pruning essential to prevent overfitting? Key Focus: 过于复杂的树会过度拟合训练数据的噪声，通过剪枝限制模型复杂度可提高其泛化能力 。 How does Support Vector Machine (SVM) identify the “maximum margin” in feature space? Key Focus: 寻找能够将不同类别分得最开的“最优超平面”，确保模型对新数据的判别更稳定 。 When should a researcher prioritize model “Interpretability” over “Accuracy”? Key Focus: 在政策辩论中，简单的分类规则（如决策树）往往比黑盒模型（如深度学习）更具说服力 。</p>
-<section id="assement" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="assement"><span class="header-section-number">7.1</span> Assement</h2>
-<p>精度评估需要考虑空间自相关</p>
-<p>面向对象分析 OBIA 怎么提升分类精度</p>
+<section id="summary-application" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="summary-application"><span class="header-section-number">7.1</span> Summary &amp; Application</h2>
+<section id="what-are-the-fundamental-differences-between-supervised-and-unsupervised-classification-in-terms-of-data-requirements-and-the-training-process" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="what-are-the-fundamental-differences-between-supervised-and-unsupervised-classification-in-terms-of-data-requirements-and-the-training-process"><span class="header-section-number">7.1.1</span> What are the fundamental differences between <strong>supervised and unsupervised classification</strong> in terms of <strong>data requirements</strong> and the <strong>training process</strong>?</h3>
+<div id="tbl-ml-comparison" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ml-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7.1: Technical comparison of Machine Learning approaches in Earth Observation.
+</figcaption>
+<div aria-describedby="tbl-ml-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Supervised Machine Learning</th>
+<th style="text-align: left;">Unsupervised Machine Learning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Definition</strong></td>
+<td style="text-align: left;">Model is trained on <strong>labeled data</strong>; each example is paired with an output label.</td>
+<td style="text-align: left;">Model is trained on <strong>unlabeled data</strong>; it seeks hidden patterns or structures.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Purpose</strong></td>
+<td style="text-align: left;">To predict specific outputs for new data based on learned relationships (<strong>Classification/Regression</strong>).</td>
+<td style="text-align: left;">To discover underlying structures or natural groupings (<strong>Clustering/ Dimensionality Reduction</strong>).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;"><strong>annotated dataset</strong> where the “correct answer” is known.</td>
+<td style="text-align: left;">raw data where <strong>no labels</strong> are provided.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>RS</strong></td>
+<td style="text-align: left;">Sample point is labeled as “Forest,” “Urban,” or “Water.”</td>
+<td style="text-align: left;">Pixels are grouped by <strong>spectral similarity</strong>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Training Process</strong></td>
+<td style="text-align: left;">Algorithm learns by mapping input features directly to the target label.</td>
+<td style="text-align: left;">Algorithm explores the data independently to find natural clusters without external guidance.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Analytical Output</strong></td>
+<td style="text-align: left;">A predictive model capable of assigning specific classes to unseen data.</td>
+<td style="text-align: left;">A set of clusters or segments revealing internal data relationships.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>RS Output</strong></td>
+<td style="text-align: left;"><strong>classified map</strong></td>
+<td style="text-align: left;">A <strong>segmented map</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Key Applications</strong></td>
+<td style="text-align: left;">Land cover classification, crop identification, and predictive modeling.</td>
+<td style="text-align: left;">Exploratory data analysis, anomaly detection, and image segmentation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="how-does-the-isodata-algorithm-improve-upon-standard-k-means-clustering-and-what-is-cluster-busting" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="how-does-the-isodata-algorithm-improve-upon-standard-k-means-clustering-and-what-is-cluster-busting"><span class="header-section-number">7.1.2</span> How does the <strong>ISODATA</strong> algorithm improve upon standard <strong>K-means</strong> clustering, and what is “cluster busting”?</h3>
+<p><img src="images/ISODATA-1.jpg" class="img-fluid" alt="ISODATA Clustering Analysis"> <em>Source: <a href="https://gisrsstudy.com/isodata/">gisrsstudy.com</a></em></p>
+<p><span class="citation" data-cites="hu2019">Hu et al. (<a href="references.html#ref-hu2019" role="doc-biblioref">2019</a>)</span> provides a sophisticated application of unsupervised learning to structural health monitoring, specifically addressing the limitations of standard K-means clustering by integrating the Iterative Self-Organizing Data Analysis (ISODATA) and the Gaussian Mixture Model (GMM).</p>
+<p>Standard K-means clustering relies on simple distance-based similarity but suffers from major defects in complex engineering contexts: it requires a pre-set number of clusters (K) and is highly sensitive to initial values, which often leads to the model falling into local optimal solutions or creating clusters with too few data points, causing divergence.</p>
+<p>The ISODATA-GMM approach introduces two fundamental improvements:<br>
+Statistical Rigor (GMM): Unlike K-means, which assigns pixels to the nearest center, GMM assumes each cluster is a multivariate Gaussian distribution. This provides a probabilistic framework to assess the role of each variable in the clustering process.</p>
+<p>Dynamic Self-Organization (ISODATA): To prevent the over-fitting risks of GMM, the ISODATA logic is used to “govern” the clusters dynamically.</p>
+<p><img src="images/isodata.png" class="img-fluid" alt="Flow chart of the ISODATA model"> <em>Figure: Iterative logic of the ISODATA model. <span class="citation" data-cites="hu2019">(<a href="references.html#ref-hu2019" role="doc-biblioref">Hu et al. 2019</a>)</span></em></p>
+<ul>
+<li><p>Step 3: ISODATA Iteration: The algorithm enters a loop where it checks the number of elements in each cluster against a minimum value (N min). It then evaluates splitting conditions (if K≤K0/2) and merging conditions (if K≥2K0) based on whether the iteration count is odd or even.</p></li>
+<li><p>Step 4: Sub-model Generation: Once the clusters are stable, the 24 measuring points are classified into five distinct groups. A Random Coefficient Model is then built for each group simultaneously, which reduces the number of free variables and enhances the model’s generalization ability.</p></li>
+</ul>
+<p>This methodology serves as a high-precision engineering equivalent to the “Cluster Busting” concept discussed in our remote sensing lectures. Logic of Cluster Busting: In our course, cluster busting is used when ISODATA produces clusters that are too heterogeneous to assign a single landcover meaning.</p>
+</section>
+<section id="what-are-the-statistical-assumptions-of-the-maximum-likelihood-classifier-and-how-does-it-assign-a-pixel-to-a-class" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="what-are-the-statistical-assumptions-of-the-maximum-likelihood-classifier-and-how-does-it-assign-a-pixel-to-a-class"><span class="header-section-number">7.1.3</span> What are the statistical assumptions of the Maximum Likelihood classifier, and how does it assign a pixel to a class?</h3>
+<blockquote class="blockquote">
+<p>[!IMPORTANT] <strong>Core Principle: Maximum Likelihood</strong></p>
+<p>The algorithm used by the Maximum Likelihood Classification tool is based on two fundamental principles: - <strong>Normal Distribution</strong>: The cells in each class sample in the multidimensional space are assumed to be normally distributed. - <strong>Bayes’ Theorem</strong>: Utilizing Bayesian decision-making to assign pixels to the class with the highest probability.</p>
+</blockquote>
+<p><strong>Comparison: Input Data vs.&nbsp;Classified Output</strong></p>
+<p>The following example shows how the Maximum Likelihood Classification tool is used to perform a supervised classification of a multiband raster into five land use classes.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Input Landsat TM Band</th>
+<th style="text-align: center;">Classified Land Use Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/LansatTMjpg.jpg" class="img-fluid" alt="Input Raster"></td>
+<td style="text-align: center;"><img src="images/calssification.png" class="img-fluid" alt="Output Classification"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><em>Source: <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/how-maximum-likelihood-classification-works.htm">ArcGIS Pro</a></em></td>
+<td style="text-align: center;"><em>Source: <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/how-maximum-likelihood-classification-works.htm">ArcGIS Pro</a></em></td>
+</tr>
+</tbody>
+</table>
+<p>From the image, five land-use classes were defined in a feature class to produce the training samples: Commercial/Industrial, Residential, Cropland, Forest, and Pasture. The Create Signatures tool was used to calculate the statistics for the classes to produce a signature file.</p>
+<p>Using the input multiband raster and the signature file, the Maximum Likelihood Classification tool is used to classify the raster cells into the five classes.</p>
+<p>Settings used in the Maximum Likelihood Classification tool dialog box:</p>
+<pre class="text"><code>+-------------------------------------------------------------+
+|    MAXIMUM LIKELIHOOD CLASSIFICATION TOOL CONFIGURATION     |
++-------------------------------------------------------------+
+|  Input Raster Bands          : northerncincy.tif            |
+|  Input Signature File        : signature.gsg                |
+|  Output Multiband Raster     : landuse                      |
+|  Reject Fraction             : 0.0                          |
+|  A Priori Probability Weight : EQUAL                        |
+|  Input A Priori Prob File    : &lt;blank&gt;                      |
+|  Output Confidence Raster    : confidence_ras               |
++-------------------------------------------------------------+
+|  Source: ESRI Spatial Analyst                               |
++-------------------------------------------------------------+</code></pre>
+</section>
+<section id="how-do-the-hyperparameters-c-and-gamma-sigma-control-the-decision-boundary-in-a-support-vector-machine-svm" class="level3" data-number="7.1.4">
+<h3 data-number="7.1.4" class="anchored" data-anchor-id="how-do-the-hyperparameters-c-and-gamma-sigma-control-the-decision-boundary-in-a-support-vector-machine-svm"><span class="header-section-number">7.1.4</span> How do the hyperparameters “C” and “Gamma” (Sigma) control the decision boundary in a Support Vector Machine (SVM)?</h3>
+<p><img src="images/svm.png" class="img-fluid" alt="SVM Maximum Margin Illustration"> <em>Source: <a href="https://sandundayananda.medium.com/support-vector-machines-svm-db8314e9092d">Medium - Support Vector Machines</a></em></p>
+</section>
+<section id="what-is-object-based-image-analysis-obia-and-what-metrics-beyond-spectral-values-can-it-utilize-for-classification" class="level3" data-number="7.1.5">
+<h3 data-number="7.1.5" class="anchored" data-anchor-id="what-is-object-based-image-analysis-obia-and-what-metrics-beyond-spectral-values-can-it-utilize-for-classification"><span class="header-section-number">7.1.5</span> What is Object-Based Image Analysis (OBIA), and what metrics beyond spectral values can it utilize for classification?</h3>
+<blockquote class="blockquote">
+<p>Think objects, not pixels!!</p>
+</blockquote>
+<p>OBIA segments pixels into homogeneous polygons (objects) before classification, which can help mitigate the “salt and pepper” noise of pixel-based methods.</p>
+<p>OBIA segments an image grouping small pixels together into vector objects. Instead of a per-pixel basis, segmentation automatically digitizes the image.</p>
+<p><img src="images/OBIA-Segmentation.jpg" class="img-fluid" alt="OBIA Segmentation"> <em>Object-Based Image Analysis (OBIA) segmentation is a process that groups similar pixels into objects</em></p>
+<p>With these segmented objects, you use their spectral, geometrical, and spatial properties to classify them into land cover.</p>
+<p><img src="images/OBIA-Classification-Final.jpg" class="img-fluid" alt="OBIA Classification"> <em>OBIA classification uses shape, size, and spectral properties of objects to classify each object</em></p>
+<blockquote class="blockquote">
+<p>[!NOTE] <strong>To recap, the two basic principles of OBIA are:</strong> 1. <strong>SEGMENTATION</strong>: Breaking the image into objects that represent real-world features. 2. <strong>CLASSIFICATION</strong>: Assigning categories based on spatial, spectral, and geometric attributes.</p>
+</blockquote>
+<p>Also, we can configure weights for all the layers we want to segment. This means that we don’t only have to segment by red, green, or blue, but we can also segment a DEM, DSM, NIR, or even LiDAR intensity.</p>
+<p><img src="images/remote-sensing-trends.png" class="img-fluid" alt="Remote Sensing Trends"> <em>Source: <a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">GIS Geography - OBIA Guide</a></em></p>
+</section>
+</section>
+<section id="application" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
+<section id="a.-data-preparation-sampling" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="a.-data-preparation-sampling"><span class="header-section-number">7.2.1</span> A. Data Preparation &amp; Sampling</h3>
+<p>Before running a Supervised classifier, you must collect “Training Data” (merged FeatureCollections of different land covers).</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Merge training samples into one FeatureCollection</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> trainingFeatures <span class="op">=</span> forest<span class="op">.</span><span class="fu">merge</span>(water)<span class="op">.</span><span class="fu">merge</span>(urban)<span class="op">.</span><span class="fu">merge</span>(agriculture)<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. Overlap samples onto the image to extract spectral values</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> trainingData <span class="op">=</span> medianImage<span class="op">.</span><span class="fu">sampleRegions</span>({</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">collection</span><span class="op">:</span> trainingFeatures<span class="op">,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">properties</span><span class="op">:</span> [<span class="st">'class'</span>]<span class="op">,</span> <span class="co">// The label property (e.g., 0, 1, 2)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">scale</span><span class="op">:</span> <span class="dv">30</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Training Data Samples:'</span><span class="op">,</span> trainingData<span class="op">.</span><span class="fu">first</span>())<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="b.-supervised-classification-random-forest-cart" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="b.-supervised-classification-random-forest-cart"><span class="header-section-number">7.2.2</span> B. Supervised Classification (Random Forest / CART)</h3>
+<p>This process involves defining the classifier, training it on your samples, and applying it to the whole image.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Define and train the classifier (Example: CART - Classification and Regression Trees)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> classifier <span class="op">=</span> ee<span class="op">.</span><span class="at">Classifier</span><span class="op">.</span><span class="fu">smileCart</span>()<span class="op">.</span><span class="fu">train</span>({</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">features</span><span class="op">:</span> trainingData<span class="op">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">classProperty</span><span class="op">:</span> <span class="st">'class'</span><span class="op">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">inputProperties</span><span class="op">:</span> medianImage<span class="op">.</span><span class="fu">bandNames</span>()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. Classify the image</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> supervisedMap <span class="op">=</span> medianImage<span class="op">.</span><span class="fu">classify</span>(classifier)<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">// 3. Display results</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(supervisedMap<span class="op">,</span> {<span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">palette</span><span class="op">:</span> [<span class="st">'green'</span><span class="op">,</span> <span class="st">'blue'</span><span class="op">,</span> <span class="st">'red'</span><span class="op">,</span> <span class="st">'yellow'</span>]}<span class="op">,</span> <span class="st">'Supervised LULC'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="c.-unsupervised-classification-k-means-clustering" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="c.-unsupervised-classification-k-means-clustering"><span class="header-section-number">7.2.3</span> C. Unsupervised Classification (K-Means Clustering)</h3>
+<p>Used for exploratory analysis when labels are unavailable. It groups pixels based on spectral similarity.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Sample pixels for the clusterer to learn the data distribution</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> trainingSample <span class="op">=</span> medianImage<span class="op">.</span><span class="fu">sample</span>({</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">region</span><span class="op">:</span> roi<span class="op">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">scale</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">numPixels</span><span class="op">:</span> <span class="dv">5000</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. Instantiate the clusterer (Example: K-Means with 5 clusters)</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> clusterer <span class="op">=</span> ee<span class="op">.</span><span class="at">Clusterer</span><span class="op">.</span><span class="fu">wekaKMeans</span>(<span class="dv">5</span>)<span class="op">.</span><span class="fu">train</span>(trainingSample)<span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">// 3. Cluster the image</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> unsupervisedMap <span class="op">=</span> medianImage<span class="op">.</span><span class="fu">cluster</span>(clusterer)<span class="op">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">// 4. Display results</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(unsupervisedMap<span class="op">.</span><span class="fu">randomVisualizer</span>()<span class="op">,</span> {}<span class="op">,</span> <span class="st">'Unsupervised Clusters'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
+<p>The transition to supervised machine learning changed how I understand the city. Instead of manually analysing a few samples, I can train a model on a small set and apply it across a much larger area, like to label 100 roofs in New York and have Google Earth Engine (GEE) predict the remaining million is a level of scale. This shift in scale is something traditional architectural methods cannot achieve. Unsupervised methods like K-Means also helped me notice patterns in the city, such as material differences and local variations, that are not easy to see directly.</p>
+<p>At the same time, I realised how dependent the results are on data quality. The model only works as well as the samples I provide. During practice, I spent a lot of time refining training areas. Even small mistakes, like confusing shadows with water, could affect the results. Moving beyond simple thresholds like NDVI to more complex feature spaces was challenging, and it showed me that automation still requires <strong>careful input</strong>.</p>
+<p>A key step for me was moving from pixel-based classification to OBIA. Pixel-based results often looked fragmented and unrealistic. After grouping pixels into meaningful units, the results became more consistent with real urban forms. This made the classification easier to interpret and closer to how we actually understand the city.</p>
+<p>Final word, validation is essential. A map that looks correct is not always reliable. Learning about the limits of metrics like Kappa, and using measures such as F1-score and ROC curves, helped me evaluate results more carefully. I also learned that spatial data needs special treatment. Standard validation methods can give overly optimistic results, so spatial cross-validation is necessary. This process shifted my focus from visualization to building models that can be trusted.</p>
 
 
 <!-- -->
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-hu2019" class="csl-entry" role="listitem">
+Hu, Yating, Chenfei Shao, Chongshi Gu, and Zhenzhu Meng. 2019. <span>“Concrete <span>Dam Displacement Prediction Based</span> on an <span>ISODATA-GMM Clustering</span> and <span>Random Coefficient Model</span>.”</span> <em>Water</em> 11 (April): 714. <a href="https://doi.org/10.3390/w11040714">https://doi.org/10.3390/w11040714</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -880,8 +1110,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./gee_i.html" class="pagination-link" aria-label="gee_i">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">gee_i</span></span>
+      <a href="./gee_i.html" class="pagination-link" aria-label="GEE">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">GEE</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -890,35 +1120,205 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># classification_i</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>机器学习影像分类算法 (Image Classification Algorithms)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>How do Classification and Regression Trees (CART) utilize Gini Impurity and Sum of Squared Residuals (SSR) to partition data?</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Key Focus: 通过递归二分法找到特征的最佳分割点，使生成的子集纯度最高</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>。</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>What is the "Ensemble" advantage of Random Forests, and how do bootstrapping and OOB improve model robustness?</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Key Focus: 结合多棵决策树的结果以减少偏差，并利用未参与训练的样本进行自我验证</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>。</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Explain the "Bias-Variance Tradeoff": Why is pruning essential to prevent overfitting?</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Key Focus: 过于复杂的树会过度拟合训练数据的噪声，通过剪枝限制模型复杂度可提高其泛化能力</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>。</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>How does Support Vector Machine (SVM) identify the "maximum margin" in feature space?</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Key Focus: 寻找能够将不同类别分得最开的“最优超平面”，确保模型对新数据的判别更稳定</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>。</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>When should a researcher prioritize model "Interpretability" over "Accuracy"?</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Key Focus: 在政策辩论中，简单的分类规则（如决策树）往往比黑盒模型（如深度学习）更具说服力</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>。</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assement</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a> 精度评估需要考虑空间自相关</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a> 面向对象分析 OBIA 怎么提升分类精度</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "# classification_i"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary &amp; Application</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">### What are the fundamental differences between **supervised and unsupervised classification** in terms of **data requirements** and the **training process**? </span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>| Feature | Supervised Machine Learning | Unsupervised Machine Learning |</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>|:---|:---|:---|</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>| **Definition** | Model is trained on **labeled data**; each example is paired with an output label. | Model is trained on **unlabeled data**; it seeks hidden patterns or structures. |</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>| **Purpose** | To predict specific outputs for new data based on learned relationships (**Classification/Regression**). | To discover underlying structures or natural groupings (**Clustering/ Dimensionality Reduction**). |</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>| **Data** | **annotated dataset** where the "correct answer" is known. |  raw data where **no labels** are provided. |</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>| **RS** |  Sample point is labeled as "Forest," "Urban," or "Water." | Pixels are grouped by **spectral similarity**. |</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>| **Training Process** | Algorithm learns by mapping input features directly to the target label. | Algorithm explores the data independently to find natural clusters without external guidance. |</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>| **Analytical Output** | A predictive model capable of assigning specific classes to unseen data. | A set of clusters or segments revealing internal data relationships. |</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>| **RS Output** | **classified map**  | A **segmented map**  |</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>| **Key Applications** | Land cover classification, crop identification, and predictive modeling. | Exploratory data analysis, anomaly detection, and image segmentation. |</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>: Technical comparison of Machine Learning approaches in Earth Observation. {#tbl-ml-comparison}</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">### How does the **ISODATA** algorithm improve upon standard **K-means** clustering, and what is "cluster busting"?</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="al">![ISODATA Clustering Analysis](images/ISODATA-1.jpg)</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>*Source: [gisrsstudy.com](https://gisrsstudy.com/isodata/)*</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>@hu2019 provides a sophisticated application of unsupervised learning to structural health monitoring, specifically addressing the limitations of standard K-means clustering by integrating the Iterative Self-Organizing Data Analysis (ISODATA) and the Gaussian Mixture Model (GMM).   </span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>Standard K-means clustering relies on simple distance-based similarity but suffers from major defects in complex engineering contexts: it requires a pre-set number of clusters (K) and is highly sensitive to initial values, which often leads to the model falling into local optimal solutions or creating clusters with too few data points, causing divergence.  </span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>The ISODATA-GMM approach introduces two fundamental improvements:  </span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>Statistical Rigor (GMM): Unlike K-means, which assigns pixels to the nearest center, GMM assumes each cluster is a multivariate Gaussian distribution. This provides a probabilistic framework to assess the role of each variable in the clustering process.  </span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>Dynamic Self-Organization (ISODATA): To prevent the over-fitting risks of GMM, the ISODATA logic is used to "govern" the clusters dynamically.   </span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="al">![Flow chart of the ISODATA model](images/isodata.png)</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>*Figure: Iterative logic of the ISODATA model. [@hu2019]*</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 3: ISODATA Iteration: The algorithm enters a loop where it checks the number of elements in each cluster against a minimum value (N min). It then evaluates splitting conditions (if K≤K0/2) and merging conditions (if K≥2K0) based on whether the iteration count is odd or even.    </span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Step 4: Sub-model Generation: Once the clusters are stable, the 24 measuring points are classified into five distinct groups. A Random Coefficient Model is then built for each group simultaneously, which reduces the number of free variables and enhances the model's generalization ability.    </span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>This methodology serves as a high-precision engineering equivalent to the "Cluster Busting" concept discussed in our remote sensing lectures. Logic of Cluster Busting: In our course, cluster busting is used when ISODATA produces clusters that are too heterogeneous to assign a single landcover meaning.    </span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="fu">### What are the statistical assumptions of the Maximum Likelihood classifier, and how does it assign a pixel to a class?</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span><span class="co">[</span><span class="ot">!IMPORTANT</span><span class="co">]</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Core Principle: Maximum Likelihood**</span></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The algorithm used by the Maximum Likelihood Classification tool is based on two fundamental principles:</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - **Normal Distribution**: The cells in each class sample in the multidimensional space are assumed to be normally distributed.</span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - **Bayes' Theorem**: Utilizing Bayesian decision-making to assign pixels to the class with the highest probability.</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>**Comparison: Input Data vs. Classified Output**</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>The following example shows how the Maximum Likelihood Classification tool is used to perform a supervised classification of a multiband raster into five land use classes.</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>| Input Landsat TM Band | Classified Land Use Output |</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>| :---: | :---: |</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>| <span class="al">![Input Raster](images/LansatTMjpg.jpg)</span> | <span class="al">![Output Classification](images/calssification.png)</span> |</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>| *Source: [ArcGIS Pro](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/how-maximum-likelihood-classification-works.htm)* | *Source: [ArcGIS Pro](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/how-maximum-likelihood-classification-works.htm)* |</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>From the image, five land-use classes were defined in a feature class to produce the training samples: Commercial/Industrial, Residential, Cropland, Forest, and Pasture. The Create Signatures tool was used to calculate the statistics for the classes to produce a signature file.</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>Using the input multiband raster and the signature file, the Maximum Likelihood Classification tool is used to classify the raster cells into the five classes.</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>Settings used in the Maximum Likelihood Classification tool dialog box:</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------+</span></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="in">|    MAXIMUM LIKELIHOOD CLASSIFICATION TOOL CONFIGURATION     |</span></span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------+</span></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a><span class="in">|  Input Raster Bands          : northerncincy.tif            |</span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a><span class="in">|  Input Signature File        : signature.gsg                |</span></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a><span class="in">|  Output Multiband Raster     : landuse                      |</span></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a><span class="in">|  Reject Fraction             : 0.0                          |</span></span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a><span class="in">|  A Priori Probability Weight : EQUAL                        |</span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a><span class="in">|  Input A Priori Prob File    : &lt;blank&gt;                      |</span></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a><span class="in">|  Output Confidence Raster    : confidence_ras               |</span></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------+</span></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a><span class="in">|  Source: ESRI Spatial Analyst                               |</span></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a><span class="in">+-------------------------------------------------------------+</span></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a><span class="fu">### How do the hyperparameters "C" and "Gamma" (Sigma) control the decision boundary in a Support Vector Machine (SVM)?</span></span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a><span class="al">![SVM Maximum Margin Illustration](images/svm.png)</span></span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>*Source: [Medium - Support Vector Machines](https://sandundayananda.medium.com/support-vector-machines-svm-db8314e9092d)*</span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a><span class="fu">### What is Object-Based Image Analysis (OBIA), and what metrics beyond spectral values can it utilize for classification? </span></span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Think objects, not pixels!!</span></span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a>OBIA segments pixels into homogeneous polygons (objects) before classification, which can help mitigate the "salt and pepper" noise of pixel-based methods.  </span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a>OBIA segments an image grouping small pixels together into vector objects. Instead of a per-pixel basis, segmentation automatically digitizes the image.  </span>
+<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a><span class="al">![OBIA Segmentation](images/OBIA-Segmentation.jpg)</span></span>
+<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a>*Object-Based Image Analysis (OBIA) segmentation is a process that groups similar pixels into objects*</span>
+<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>With these segmented objects, you use their spectral, geometrical, and spatial properties to classify them into land cover.  </span>
+<span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a><span class="al">![OBIA Classification](images/OBIA-Classification-Final.jpg)</span></span>
+<span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a>*OBIA classification uses shape, size, and spectral properties of objects to classify each object*</span>
+<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span><span class="co">[</span><span class="ot">!NOTE</span><span class="co">]</span></span>
+<span id="cb5-117"><a href="#cb5-117" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **To recap, the two basic principles of OBIA are:**</span></span>
+<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 1. **SEGMENTATION**: Breaking the image into objects that represent real-world features.</span></span>
+<span id="cb5-119"><a href="#cb5-119" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 2. **CLASSIFICATION**: Assigning categories based on spatial, spectral, and geometric attributes.</span></span>
+<span id="cb5-120"><a href="#cb5-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-121"><a href="#cb5-121" aria-hidden="true" tabindex="-1"></a>Also, we can configure weights for all the layers we want to segment. This means that we don’t only have to segment by red, green, or blue, but we can also segment a DEM, DSM, NIR, or even LiDAR intensity.</span>
+<span id="cb5-122"><a href="#cb5-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-123"><a href="#cb5-123" aria-hidden="true" tabindex="-1"></a><span class="al">![Remote Sensing Trends](images/remote-sensing-trends.png)</span></span>
+<span id="cb5-124"><a href="#cb5-124" aria-hidden="true" tabindex="-1"></a>*Source: [GIS Geography - OBIA Guide](https://gisgeography.com/obia-object-based-image-analysis-geobia/)*</span>
+<span id="cb5-125"><a href="#cb5-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-127"><a href="#cb5-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-128"><a href="#cb5-128" aria-hidden="true" tabindex="-1"></a><span class="fu">## Application </span></span>
+<span id="cb5-129"><a href="#cb5-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-131"><a href="#cb5-131" aria-hidden="true" tabindex="-1"></a><span class="fu">### A. Data Preparation &amp; Sampling</span></span>
+<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>Before running a Supervised classifier, you must collect "Training Data" (merged FeatureCollections of different land covers).</span>
+<span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Merge training samples into one FeatureCollection</span></span>
+<span id="cb5-136"><a href="#cb5-136" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> trainingFeatures <span class="op">=</span> forest<span class="op">.</span><span class="fu">merge</span>(water)<span class="op">.</span><span class="fu">merge</span>(urban)<span class="op">.</span><span class="fu">merge</span>(agriculture)<span class="op">;</span></span>
+<span id="cb5-137"><a href="#cb5-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. Overlap samples onto the image to extract spectral values</span></span>
+<span id="cb5-139"><a href="#cb5-139" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> trainingData <span class="op">=</span> medianImage<span class="op">.</span><span class="fu">sampleRegions</span>({</span>
+<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a>  <span class="dt">collection</span><span class="op">:</span> trainingFeatures<span class="op">,</span></span>
+<span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a>  <span class="dt">properties</span><span class="op">:</span> [<span class="st">'class'</span>]<span class="op">,</span> <span class="co">// The label property (e.g., 0, 1, 2)</span></span>
+<span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a>  <span class="dt">scale</span><span class="op">:</span> <span class="dv">30</span></span>
+<span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-145"><a href="#cb5-145" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Training Data Samples:'</span><span class="op">,</span> trainingData<span class="op">.</span><span class="fu">first</span>())<span class="op">;</span></span>
+<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-147"><a href="#cb5-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-148"><a href="#cb5-148" aria-hidden="true" tabindex="-1"></a><span class="fu">### B. Supervised Classification (Random Forest / CART)</span></span>
+<span id="cb5-149"><a href="#cb5-149" aria-hidden="true" tabindex="-1"></a>This process involves defining the classifier, training it on your samples, and applying it to the whole image.</span>
+<span id="cb5-150"><a href="#cb5-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-151"><a href="#cb5-151" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Define and train the classifier (Example: CART - Classification and Regression Trees)</span></span>
+<span id="cb5-153"><a href="#cb5-153" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> classifier <span class="op">=</span> ee<span class="op">.</span><span class="at">Classifier</span><span class="op">.</span><span class="fu">smileCart</span>()<span class="op">.</span><span class="fu">train</span>({</span>
+<span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a>  <span class="dt">features</span><span class="op">:</span> trainingData<span class="op">,</span></span>
+<span id="cb5-155"><a href="#cb5-155" aria-hidden="true" tabindex="-1"></a>  <span class="dt">classProperty</span><span class="op">:</span> <span class="st">'class'</span><span class="op">,</span></span>
+<span id="cb5-156"><a href="#cb5-156" aria-hidden="true" tabindex="-1"></a>  <span class="dt">inputProperties</span><span class="op">:</span> medianImage<span class="op">.</span><span class="fu">bandNames</span>()</span>
+<span id="cb5-157"><a href="#cb5-157" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb5-158"><a href="#cb5-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-159"><a href="#cb5-159" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. Classify the image</span></span>
+<span id="cb5-160"><a href="#cb5-160" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> supervisedMap <span class="op">=</span> medianImage<span class="op">.</span><span class="fu">classify</span>(classifier)<span class="op">;</span></span>
+<span id="cb5-161"><a href="#cb5-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-162"><a href="#cb5-162" aria-hidden="true" tabindex="-1"></a><span class="co">// 3. Display results</span></span>
+<span id="cb5-163"><a href="#cb5-163" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(supervisedMap<span class="op">,</span> {<span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">palette</span><span class="op">:</span> [<span class="st">'green'</span><span class="op">,</span> <span class="st">'blue'</span><span class="op">,</span> <span class="st">'red'</span><span class="op">,</span> <span class="st">'yellow'</span>]}<span class="op">,</span> <span class="st">'Supervised LULC'</span>)<span class="op">;</span></span>
+<span id="cb5-164"><a href="#cb5-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-165"><a href="#cb5-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-166"><a href="#cb5-166" aria-hidden="true" tabindex="-1"></a><span class="fu">### C. Unsupervised Classification (K-Means Clustering)</span></span>
+<span id="cb5-167"><a href="#cb5-167" aria-hidden="true" tabindex="-1"></a>Used for exploratory analysis when labels are unavailable. It groups pixels based on spectral similarity.</span>
+<span id="cb5-168"><a href="#cb5-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-169"><a href="#cb5-169" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb5-170"><a href="#cb5-170" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. Sample pixels for the clusterer to learn the data distribution</span></span>
+<span id="cb5-171"><a href="#cb5-171" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> trainingSample <span class="op">=</span> medianImage<span class="op">.</span><span class="fu">sample</span>({</span>
+<span id="cb5-172"><a href="#cb5-172" aria-hidden="true" tabindex="-1"></a>  <span class="dt">region</span><span class="op">:</span> roi<span class="op">,</span></span>
+<span id="cb5-173"><a href="#cb5-173" aria-hidden="true" tabindex="-1"></a>  <span class="dt">scale</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span></span>
+<span id="cb5-174"><a href="#cb5-174" aria-hidden="true" tabindex="-1"></a>  <span class="dt">numPixels</span><span class="op">:</span> <span class="dv">5000</span></span>
+<span id="cb5-175"><a href="#cb5-175" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb5-176"><a href="#cb5-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-177"><a href="#cb5-177" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. Instantiate the clusterer (Example: K-Means with 5 clusters)</span></span>
+<span id="cb5-178"><a href="#cb5-178" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> clusterer <span class="op">=</span> ee<span class="op">.</span><span class="at">Clusterer</span><span class="op">.</span><span class="fu">wekaKMeans</span>(<span class="dv">5</span>)<span class="op">.</span><span class="fu">train</span>(trainingSample)<span class="op">;</span></span>
+<span id="cb5-179"><a href="#cb5-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-180"><a href="#cb5-180" aria-hidden="true" tabindex="-1"></a><span class="co">// 3. Cluster the image</span></span>
+<span id="cb5-181"><a href="#cb5-181" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> unsupervisedMap <span class="op">=</span> medianImage<span class="op">.</span><span class="fu">cluster</span>(clusterer)<span class="op">;</span></span>
+<span id="cb5-182"><a href="#cb5-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-183"><a href="#cb5-183" aria-hidden="true" tabindex="-1"></a><span class="co">// 4. Display results</span></span>
+<span id="cb5-184"><a href="#cb5-184" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(unsupervisedMap<span class="op">.</span><span class="fu">randomVisualizer</span>()<span class="op">,</span> {}<span class="op">,</span> <span class="st">'Unsupervised Clusters'</span>)<span class="op">;</span></span>
+<span id="cb5-185"><a href="#cb5-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-186"><a href="#cb5-186" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-187"><a href="#cb5-187" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reflection</span></span>
+<span id="cb5-188"><a href="#cb5-188" aria-hidden="true" tabindex="-1"></a>The transition to supervised machine learning changed how I understand the city. Instead of manually analysing a few samples, I can train a model on a small set and apply it across a much larger area, like to label 100 roofs in New York and have Google Earth Engine (GEE) predict the remaining million is a level of scale. This shift in scale is something traditional architectural methods cannot achieve. Unsupervised methods like K-Means also helped me notice patterns in the city, such as material differences and local variations, that are not easy to see directly.    </span>
+<span id="cb5-189"><a href="#cb5-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-190"><a href="#cb5-190" aria-hidden="true" tabindex="-1"></a>At the same time, I realised how dependent the results are on data quality. The model only works as well as the samples I provide. During practice, I spent a lot of time refining training areas. Even small mistakes, like confusing shadows with water, could affect the results. Moving beyond simple thresholds like NDVI to more complex feature spaces was challenging, and it showed me that automation still requires **careful input**.    </span>
+<span id="cb5-191"><a href="#cb5-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-192"><a href="#cb5-192" aria-hidden="true" tabindex="-1"></a>A key step for me was moving from pixel-based classification to OBIA. Pixel-based results often looked fragmented and unrealistic. After grouping pixels into meaningful units, the results became more consistent with real urban forms. This made the classification easier to interpret and closer to how we actually understand the city.  </span>
+<span id="cb5-193"><a href="#cb5-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-194"><a href="#cb5-194" aria-hidden="true" tabindex="-1"></a>Final word, validation is essential. A map that looks correct is not always reliable. Learning about the limits of metrics like Kappa, and using measures such as F1-score and ROC curves, helped me evaluate results more carefully. I also learned that spatial data needs special treatment. Standard validation methods can give overly optimistic results, so spatial cross-validation is necessary. This process shifted my focus from visualization to building models that can be trusted.  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yichienchen99/CASA0023_LD/edit/master/classification_i.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/yichienchen99/CASA0023_LD/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/edit/master/classification_i.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jiaying-ice/Jiaying-2026-portfolio/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

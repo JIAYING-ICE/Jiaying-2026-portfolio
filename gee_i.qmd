@@ -1,31 +1,44 @@
 ---
 title: "GEE"
 ---
+
 GEE is a cloud-based geospatial processing service designed for planetary-scale analysis. It eliminates local hardware constraints by storing massive datasets (like Landsat and Sentinel) on **Google’s servers** and executing computations on the **server-side** rather than on the user's local machine.
 
 **EECU** (Earth Engine Compute Units) measures the computational resources required to execute a task or script in Google Earth Engine Server.
 
-call out
-Start with ee.: Server-side objects in Google Earth Engine (GEE) are typically prefixed with ee.. This indicates that they are created and manipulated on GEE's cloud infrastructure.
+::: callout-note
+## The `ee.` Prefix
 
-Examples: 代码块
+Server-side objects in Google Earth Engine are typically prefixed with `ee.`. This indicates that they are created, stored, and manipulated on GEE's high-performance cloud infrastructure rather than your local machine.
+:::
 
-ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
-ee.Geometry.Rectangle(-122.35, 37.77, -122.15, 37.97)
-ee.FeatureCollection('USDA/ERS/Global_Trade')
-ee.Algorithms.Landsat.thermalAnomaly
+#### Examples of Server-Side Construction:
 
+``` javascript
+// 1. Accessing a collection of satellite imagery
+var landsatCol = ee.ImageCollection('LANDSAT/LC08/C01/T1_SR');
+
+// 2. Defining a spatial boundary (Vector Geometry)
+var studyArea = ee.Geometry.Rectangle(-122.35, 37.77, -122.15, 37.97);
+
+// 3. Loading a pre-defined vector dataset (FeatureCollection)
+var tradeData = ee.FeatureCollection('USDA/ERS/Global_Trade');
+
+// 4. Utilizing a specific GEE algorithm
+var anomaly = ee.Algorithms.Landsat.thermalAnomaly(landsatCol.first());
+```
+
+> \[!TIP\] **Why it matters:** When you perform operations on an `ee.ImageCollection` or `ee.FeatureCollection`, you are sending instructions to the Google servers to process petabytes of data in parallel. Never use a standard JavaScript `for` loop to iterate over these; instead, use the `.map()` function to keep the computation on the server side.
 
 ## Summary
 
 ### How does the "Client-side vs. Server-side" architecture of GEE enable massive data processing?
 
-call out
+::: callout-note
+## It’s mine! BUT not really!!
+:::
 
-It’s mine! BUT not really!!
-
-
-```text
+``` text
 +------------------------------------------+               +------------------------------------------+
 |          CLIENT SIDE (Browser)           |               |          SERVER SIDE (Backend)           |
 |      (Frontend / User Environment)       |               |     (Google Cloud Infrastructure)        |
@@ -53,57 +66,59 @@ It’s mine! BUT not really!!
 ```
 
 ### How does GEE classify and organize raster and vector data structures?
-GEE utilizes specific "objects" for different data types:  
 
-- Image: The fundamental raster data type consisting of bands
+GEE utilizes specific "objects" for different data types:
 
-- Feature: The fundamental vector data type consisting of a geometry and a dictionary of attributes
+-   Image: The fundamental raster data type consisting of bands
 
-- Collections: Stacks of these objects are managed as ImageCollections or FeatureCollections
+-   Feature: The fundamental vector data type consisting of a geometry and a dictionary of attributes
+
+-   Collections: Stacks of these objects are managed as ImageCollections or FeatureCollections
 
 ### Why must researchers use "Mapping" instead of "Looping" for server-side operations?
+
 Standard JavaScript loops run on the client-side (the browser) and cannot "see" what is inside a server-side ee object.
 
-Mapping (using .map()) allows GEE to allocate processing to different machines in parallel, ensuring efficient analysis of massive collections without repeatedly loading data
-
+Mapping (using .map()) allows GEE to allocate processing to different machines in parallel, ensuring efficient analysis of massive collections without repeatedly loading data.
 
 ### How does GEE handle Scale (resolution) and Projections differently than traditional desktop GIS?
-Scale: In GEE, scale is determined by the output analysis, not the input. 
 
-GEE uses an Image Pyramid logic to select the resolution closest to the analysis scale and resamples data on the fly.  
+Scale: In GEE, scale is determined by the output analysis, not the input.
 
-Projections: Users generally do not need to worry about projections; GEE automatically converts all data into the Mercator projection (EPSG:3857) for map display.   
+GEE uses an Image Pyramid logic to select the resolution closest to the analysis scale and resamples data on the fly.
 
-image:  Flow chart of operations when resample() is called on the input image prior to display in the Code Editor. Curved lines indicate the flow of information to the reprojection: specifically, the output projection, scale and resampling method to use. "D:\0.CASA_USS\Jiaying-2026 portfolio-book\images\Resample.png" source:https://developers.google.com/earth-engine/guides/resample
+Projections: Users generally do not need to worry about projections; GEE automatically converts all data into the Mercator projection (EPSG:3857) for map display.  
 
-并排两张图
-image: Landsat imagery resampled with nearest neighbor."D:\0.CASA_USS\Jiaying-2026 portfolio-book\images\resample_original.png" source:https://developers.google.com/earth-engine/guides/resample
- 
-image: Landsat imagery resampled with bicubic resampling."D:\0.CASA_USS\Jiaying-2026 portfolio-book\images\resample_bicubic.png" source:https://developers.google.com/earth-engine/guides/resample
+![Flow chart of operations when resample() is called on the input image. Curved lines indicate the flow of information: output projection, scale, and method.](images/Resample.png) *Source: [Google Earth Engine Guides](https://developers.google.com/earth-engine/guides/resample)*
+
+::: {layout-ncol="2"}
+![Landsat: Nearest Neighbor (Original)](images/resample_original.png)
+
+![Landsat: Bicubic Resampling](images/resample_bicubic.png)
+:::
+
+*Source: [Google Earth Engine Guides](https://developers.google.com/earth-engine/guides/resample)*
 
 ### What are "Reducers" and how do they facilitate geospatial statistics?
+
 Reducers are objects used to summarize or aggregate data.  
 
-- Image Reduction: Summarizing an ImageCollection into a single image (e.g., calculating the median value of every pixel over a year).     
+-   Image Reduction: Summarizing an ImageCollection into a single image (e.g., calculating the median value of every pixel over a year).  
 
-image: The reducer operation provided by Google Earth Engine (GEE) "D:\0.CASA_USS\Jiaying-2026 portfolio-book\images\part4.jpg" [@zhang2021]
+![The Technical Workflow for GEE Data Processing](images/flowchart.png) *Figure: The end-to-end technical path from data ingestion to final analysis. [@zhang2021]* - Zonal Statistics: Using reduceRegion() or reduceRegions() to calculate statistics (like mean temperature) for a specific vector geometry
 
-- Zonal Statistics: Using reduceRegion() or reduceRegions() to calculate statistics (like mean temperature) for a specific vector geometry  
-
-- Reducer in Application
+-   Reducer in Application
 
 Annual Composite Images are representative datasets synthesized from a long-term sequence of satellite observations (such as Landsat or Sentinel-2) over a full year. This process relies on Reducers, which are specific objects in Google Earth Engine (GEE) used to compute statistics or perform aggregations across an ImageCollection.
 
-
-As detailed in the literature, the workflow for creating these composites typically follows three stages:
-Data Acquisition and Pre-processing: The system ingests an entire year of multi-band imagery, filtered by date and region of interest. A critical step involves using the Quality Assessment (QA) band to mask clouds, shadows, and water, ensuring only "clean" pixels remain in the stack.  
+As detailed in the literature, the workflow for creating these composites typically follows three stages: Data Acquisition and Pre-processing: The system ingests an entire year of multi-band imagery, filtered by date and region of interest. A critical step involves using the Quality Assessment (QA) band to mask clouds, shadows, and water, ensuring only "clean" pixels remain in the stack.\
 Feature Engineering (Indices): Spectral indices like NDVI (vegetation), NDWI (water), and NDBI (built-up) are calculated for every individual image in the time series.  
 
-image: The Technical Workflow "D:\0.CASA_USS\Jiaying-2026 portfolio-book\images\flowchart.png"  [@zhang2021]
+![Annual composite images of the three districts using different reducers](images/minmax.png) *Figure: Comparison of (1) Min, (2) Median, and (3) Max reducers (R: Band 6; G: Band 5; B: Band 3). [@zhang2021]*
 
-@zhang2021 indicates that combining multiple reducers—such as Min, Max, and Median—provides better results for urban mapping than a single reducer. Median Reducers are the gold standard for creating haze-free, "representative" annual images. Min and Max Reducers are applied to capture phenological extremes, such as the peak of the growing season or seasonal bare-soil periods, which helps distinguish urban areas from spectral "confusers" like farmland.
+@zhang2021 indicates that combining multiple reducers—such as Min, Max, and Median—provides better results for urban mapping than a single reducer. Median Reducers are the gold standard for creating haze-free, "representative" annual images. Min and Max Reducers are applied to capture phenological extremes, such as the peak of the growing season or seasonal bare-soil periods, which helps distinguish urban areas from spectral "confusers" like farmland.  
 
-image: Annual composite images of the three districts obtained in this study ((a), (b), and (c) respectively; 1, 2, and 3 represent the results from ee.Reducer.min(), ee.Reducer.median(), and ee.Reducer.max() respectively). (R: Band 6; G: Band 5; B: Band 3). "D:\0.CASA_USS\Jiaying-2026 portfolio-book\images\minmax.png" [@zhang2021]
+image: Annual composite images of the three districts obtained in this study ((a), (b), and (c) respectively; 1, 2, and 3 represent the results from ee.Reducer.min(), ee.Reducer.median(), and ee.Reducer.max() respectively). (R: Band 6; G: Band 5; B: Band 3). "D:\\0.CASA_USS\Jiaying-2026 portfolio-book\images\minmax.png" [@zhang2021]
 
 ## Application
 
@@ -111,8 +126,7 @@ This practical transitions from single-image processing to managing **Image Coll
 
 > **Image Collection (`ee.ImageCollection`)**: A stack or "folder" of many `ee.Image` objects. Each image contains its own bands and metadata.
 
-
-```text
+``` text
 +-------------------------------------------------------------------------------+
 |                      GOOGLE EARTH ENGINE (GEE) WORKFLOW                       |
 +-------------------------------------------------------------------------------+
@@ -148,13 +162,13 @@ This practical transitions from single-image processing to managing **Image Coll
 +-------------------------------------------------------------------------------+
 |            From raw spectral signal to multi-level layer                      |
 +-------------------------------------------------------------------------------+
-
 ```
 
 #### A. Accessing Collections
+
 Loading a specific dataset from the GEE Data Catalog and inspecting the first available image.
 
-```javascript
+``` javascript
 // Accessing Landsat 8 Collection 2 Level 2 TOA dataset
 var l8 = ee.ImageCollection("LANDSAT/LC08/C02/T1_TOA");
 
@@ -163,9 +177,10 @@ print('First image metadata:', l8.first());
 ```
 
 #### B. Filtering Collections
+
 Filtering is the "Remote Control" step—narrowing down millions of images to the specific ones needed for study.
 
-```javascript
+``` javascript
 var startDate = '2025-01-01';
 var endDate = '2025-12-31';
 var poi = ee.Geometry.Point(91.79, 22.34); // Point of Interest
@@ -181,9 +196,10 @@ print('Filtered Collection Size:', filteredLandsat.size());
 ```
 
 #### C. Reducing Collections (Compositing)
+
 The process of "squashing" a stack of filtered images into a single composite image. Using `median()` helps remove transient "noise" like clouds and shadows.
 
-```javascript
+``` javascript
 // Create a median composite
 var medianComposite = filteredLandsat.median();
 
@@ -197,9 +213,10 @@ Map.addLayer(medianComposite, {
 ```
 
 #### D. Extracting Metadata
+
 Retrieving specific properties like the acquisition date of an individual image.
 
-```javascript
+``` javascript
 // Select the first image from the filtered stack
 var singleImage = ee.Image(filteredLandsat.first());
 
@@ -212,9 +229,10 @@ print('Capture Date of this image:', readableDate);
 ```
 
 #### E. RGB vs. False Color
+
 Changing the band combinations to reveal features invisible to the naked eye.
 
-```javascript
+``` javascript
 // 1. Natural Color (RGB): B4, B3, B2
 var naturalColor = medianComposite.visualize({
   bands: ['B4', 'B3', 'B2'], 
@@ -233,23 +251,22 @@ var falseColor = medianComposite.visualize({
 Map.addLayer(falseColor, {}, 'False-Color Composite (NIR)');
 ```
 
-callout
+::: callout-tip
+## The Workflow Logic
 
-The Workflow Logic
-1.  **Select**: Identify the right satellite collection (Landsat/Sentinel).
-2.  **Filter**: Apply spatial, temporal, and quality constraints.
-3.  **Reduce**: Use a reducer (Mean/Median) to create an "Analysis Ready" composite.
-4.  **Visualize**: Swap bands to tell different urban stories (e.g., using NIR to monitor urban green space).
+1.  **Select**: Identify the right satellite collection (e.g., Landsat 8/9 or Sentinel-2).
+2.  **Filter**: Apply spatial (bounds), temporal (date range), and quality (cloud cover) constraints.
+3.  **Reduce**: Use a reducer like `ee.Reducer.median()` to "stack" multiple images and create a single "Analysis Ready" cloud-free composite.
+4.  **Visualize**: Swap bands to tell different urban stories—for instance, using **False Color (NIR)** to monitor urban green space or **SWIR** to highlight built-up structures.
 
-**Key Takeaway**: By using **Server-side** filtering and reducing, we avoid the memory-hogging issues of local processing. GEE only computes the pixels needed for your current view, solving the hardware frustration encountered in SNAP.
-
+**Key Takeaway**: By utilizing **Server-side** filtering and reducing, we bypass the memory-hogging limitations of local processing. GEE only computes the specific pixels required for your current zoom level, effectively solving the hardware bottlenecks often encountered in desktop software like SNAP.
+:::
 
 ## Reflection
 
 I have been eagerly anticipating the introduction of Google Earth Engine (GEE), and it did not disappoint. While the introduction of JavaScript—yet another programming language to master!—felt daunting at first, I soon realized its purpose. GEE uses JavaScript as a "bridge" because it is the language of the web; it allows us to interact with Google’s cloud infrastructure through a browser without installing a single gigabyte of software. This week, the fragmented pieces of the past month finally clicked into a unified workflow.
 
-My previous struggle with SNAP was a battle against my own hardware. I was trying to haul massive buckets of data into my local RAM, resulting in constant crashes. GEE brings a fundamental shift on **Processing vs. Requesting**. I am no longer doing the math on my computer that could lead it into crashed. I am sending a script, a instruction to Google’s servers. 
-Also, the **Proxy Objects** has changed. When I define `var image = ee.Image(...)`, that image doesn't exist in my browser. It is a **Proxy Object**—a placeholder or a agent. Most interesting thing is GEE is "lazy" in the best way possible. It only computes exactly what is visible on my screen at that moment so  I can pan across the entire globe as easily as a single city block.
+My previous struggle with SNAP was a battle against my own hardware. I was trying to haul massive buckets of data into my local RAM, resulting in constant crashes. GEE brings a fundamental shift on **Processing vs. Requesting**. I am no longer doing the math on my computer that could lead it into crashed. I am sending a script, a instruction to Google’s servers. Also, the **Proxy Objects** has changed. When I define `var image = ee.Image(...)`, that image doesn't exist in my browser. It is a **Proxy Object**—a placeholder or a agent. Most interesting thing is GEE is "lazy" in the best way possible. It only computes exactly what is visible on my screen at that moment so I can pan across the entire globe as easily as a single city block.
 
 One of the most striking analogies from class was the "Cooking" metaphor. GEE is like giving a chef a recipe: "Take a pot (Collection), add vegetables (Filter), boil (Reduce), and serve (Visualize)." However, this led to a major "Aha!" moment regarding limitations. I finally understood why a standard JavaScript `for-loop` (Client-side logic) fails when applied to an `ee.ImageCollection` (Server-side object). You cannot use a "local" spoon to stir a "remote" pot. To loop in GEE, you must use `.map()`, keeping the instructions within the server’s domain.
 

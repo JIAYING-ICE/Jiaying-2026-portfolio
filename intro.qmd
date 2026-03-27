@@ -125,22 +125,7 @@ The following figures illustrate the geometric and spectral logic behind resampl
 
 ## Application
 
-the limitations of the 4 resolutions. For example, why is a high temporal resolution (frequent visits) often sacrificed for high spatial resolution (small pixels)
-
-
-Methodology (Practical): How we load data into R (using terra for speed or stars for large datasets) and SNAP
-. Mention the importance of resampling Sentinel data to match Landsat's grid for cross-comparison
-.
-Case Study Link: Referencing MacLachlan et al. (2017) regarding Urban Expansion in Perth
-.
-Critical Insight: Landsat is highly valued because it is the longest free temporal repository of consistent data, making it ideal for multi-decadal change detection
-.
-Policy Connection: How these spectral metrics (like NDVI or Tasseled Cap) support SDG Goal 11 by identifying urban green space or informal housing
-.
-
-
-
-In our practical sessions, we found that comparing Landsat and Sentinel-2 requires resampling to a common grid. This is not merely a geometric correction; it is an active engagement with the MAUP Scale Effect. By upscaling Sentinel data to match Landsat’s 30m resolution, we are essentially **re-zoning** the Earth's surface, which—as I learned in GIS—can introduce statistical bias where the variance of the data decreases as the unit size increases
+In our practical sessions, we found that comparing Landsat and Sentinel-2 requires resampling to a common grid. This is not merely a geometric correction; it is an active engagement with the MAUP Scale Effect. By upscaling Sentinel data to match Landsat’s 30m resolution, we are essentially **re-zoning** the Earth's surface, which—as I learned in GIS—can introduce statistical bias where the variance of the data decreases as the unit size increases.
 
 
 
@@ -157,7 +142,8 @@ In our practical sessions, we found that comparing Landsat and Sentinel-2 requir
 
 Coming from an architectural background, my relationship with satellite imagery was previously confined to high-resolution RGB frames for site analysis and multi-temporal historical imagery to track urban morphology. I viewed maps as "static snapshots." Discovering the "invisible maps"—the vast world of multispectral signatures—was a moment of profound revelation. Realizing that the Earth "speaks" in wavelengths beyond human vision (IR, SWIR, Thermal) has opened a hidden dimension of urban detail I previously lacked the vocabulary to describe. It is no longer just about seeing the site; it is about sensing its physical properties, from rooftop material emissivity to the subtle physiological stress of urban vegetation.   
 
-One of the most captivating technical concepts was the Earth Observation (EO) Dashboard's dynamic scaling. The ability to seamlessly glide from a global overview to a granular streetscape is not merely a UI convenience but a sophisticated engineering feat known as the **Image Pyramid (or Tiled Web Map)**.   
+One of the most captivating technical concepts was the Earth Observation (EO) Dashboard's dynamic scaling. The ability to seamlessly glide from a global overview to a granular streetscape is not merely a UI convenience but a sophisticated engineering feat known as the **Image Pyramid **.  
+
 > **Technical Note:** In an Image Pyramid, data is pre-processed into a hierarchy of resolutions. When zoomed out, the system serves "low-resolution" tiles (aggregated pixels) to save bandwidth; as I scroll in, it replaces them with "high-resolution" tiles. This allows us to manage the trade-off between **Extents (breadth)** and **Precision (depth)** without crashing the browser, effectively serving as a spatial proxy for massive datasets.  
 
 
