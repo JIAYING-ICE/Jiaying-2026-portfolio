@@ -21,7 +21,7 @@ book:
     background: light
     collapse: true
         
-  repo-url: https://jiaying-ice.github.io/Jiaying-2026-portfolio/
+  repo-url: https://github.com/jiaying-ice/Jiaying-2026-portfolio
   repo-actions: [edit, issue]
   repo-branch: master
   
